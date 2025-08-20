@@ -16,7 +16,7 @@ const Footer = () => {
             Connect with us over socials.
           </p>
 
-          <h3 className="mt-4 font-semibold">Our Supported:</h3>
+          <h3 className="mt-4 font-semibold">Our Patner:</h3>
 
           {/* Logos in a row */}
           <div className="w-30 h-35 md:w-35 md:h-35 flex flex-row space-x-4 mt-2">
