@@ -44,6 +44,7 @@ function MainContent() {
     <main className="flex flex-col gap-6 px-2 sm:px-4 md:px-6 lg:px-12">
       {isHome ? (
         <>
+          <Header/>
           <Advertisement />
           <Main_News_Section />
           <Home_Trending_News />
@@ -82,10 +83,10 @@ function App() {
     <Router>
       <div className="flex flex-col min-h-screen bg-gray-50">
         {/* Header */}
-        <Header />
-
+        
         {/* Sticky MenuBar */}
         <div className="sticky top-0 z-50 bg-white shadow-md">
+         <Header/>
           <MenuBar />
         </div>
 
