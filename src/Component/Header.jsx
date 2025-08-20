@@ -10,7 +10,7 @@ export default function Header() {
             className="w-full h-full rounded-full object-cover"
             alt="Logo"
           />
-        </div>
+        </div> 
       </div>
 
       {/* Center Text */}
@@ -24,13 +24,7 @@ export default function Header() {
 
       {/* Right Side Icons */}
       <div className="flex items-center gap-4">
-        <div className="w-30 h-35 md:w-30 md:h-30">
-          <img
-            src="/Image/newl2.png"
-            className="w-full h-full object-contain rounded-full bg-white p-1"
-            alt="Logo2"
-          />
-        </div>
+      
         <div className="w-14 h-14 md:w-30 md:h-30">
           <img
             src="/Image/l3.jpg"

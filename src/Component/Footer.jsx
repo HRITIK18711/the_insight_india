@@ -62,20 +62,16 @@ const Footer = () => {
           {/* Social Links */}
           <div className="flex items-center space-x-4">
             <h1 className="whitespace-nowrap text-lg font-semibold">
-              Follow Us on:
+              Follow Us on Social Media:
             </h1>
             <a
-              href="#"
+              href="https://www.facebook.com/share/1HfU1MdzLm/"
               className="bg-gray-800 hover:bg-gray-700 p-3 rounded-full text-white"
             >
               <FaFacebookF />
             </a>
-            <a
-              href="#"
-              className="bg-gray-800 hover:bg-gray-700 p-3 rounded-full text-white"
-            >
-              <FaLinkedin />
-            </a>
+            
+            
             <a
               href="#"
               className="bg-gray-800 hover:bg-gray-700 p-3 rounded-full text-white"
@@ -83,7 +79,7 @@ const Footer = () => {
               <FaInstagram />
             </a>
             <a
-              href="#"
+              href="https://www.youtube.com/@theinsightindia"
               className="bg-gray-800 hover:bg-gray-700 p-3 rounded-full text-white"
             >
               <FaYoutube />
