@@ -26,7 +26,7 @@ const notes = [
 
 export default function CurrentAffair() {
   return (
-    <section className="bg-gray-100 py-10 px-6 md:px-20 mt-35">
+    <section className="bg-gray-100 py-10 px-6 md:px-20 mt-15">
       <h2 className="text-3xl font-bold text-gray-800 mb-6 text-center">
         📌 Current Affairs Notes
       </h2>

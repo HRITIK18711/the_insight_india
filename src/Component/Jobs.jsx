@@ -30,7 +30,7 @@ export default function Jobs() {
   ];
 
   return (
-    <div className="bg-gray-50 py-10 px-5 md:px-16 mt-30">
+    <div className="bg-gray-50 py-10 px-5 md:px-16 mt-15">
       <h2 className="text-3xl font-bold text-gray-900 mb-6 border-b-4 border-blue-600 inline-block">
         📰 Jobs Section
       </h2>
