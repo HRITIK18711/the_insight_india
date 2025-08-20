@@ -22,7 +22,7 @@ const Footer = () => {
           <div className="w-30 h-35 md:w-35 md:h-35 flex flex-row space-x-4 mt-2">
             <img
               src="/Image/newl2.png"
-              className="w-full h-full object-contain rounded-full bg-orange-200 p-1"
+              className="w-full h-full object-contain rounded-full bg-white p-1"
               alt="Logo1"
             />
             <img

@@ -38,7 +38,7 @@ function MainContent() {
       {isHome ? (
         // Homepage Layout
         <>
-          <MenuBar />
+          {/* <MenuBar /> */}
           <Advertisement />
           <Main_News_Section />
           <Home_Trending_News />
@@ -78,6 +78,7 @@ function App() {
   return (
     <Router>
       <Header />
+      <MenuBar />
       <MainContent />
       <Footer/>
     </Router>

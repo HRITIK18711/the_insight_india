@@ -51,7 +51,7 @@ const newsItems = [
 
 export default function Latest_News() {
   return (
-    <div className="w-full px-6 py-6 mt-35">
+    <div className="w-full px-6 py-6 mt-15">
       {/* Section Title */}
       <h2 className="text-xl font-bold text-pink-600 mb-4"><span className="text-red-600"><Link to="/">Home</Link></span>|Trending</h2>
       

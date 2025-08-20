@@ -14,17 +14,20 @@ export default function Header() {
       </div>
 
       {/* Center Text */}
-            <p className="absolute left-1/2 -translate-x-1/2 text-white font-extrabold text-5xl md:text-5xl tracking-widest drop-shadow-lg uppercase">
-                THE INSIGHT INDIA
-            </p>
+      <p className="absolute left-1/2 -translate-x-1/2 text-white font-extrabold text-5xl md:text-6xl tracking-widest drop-shadow-lg uppercase text-center">
+        THE INSIGHT INDIA
+        <span className="block text-xl md:text-2xl italic font-light text-yellow-400 tracking-wide normal-case">
+          Awakening Minds
+        </span>
+      </p>
 
 
       {/* Right Side Icons */}
       <div className="flex items-center gap-4">
-        <div className="w-30 h-35 md:w-35 md:h-35">
+        <div className="w-30 h-35 md:w-30 md:h-30">
           <img
             src="/Image/newl2.png"
-            className="w-full h-full object-contain rounded-full bg-orange-200 p-1"
+            className="w-full h-full object-contain rounded-full bg-white p-1"
             alt="Logo2"
           />
         </div>
