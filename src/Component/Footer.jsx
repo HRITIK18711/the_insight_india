@@ -63,10 +63,10 @@ const Footer = () => {
             </li>
             <li>
               <Link
-                to="/travel"
+                to="/donate"
                 className="hover:text-yellow-400 transition duration-300"
               >
-                Travel
+                Donate
               </Link>
             </li>
           </ul>
