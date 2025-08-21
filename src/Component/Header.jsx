@@ -5,10 +5,10 @@ export default function Header() {
       <div className="flex items-center justify-between px-3 sm:px-6 md:px-8 py-2">
         
         {/* Left Logo */}
-        <div className="flex-shrink-0 w-10 h-10 sm:w-14 sm:h-14 md:w-16 md:h-16">
+        <div className="flex-shrink-0 min-w-[40px] sm:min-w-[56px] md:min-w-[64px]">
           <img
             src="/Image/l1.png"
-            className="w-full h-full rounded-full object-cover"
+            className="w-10 h-10 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-full object-cover"
             alt="Logo"
           />
         </div>
@@ -24,10 +24,10 @@ export default function Header() {
         </div>
 
         {/* Right Logo */}
-        <div className="flex-shrink-0 w-10 h-10 sm:w-14 sm:h-14 md:w-16 md:h-16 lg:w-20 lg:h-20">
+        <div className="flex-shrink-0 min-w-[40px] sm:min-w-[56px] md:min-w-[64px]">
           <img
             src="/Image/l3.jpg"
-            className="w-full h-full rounded-full object-cover"
+            className="w-10 h-10 sm:w-14 sm:h-14 md:w-16 md:h-16 lg:w-20 lg:h-20 rounded-full object-cover"
             alt="Logo3"
           />
         </div>
