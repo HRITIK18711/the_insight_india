@@ -5,14 +5,15 @@ import { FaBars, FaTimes } from "react-icons/fa";
 export default function MenuBar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
+  // Function to handle click and close menu
   const handleMenuClick = () => setMenuOpen(false);
 
   return (
     <nav
       className="
-        fixed top-[100px] md:top-[160px] left-0 
         w-full bg-white border text-black shadow-md 
-        z-40
+        mt-[100px] md:mt-40   /* mobile ~100px, desktop ~160px */
+        z-50 relative
       "
     >
       {/* Mobile toggle button */}
@@ -87,7 +88,7 @@ export default function MenuBar() {
           onClick={handleMenuClick}
           className="md:ml-6 px-6 py-3 bg-red-600 text-white font-extrabold text-lg rounded-full shadow-lg hover:bg-red-700 hover:scale-105 transition-transform duration-300"
         >
-          DONATE
+          DONATE 
         </Link>
       </ul>
     </nav>
