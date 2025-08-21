@@ -34,7 +34,7 @@ import Jobs from "./Component/Jobs";
 import Current_Affair from "./Component/Current_Affair";
 import Mass_comm from "./Component/Mass_comm";
 import Miscal from "./Component/Miscal";
-
+import Donate from "./Component/Donate";
 // ✅ Main content: Home vs other routes
 function MainContent() {
   const location = useLocation();
@@ -71,6 +71,7 @@ function MainContent() {
           <Route path="/audio" element={<Audio />} />
           <Route path="/jobs" element={<Jobs />} />
           <Route path="/miscal" element={<Miscal />} />
+          <Route path="/donate" element={<Donate />} />
         </Routes>
       )}
     </main>
