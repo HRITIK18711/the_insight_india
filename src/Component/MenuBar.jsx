@@ -9,7 +9,7 @@ export default function MenuBar() {
   const handleMenuClick = () => setMenuOpen(false);
 
   return (
-    <nav className="w-full bg-white border text-black shadow-md mt-40 z-50 relative">
+    <nav className="w-full bg-white border text-black shadow-md mt-30 z-50 relative">
       {/* Mobile toggle button */}
       <div className="flex justify-between items-center px-4 py-3 md:hidden">
         <h1 className="font-bold text-xl">Menu</h1>
