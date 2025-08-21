@@ -7,6 +7,7 @@ import {
   useLocation,
 } from "react-router-dom";
 
+import { useEffect } from "react";
 import Header from "./Component/Header";
 import MenuBar from "./Component/MenuBar";
 import Advertisement from "./Component/Advertisment";
@@ -35,6 +36,18 @@ import Current_Affair from "./Component/Current_Affair";
 import Mass_comm from "./Component/Mass_comm";
 import Miscal from "./Component/Miscal";
 import Donate from "./Component/Donate";
+
+// ✅ Component to auto-scroll to top on route change
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, [pathname]);
+
+  return null;
+}
+
 // ✅ Main content: Home vs other routes
 function MainContent() {
   const location = useLocation();
@@ -81,6 +94,7 @@ function MainContent() {
 function App() {
   return (
     <Router>
+      <ScrollToTop /> {/* ✅ Auto scroll on route change */}
       <div className="flex flex-col min-h-screen bg-gray-50">
         {/* Sticky Header + MenuBar */}
         <div className="sticky top-0 z-50 bg-white shadow-md">
