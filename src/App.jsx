@@ -35,7 +35,7 @@ import Current_Affair from "./Component/Current_Affair";
 import Mass_comm from "./Component/Mass_comm";
 import Miscal from "./Component/Miscal";
 
-// ✅ Main content handles home vs other pages
+// ✅ Main content: Home vs other routes
 function MainContent() {
   const location = useLocation();
   const isHome = location.pathname === "/";
@@ -44,7 +44,6 @@ function MainContent() {
     <main className="flex flex-col gap-6 px-2 sm:px-4 md:px-6 lg:px-12">
       {isHome ? (
         <>
-          <Header/>
           <Advertisement />
           <Main_News_Section />
           <Home_Trending_News />
@@ -82,20 +81,18 @@ function App() {
   return (
     <Router>
       <div className="flex flex-col min-h-screen bg-gray-50">
-        {/* Header */}
-        
-        {/* Sticky MenuBar */}
+        {/* Sticky Header + MenuBar */}
         <div className="sticky top-0 z-50 bg-white shadow-md">
-         <Header/>
+          <Header />
           <MenuBar />
         </div>
 
-        {/* Main Responsive Content */}
-        <div className="flex-grow">
+        {/* Main content grows and scrolls */}
+        <div className="flex-grow pt-4">
           <MainContent />
         </div>
 
-        {/* Footer */}
+        {/* Footer stays at bottom (only visible after scroll end) */}
         <Footer />
       </div>
     </Router>
