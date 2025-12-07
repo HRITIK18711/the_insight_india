@@ -83,13 +83,13 @@ export default function MenuBar() {
         </li>
 
         {/* Donate Button */}
-        <Link
+        {/* <Link
           to="/donate"
           onClick={handleMenuClick}
           className="md:ml-6 px-6 py-3 bg-red-600 text-white font-extrabold text-lg rounded-full shadow-lg hover:bg-red-700 hover:scale-105 transition-transform duration-300"
         >
           DONATE 
-        </Link>
+        </Link> */}
       </ul>
     </nav>
   );

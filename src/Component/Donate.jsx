@@ -54,11 +54,7 @@ export default function Donate() {
 
             {/* QR Image */}
             <h2 className="text-xl font-bold mb-4 text-rose-700">Scan to Pay</h2>
-            <img
-              src="/Image/QR.jpg"
-              alt="Donate QR"
-              className="w-64 h-64 mx-auto object-contain"
-            />
+            
             <p className="mt-3 text-gray-600 text-sm text-center">
               Use UPI / Scanner to complete your donation
             </p>

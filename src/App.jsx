@@ -84,7 +84,7 @@ function MainContent() {
           <Route path="/audio" element={<Audio />} />
           <Route path="/jobs" element={<Jobs />} />
           <Route path="/miscal" element={<Miscal />} />
-          <Route path="/donate" element={<Donate />} />
+          {/* <Route path="/donate" element={<Donate />} /> */}
         </Routes>
       )}
     </main>
