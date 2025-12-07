@@ -116,7 +116,7 @@ const Footer = () => {
 
       {/* Footer Bottom */}
       <div className="border-t border-gray-700 mt-8 py-4 text-center text-sm text-gray-400">
-        <span className="text-yellow-400 font-semibold">Developed By:</span> Hritik Upadhyay
+        <span className="text-yellow-400 font-semibold">Developed By:</span> Ranu Singh
       </div>
     </footer>
   );
