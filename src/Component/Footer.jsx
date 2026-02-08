@@ -8,7 +8,7 @@ const Footer = () => {
     <footer
       className="relative text-white"
       style={{
-        backgroundImage: "url('/Image/footer_03.jpeg')",
+        backgroundImage: "url('/Image/footer_02.jpeg')",
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
