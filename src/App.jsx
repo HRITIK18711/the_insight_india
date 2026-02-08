@@ -8,9 +8,9 @@ import {
 } from "react-router-dom";
 
 import { useEffect } from "react";
-import Header from "./Component/Header";
+// import Header from "./Component/Header";
 import MenuBar from "./Component/MenuBar";
-import Advertisement from "./Component/Advertisment";
+
 import Main_News_Section from "./Component/Main_News_Section";
 import Home_Trending_News from "./Component/Home_Trending_News";
 import Home_Sports_News from "./Component/Home_Sports_News";
@@ -32,7 +32,7 @@ function MainContent() {
     <main className="flex flex-col gap-6 px-2 sm:px-4 md:px-6 lg:px-12">
       {isHome ? (
         <>
-          <Advertisement />
+          
           <Main_News_Section />
           <Home_Trending_News />
           <Home_Sports_News />
@@ -69,7 +69,7 @@ function App() {
 
           {/* Header + Menu */}
           <div className="sticky top-0 z-50 bg-white/80 backdrop-blur shadow-md">
-            <Header />
+            {/* <Header /> */}
             <MenuBar />
           </div>
 

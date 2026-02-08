@@ -10,14 +10,14 @@ export default function Home_Sports_News() {
   const [page, setPage] = useState(0);
 
   const news = [
-    { img: "/Image/lt1.webp", title: "Indian Army के जवान को खंभे से बांधकर पीटने वाले टोल प्लाजा वालों के साथ क्या हुआ?", rating: "4.9", reviews: "3,149" },
-    { img: "/Image/lt2.webp", title: "यौन उत्पीड़न की आरोपी महिला पर Karnataka High Court ने क्या फैसला सुनाया?", rating: "5.0", reviews: "287" },
-    { img: "/Image/lt3.webp", title: "डायरेक्टर AR Murugadoss ने बताया, रात को 2 बजे शूट करने पड़ते थे सिकंदर के सीन", rating: "4.9", reviews: "240" },
-    { img: "/Image/lt4.webp", title: "हरियाणा के भिवानी में 19 साल की मनीषा का मर्डर, लड़कों पर उतरे लोग", rating: "4.8", reviews: "313" },
-    { img: "/Image/lt5.webp", title: "News example 5", rating: "4.7", reviews: "180" },
-    { img: "/Image/lt6.webp", title: "News example 6", rating: "4.6", reviews: "220" },
-    { img: "/Image/lt7.webp", title: "News example 7", rating: "4.9", reviews: "410" },
-    { img: "/Image/lt8.webp", title: "News example 8", rating: "5.0", reviews: "512" },
+    { img: "/Image/up.jpg", title: "Indian Army के जवान को खंभे से बांधकर पीटने वाले टोल प्लाजा वालों के साथ क्या हुआ?", rating: "4.9", reviews: "3,149" },
+    { img: "/Image/up.jpg", title: "यौन उत्पीड़न की आरोपी महिला पर Karnataka High Court ने क्या फैसला सुनाया?", rating: "5.0", reviews: "287" },
+    { img: "/Image/up.jpg", title: "डायरेक्टर AR Murugadoss ने बताया, रात को 2 बजे शूट करने पड़ते थे सिकंदर के सीन", rating: "4.9", reviews: "240" },
+    { img: "/Image/up.jpg", title: "हरियाणा के भिवानी में 19 साल की मनीषा का मर्डर, लड़कों पर उतरे लोग", rating: "4.8", reviews: "313" },
+    { img: "/Image/up01.jpg", title: "News example 5", rating: "4.7", reviews: "180" },
+    { img: "/Image/up01.jpg", title: "News example 6", rating: "4.6", reviews: "220" },
+    { img: "/Image/up01.jpg", title: "News example 7", rating: "4.9", reviews: "410" },
+    { img: "/Image/up01.jpg", title: "News example 8", rating: "5.0", reviews: "512" },
   ];
 
   const maxPage = Math.ceil(news.length / VISIBLE) - 1;
