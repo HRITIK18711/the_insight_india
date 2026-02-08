@@ -123,7 +123,7 @@ const MenuBar = () => {
             exit={{ opacity: 0, y: -20 }}
             className="fixed inset-0 bg-white z-[999] lg:hidden pt-28 px-8 pb-10 flex flex-col justify-between"
           >
-            <div className="space-y-1">
+            <div className=" bg-white w-full space-y-1">
               <p className="text-[10px] font-black tracking-[0.2em] text-slate-400 uppercase mb-4 ml-2">
                 Explore Destinations
               </p>
