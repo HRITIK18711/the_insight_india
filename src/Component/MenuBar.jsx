@@ -31,56 +31,23 @@ export default function MenuBar() {
         ${menuOpen ? "block px-6 pb-6" : "hidden md:flex"}`}
       >
         <Link to="/" onClick={handleMenuClick} className="hover:text-blue-600 transition-all">Home</Link>
-        <Link to="/latest-news" onClick={handleMenuClick} className="hover:text-blue-600 transition-all">Trending</Link>
-        <Link to="/insight" onClick={handleMenuClick} className="hover:text-blue-600 transition-all">Insight Videos</Link>
-
+        
         {/* News Digest Dropdown */}
         <li className="relative group">
-          <span className="hover:text-blue-600 cursor-pointer">News Digest</span>
+          <span className="hover:text-blue-600 cursor-pointer">Destination</span>
           <ul className="absolute left-0 top-full hidden group-hover:block bg-white rounded shadow-lg w-40 z-50 font-normal">
-            <li className="hover:bg-gray-100 px-3 py-2"><Link to="/politics" onClick={handleMenuClick}>Politics</Link></li>
-            <li className="hover:bg-gray-100 px-3 py-2"><Link to="/national" onClick={handleMenuClick}>National</Link></li>
-            <li className="hover:bg-gray-100 px-3 py-2"><Link to="/international" onClick={handleMenuClick}>International</Link></li>
-            <li className="hover:bg-gray-100 px-3 py-2"><Link to="/bussines" onClick={handleMenuClick}>Business</Link></li>
-            <li className="hover:bg-gray-100 px-3 py-2"><Link to="/sports" onClick={handleMenuClick}>Sports</Link></li>
-            <li className="hover:bg-gray-100 px-3 py-2"><Link to="/miscal" onClick={handleMenuClick}>Miscellaneous</Link></li>
+            <li className="hover:bg-red-400 px-3 py-2"><Link to="/" onClick={handleMenuClick}>Uttrakhand</Link></li>
+            <li className="hover:bg-red-400 px-3 py-2"><Link to="/" onClick={handleMenuClick}>Delhi</Link></li>
+            <li className="hover:bg-red-400 px-3 py-2"><Link to="/" onClick={handleMenuClick}>Uttar Pradesh</Link></li>
+            
           </ul>
         </li>
 
-        <li><Link to="/editoral" onClick={handleMenuClick} className="hover:text-blue-600">Editorial</Link></li>
-
-        {/* Lifestyle Dropdown */}
-        <li className="relative group">
-          <span className="hover:text-blue-600 cursor-pointer">Lifestyle</span>
-          <ul className="absolute left-0 top-full hidden group-hover:block bg-white rounded shadow-lg w-36 z-50 font-normal">
-            <li className="hover:bg-gray-100 px-3 py-2"><Link to="/fashion" onClick={handleMenuClick}>Fashion</Link></li>
-            <li className="hover:bg-gray-100 px-3 py-2"><Link to="/health" onClick={handleMenuClick}>Health</Link></li>
-          </ul>
-        </li>
-
-        <li><Link to="/travel" onClick={handleMenuClick} className="hover:text-blue-600">Travel</Link></li>
-        <li><Link to="/factcheck" onClick={handleMenuClick} className="hover:text-blue-600">Fact-Check</Link></li>
-
-        {/* Entertainment Dropdown */}
-        <li className="relative group">
-          <span className="hover:text-blue-600 cursor-pointer">Entertainment</span>
-          <ul className="absolute left-0 top-full hidden group-hover:block bg-white rounded shadow-lg w-44 z-50 font-normal">
-            <li className="hover:bg-gray-100 px-3 py-2"><Link to="/latest_enter" onClick={handleMenuClick}>Latest Releases</Link></li>
-            <li className="hover:bg-gray-100 px-3 py-2"><Link to="/film_review" onClick={handleMenuClick}>Film Reviews</Link></li>
-          </ul>
-        </li>
-
-        <li><Link to="/audio" onClick={handleMenuClick} className="hover:text-blue-600">Audio</Link></li>
-        <li><Link to="/jobs" onClick={handleMenuClick} className="hover:text-blue-600">Jobs</Link></li>
-
-        {/* Notes Dropdown */}
-        <li className="relative group">
-          <span className="hover:text-blue-600 cursor-pointer">Notes</span>
-          <ul className="absolute left-0 top-full hidden group-hover:block bg-white rounded shadow-lg w-48 z-50 font-normal">
-            <li className="hover:bg-gray-100 px-3 py-2"><Link to="/masscomm" onClick={handleMenuClick}>Mass Comm</Link></li>
-            <li className="hover:bg-gray-100 px-3 py-2"><Link to="/current" onClick={handleMenuClick}>Current Affairs</Link></li>
-          </ul>
-        </li>
+        <li><Link to="/editoral" onClick={handleMenuClick} className="hover:text-blue-600">Travel Guide.</Link></li>
+        <li><Link to="/travel" onClick={handleMenuClick} className="hover:text-blue-600">Hotels</Link></li>
+        <li><Link to="/factcheck" onClick={handleMenuClick} className="hover:text-blue-600">Blog</Link></li>
+        <li><Link to="/audio" onClick={handleMenuClick} className="hover:text-blue-600">About us</Link></li>
+        <li><Link to="/jobs" onClick={handleMenuClick} className="hover:text-blue-600">Contact us</Link></li>
 
         {/* Donate Button */}
         {/* <Link
@@ -88,8 +55,16 @@ export default function MenuBar() {
           onClick={handleMenuClick}
           className="md:ml-6 px-6 py-3 bg-red-600 text-white font-extrabold text-lg rounded-full shadow-lg hover:bg-red-700 hover:scale-105 transition-transform duration-300"
         >
-          DONATE 
+          Support Us 
         </Link> */}
+        <Link
+          to="/donate"
+          onClick={handleMenuClick}
+          className="md:ml-6 px-6 py-3 bg-red-600 text-white font-extrabold text-lg rounded-full shadow-lg hover:bg-red-700 hover:scale-105 transition-transform duration-300"
+        >
+Book Now        
+</Link>
+
       </ul>
     </nav>
   );

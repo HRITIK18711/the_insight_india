@@ -7,7 +7,7 @@ export default function Donate() {
   return (
     <div className="flex justify-center items-center min-h-screen bg-gradient-to-b from-rose-100 to-rose-300 p-4">
       <div className="bg-white rounded-2xl shadow-2xl w-full max-w-3xl p-8 text-center">
-        
+
         {/* Title */}
         <h1 className="text-3xl sm:text-4xl font-extrabold text-rose-800 mb-4">
           Support Our Cause ❤️
@@ -54,7 +54,7 @@ export default function Donate() {
 
             {/* QR Image */}
             <h2 className="text-xl font-bold mb-4 text-rose-700">Scan to Pay</h2>
-            
+
             <p className="mt-3 text-gray-600 text-sm text-center">
               Use UPI / Scanner to complete your donation
             </p>

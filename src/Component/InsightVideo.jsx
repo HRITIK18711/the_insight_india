@@ -76,7 +76,7 @@ export default function InsightVideo() {
                 src={item.link}
                 title={item.title}
                 className="w-full h-56"
-                frameBorder="0"
+                
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
               ></iframe>
