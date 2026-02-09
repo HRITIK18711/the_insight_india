@@ -23,15 +23,15 @@ const Footer = () => {
           {/* Left Section */}
           <div>
             <h2 className="text-2xl font-bold mb-4 text-yellow-400 tracking-wide">
-              THE INSIGHT INDIA
+              RU EXPLORES
             </h2>
-            <img src="/Image/l1.png" alt="logo" className="w-72 h-32 mb-4" />
+            <img src="/Image/LOGO.jpeg" alt="logo" className="w-72 h-32 mb-4" />
             <p className="text-gray-200 leading-relaxed">
-              Thank you for visiting our official News Portal website.
+              Thank you for visiting our official Travel website.
               Stay connected with us on social media for the latest updates.
             </p>
 
-            <h3 className="mt-6 font-semibold text-lg text-yellow-400">
+            {/* <h3 className="mt-6 font-semibold text-lg text-yellow-400">
               Our Partners
             </h3>
             <div className="flex items-center space-x-4 mt-3">
@@ -45,7 +45,7 @@ const Footer = () => {
                 className="w-14 h-14 object-contain rounded-full bg-white p-1 shadow-md"
                 alt="Partner 2"
               />
-            </div>
+            </div> */}
           </div>
 
           {/* Quick Links */}
@@ -55,8 +55,8 @@ const Footer = () => {
             </h2>
             <ul className="space-y-3">
               <li><Link to="/" className="hover:text-yellow-400">Home</Link></li>
-              <li><Link to="/latest-news" className="hover:text-yellow-400">Trending</Link></li>
-              <li><Link to="/insight" className="hover:text-yellow-400">Insight Video</Link></li>
+              <li><Link to="/latest-news" className="hover:text-yellow-400">About us</Link></li>
+              <li><Link to="/insight" className="hover:text-yellow-400">Vlogs</Link></li>
               <li><Link to="/donate" className="hover:text-yellow-400">Donate</Link></li>
             </ul>
           </div>
@@ -87,10 +87,10 @@ const Footer = () => {
         </div>
 
         {/* Footer Bottom */}
-        <div className="border-t border-white/30 py-4 text-center text-sm text-gray-300">
+        {/* <div className="border-t border-white/30 py-4 text-center text-sm text-gray-300">
           <span className="text-yellow-400 font-semibold">Developed By:</span>{" "}
           Hritik Upadhyay
-        </div>
+        </div> */}
       </div>
     </footer>
   );

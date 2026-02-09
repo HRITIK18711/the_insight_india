@@ -42,6 +42,9 @@ const MenuBar = () => {
         <div className="px-6 flex justify-between items-center">
           {/* Logo Section */}
           <Link to="/" className="flex items-center gap-2 z-[1010]">
+          <img src="/Image/LOGO.jpeg"
+                alt="logo"
+               className="w-20 md:w-24 h-16 md:h-20 object-contain rounded-full border-2 border-[#FF6B35]"></img>
             <span className="text-xl md:text-2xl font-black tracking-tighter text-slate-900 uppercase">
               RU <span className="text-[#FF6B35]">Explore</span>
             </span>
