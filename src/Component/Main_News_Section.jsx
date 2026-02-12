@@ -27,7 +27,7 @@ export default function Main_News_Section() {
           sm:grid-cols-2 
           md:grid-cols-3 
           lg:grid-cols-4 
-          gap-6
+          max-w-6xl justify-center mx-auto  gap-6
           place-items-center
         ">
           {cards.map((item, index) => (
