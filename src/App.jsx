@@ -14,6 +14,7 @@ import MenuBar from "./Component/MenuBar";
 import Main_News_Section from "./Component/Main_News_Section";
 import Home_Trending_News from "./Component/Home_Trending_News";
 import Home_Sports_News from "./Component/Home_Sports_News";
+import Webstories from "./Component/Webstories";
 
 import Home_Entertainment_News from "./Component/Home_Entertainment_News";
 import Footer from "./Component/Footer";
@@ -40,7 +41,9 @@ function MainContent() {
         </>
       ) : (
         <Routes>
-          {/*  */}
+          {
+            <Route path="/webstories" element={<Webstories />}></Route>
+          }
         </Routes>
       )}
     </main>
@@ -53,7 +56,7 @@ function App() {
       <ScrollToTop />
 
       {/* 🌄 Background Wrapper */}
-      <div className="relative flex flex-col min-h-screen overflow-hidden">
+      <div className="relative flex flex-col min-h-screen ">
 
         {/* Background Image */}
         <div
