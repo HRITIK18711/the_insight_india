@@ -22,10 +22,10 @@ const Footer = () => {
           
           {/* Left Section */}
           <div>
-            <h2 className="text-2xl font-bold mb-4 text-yellow-400 tracking-wide">
+            {/* <h2 className="text-2xl font-bold mb-4 text-yellow-400 tracking-wide">
               RU EXPLORES
-            </h2>
-            <img src="/Image/LOGO.jpeg" alt="logo" className="w-72 h-32 mb-4" />
+            </h2> */}
+            <img src="/Image/logo1.png" alt="logo" className="w-72 h-32 mb-4" />
             <p className="text-gray-200 leading-relaxed">
               Thank you for visiting our official Travel website.
               Stay connected with us on social media for the latest updates.
@@ -67,7 +67,7 @@ const Footer = () => {
               Contact Us
             </h2>
             <p className="flex items-center gap-3 mb-4 text-gray-200">
-              <FaEnvelope className="text-yellow-400" /> insight22@gmail.com
+              <FaEnvelope className="text-yellow-400" /> ruexplores02@gmail.com
             </p>
 
             {/* Social Links */}

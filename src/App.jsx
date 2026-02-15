@@ -12,7 +12,7 @@ import { useEffect } from "react";
 import MenuBar from "./Component/MenuBar";
 
 import Main_News_Section from "./Component/Main_News_Section";
-import Home_Trending_News from "./Component/Home_Trending_News";
+
 import Home_Sports_News from "./Component/Home_Sports_News";
 import Webstories from "./Component/Webstories";
 
@@ -33,9 +33,9 @@ function MainContent() {
     <main className="flex flex-col gap-6 px-2 sm:px-4 md:px-6 lg:px-12">
       {isHome ? (
         <>
-          
+
           <Main_News_Section />
-          <Home_Trending_News />
+          
           <Home_Sports_News />
           <Home_Entertainment_News />
         </>
@@ -60,9 +60,13 @@ function App() {
 
         {/* Background Image */}
         <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40"
-          style={{ backgroundImage: "url('/Image/bg.png')" }}
-        ></div>
+  className="fixed top-0 left-0 w-full h-screen bg-no-repeat bg-center bg-cover  -z-10"
+  style={{ backgroundImage: "url('/Image/Background.png')" }}
+></div>
+
+
+
+
 
         {/* Soft white fade */}
         <div className="absolute inset-0 bg-white/50"></div>

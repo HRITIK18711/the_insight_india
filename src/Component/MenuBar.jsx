@@ -22,21 +22,20 @@ const MenuBar = () => {
     { name: "Home", path: "/" },
     { name: "Travel Guide", path: "/" },
     { name: "Web Stories", path: "/webstories" },
-    { name: "Hotels", path: "/" },
-    { name: "Blog", path: "/" },
+    { name: "Events", path: "/" },
     { name: "About us", path: "/" },
-    { name: "Contact us", path: "/" },
+    
   ];
 
-  const destinations = ["Uttrakhand", "Delhi", "Uttar Pradesh"];
+  const destinations = ["Delhi", "Uttrakhand", "Uttar Pradesh"];
 
   return (
     <>
       <nav
-        className={`fixed top-4 left-1/2 -translate-x-1/2 w-[92%] max-w-7xl z-[1000] transition-all duration-500 rounded-full border ${
+        className={`fixed  left-1/2 -translate-x-1/2 w-[92%] max-w-7xl z-[1000] transition-all duration-500 rounded-full border ${
           scrolled || isOpen
-            ? "bg-[#4198db] shadow-xl border-slate-100"
-            : "bg-[#4198db]/90 backdrop-blur-md border-white/20"
+            ? "bg-black shadow-xl border-slate-100"
+            : "bg-black/60 backdrop-blur-md border-white/20"
         } py-2 md:py-3`}
       >
         <div className="px-6 flex justify-between items-center">
@@ -93,12 +92,12 @@ const MenuBar = () => {
             ))}
 
             {/* CTA */}
-            <Link
+            {/* <Link
               to="/donate"
               className="ml-4 px-6 py-2.5 bg-[#FF6B35] text-white text-sm font-extrabold rounded-full hover:bg-[#e85a20] hover:scale-105 transition-all shadow-lg shadow-orange-200"
             >
               Book Now
-            </Link>
+            </Link> */}
           </div>
 
           {/* Mobile Toggle */}

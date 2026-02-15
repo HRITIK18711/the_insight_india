@@ -1,10 +1,10 @@
 import React from "react";
 
 const cards = [
-  { title: "Outdoors", img: "/Image/outdoor.jpg" },
-  { title: "Food", img: "/Image/food.jpg" },
-  { title: "Culture", img: "/Image/culture.jpg" },
-  { title: "Water", img: "/Image/water.jpg" },
+  { title: "Places to Explore", img: "/Image/Delhi.png" },
+  { title: "Markets to Explore ", img: "/Image/food.jpg" },
+  { title: "Food/Cafe to Explore", img: "/Image/culture.jpg" },
+  { title: "Reviews/Stories", img: "/Image/water.jpg" },
 ];
 
 export default function Main_News_Section() {
@@ -14,10 +14,10 @@ export default function Main_News_Section() {
 
         {/* Heading */}
         <h2 className="text-2xl sm:text-3xl font-bold mb-1 text-black">
-          Find things to do by interest
+          Things To Do in Delhi
         </h2>
-        <p className="text-gray-600 mb-8">
-          Whatever you're into, we’ve got it
+        <p className="text-black mb-8">
+          Explore and Travel
         </p>
 
         {/* Responsive Grid */}
@@ -43,6 +43,7 @@ export default function Main_News_Section() {
                     h-[260px] 
                     sm:h-[300px] 
                     object-cover 
+                    
                     group-hover:scale-110 
                     transition duration-500
                   "
