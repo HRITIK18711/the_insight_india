@@ -27,7 +27,7 @@ const MenuBar = () => {
     
   ];
 
-  const destinations = ["Delhi", "Uttrakhand", "Uttar Pradesh"];
+  const destinations = ["Delhi", "Uttarakhand", "Uttar Pradesh"];
 
   return (
     <>
