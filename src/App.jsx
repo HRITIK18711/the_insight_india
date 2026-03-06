@@ -8,6 +8,9 @@ import {
 import { useEffect } from "react";
 
 import MenuBar from "./Component/MenuBar";
+import About from "./Component/About";
+import Privacy from "./Component/Privacy";
+import Disc from "./Component/Disc";
 import Content from "./Component/Content";
 import Main_News_Section from "./Component/Main_News_Section";
 import Home_Sports_News from "./Component/Home_Sports_News";
@@ -37,6 +40,9 @@ function MainContent() {
       ) : (
         <Routes>
           <Route path="/webstories" element={<Webstories />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/privacy" element={<Privacy />} />
+          <Route path="/disc" element={<Disc />} />
         </Routes>
       )}
     </main>

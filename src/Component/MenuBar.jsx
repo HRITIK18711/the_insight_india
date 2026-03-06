@@ -20,7 +20,7 @@ const MenuBar = () => {
 
   const navLinks = [
     { name: "Home", path: "/" },
-    { name: "Travel Guide", path: "/" },
+    // { name: "Travel Guide", path: "/" },
     { name: "Web Stories", path: "/webstories" },
     { name: "Events", path: "/" },
     { name: "Trending Now", path: "/" },
@@ -29,6 +29,7 @@ const MenuBar = () => {
   ];
 
   const destinations = ["Delhi", "Uttarakhand", "Uttar Pradesh"];
+  const Travel_Guide = ["Itineraries", "Stays/Hotels", "Rides","Treks"];
 
   return (
     <>
@@ -68,6 +69,27 @@ const MenuBar = () => {
               <div className="absolute top-full left-0 pt-4 hidden group-hover:block transition-all">
                 <ul className="w-48 bg-white rounded-2xl shadow-xl border border-slate-100 overflow-hidden">
                   {destinations.map((city) => (
+                    <li key={city}>
+                      <Link
+                        to={`/destination/${city.toLowerCase().replace(" ", "-")}`}
+                        className="block px-5 py-3 text-sm font-medium text-slate-700 hover:bg-orange-50 hover:text-[#FF6B35] transition-colors"
+                      >
+                        {city}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            {/* Travel_Guide Dropdown */}
+            <div className="relative group px-4 py-2 text-sm font-bold text-white cursor-pointer flex items-center gap-1 hover:text-[#FF6B35] transition-all">
+              <span>Travel Guide</span>
+              <ChevronDown size={14} className="group-hover:rotate-180 transition-transform duration-300" />
+
+              <div className="absolute top-full left-0 pt-4 hidden group-hover:block transition-all">
+                <ul className="w-48 bg-white rounded-2xl shadow-xl border border-slate-100 overflow-hidden">
+                  {Travel_Guide.map((city) => (
                     <li key={city}>
                       <Link
                         to={`/destination/${city.toLowerCase().replace(" ", "-")}`}
