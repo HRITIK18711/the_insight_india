@@ -6,7 +6,7 @@ import {
   useLocation,
 } from "react-router-dom";
 import { useEffect } from "react";
-import { Helmet } from "react-helmet";   // ✅ SEO Import
+import { Helmet } from "react-helmet";
 
 import MenuBar from "./Component/MenuBar";
 import About from "./Component/About";
@@ -21,15 +21,13 @@ import Footer from "./Component/Footer";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
-  useEffect(() => window.scrollTo({ top: 0, behavior: "smooth" }), [pathname]);
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, [pathname]);
+
   return null;
 }
-useEffect(() => {
-  const script = document.createElement("script");
-  script.src = "https://gc.zgo.at/count.js";
-  script.async = true;
-  document.body.appendChild(script);
-}, []);
 
 function MainContent() {
   const location = useLocation();
@@ -61,27 +59,31 @@ function App() {
     <Router>
       <ScrollToTop />
 
-      {/* ✅ SEO META TAGS */}
+      {/* SEO + GoatCounter */}
       <Helmet>
+        <title>RU Explores | Latest News, Web Stories & Updates</title>
+
+        <meta
+          name="description"
+          content="RU Explores brings you the latest news, sports updates, entertainment news, and web stories in one place."
+        />
+
+        <meta
+          name="keywords"
+          content="RU Explores, news, sports news, entertainment news, web stories, latest updates"
+        />
+
+        <meta name="author" content="RU Explores" />
+
+        {/* GoatCounter Script */}
         <script
           data-goatcounter="https://ruexplores.goatcounter.com/count"
           async
           src="//gc.zgo.at/count.js"
         ></script>
-
-        <title>RU Explores | Latest News, Web Stories & Updates</title>
-        <meta
-          name="description"
-          content="RU Explores brings you the latest news, sports updates, entertainment news, and web stories in one place."
-        />
-        <meta
-          name="keywords"
-          content="RU Explores, news, sports news, entertainment news, web stories, latest updates"
-        />
-        <meta name="author" content="RU Explores" />
       </Helmet>
 
-      {/* 🌄 FULL SITE BACKGROUND */}
+      {/* FULL SITE BACKGROUND */}
       <div className="relative min-h-screen">
 
         {/* Background Image */}
@@ -90,7 +92,7 @@ function App() {
           style={{ backgroundImage: "url('/Image/hero.jpeg')" }}
         ></div>
 
-        {/* Soft overlay */}
+        {/* Overlay */}
         <div className="fixed top-0 left-0 w-full h-screen bg-black/20 -z-10"></div>
 
         {/* APP CONTENT */}
