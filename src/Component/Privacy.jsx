@@ -1,8 +1,61 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 
 export default function Privacy() {
   return (
     <div className="bg-white text-gray-800">
+
+      {/* SEO TAGS */}
+      <Helmet>
+
+        <title>Privacy Policy | RUExplores</title>
+
+        <meta
+          name="description"
+          content="Read the Privacy Policy of RUExplores to understand how we collect, use and protect visitor information while exploring travel guides, destinations and stories."
+        />
+
+        <meta
+          name="keywords"
+          content="RUExplores privacy policy, travel blog privacy policy, website privacy policy India, data protection policy"
+        />
+
+        <link
+          rel="canonical"
+          href="https://ruexplores.com/privacy"
+        />
+
+        {/* Open Graph */}
+        <meta property="og:title" content="Privacy Policy | RUExplores" />
+        <meta
+          property="og:description"
+          content="Learn how RUExplores protects visitor information and maintains transparency in data usage."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://ruexplores.com/privacy" />
+        <meta
+          property="og:image"
+          content="https://ruexplores.com/Image/1.png"
+        />
+
+        {/* Schema */}
+        <script type="application/ld+json">
+          {`
+          {
+            "@context":"https://schema.org",
+            "@type":"WebPage",
+            "name":"Privacy Policy",
+            "url":"https://ruexplores.com/privacy",
+            "publisher":{
+              "@type":"Organization",
+              "name":"RUExplores",
+              "url":"https://ruexplores.com"
+            }
+          }
+          `}
+        </script>
+
+      </Helmet>
 
       {/* HERO */}
       <section className="bg-gradient-to-r from-indigo-600 to-blue-600 text-white py-24 px-6 text-center">
@@ -10,7 +63,7 @@ export default function Privacy() {
           Privacy Policy
         </h1>
         <p className="text-lg opacity-90">
-          Last updated:
+          Last updated: March 2026
         </p>
       </section>
 
@@ -123,25 +176,17 @@ export default function Privacy() {
 
         <h2 className="text-3xl font-bold">4. Third-Party Services</h2>
 
-        {/* Analytics */}
         <div>
           <h3 className="text-xl font-semibold mb-2">
             a) Analytics Tools
           </h3>
 
           <p>
-            RU Explores may use tools such as Google Analytics to understand
-            website traffic and usage patterns.
+            RU Explores may use analytics tools to understand website traffic
+            and visitor behavior.
           </p>
-
-          <ul className="list-disc pl-6 mt-2 space-y-2">
-            <li>IP address</li>
-            <li>Browser or device data</li>
-            <li>Usage behavior</li>
-          </ul>
         </div>
 
-        {/* Ads */}
         <div>
           <h3 className="text-xl font-semibold mb-2">
             b) Advertising Partners
@@ -153,92 +198,26 @@ export default function Privacy() {
           </p>
 
           <p className="mt-2">
-            These services may use cookies, web beacons or similar technologies
-            to show advertisements based on your interests and browsing
-            behavior.
+            These services may use cookies or similar technologies to display
+            advertisements based on your interests.
           </p>
         </div>
 
-        {/* Affiliate */}
         <div>
           <h3 className="text-xl font-semibold mb-2">
             c) Affiliate Links
           </h3>
 
           <p>
-            Some pages may contain affiliate links for hotels, travel services
-            and related resources.
+            Some pages may contain affiliate links for hotels and travel
+            services.
           </p>
 
           <p className="mt-2">
-            If you purchase through these links, RU Explores may earn a small
+            If you book through these links, RU Explores may earn a small
             commission at no extra cost to you.
           </p>
 
-          <ul className="list-disc pl-6 mt-2 space-y-2">
-            <li>Maintain the website</li>
-            <li>Create free travel content</li>
-            <li>Improve guides and resources</li>
-          </ul>
-
-        </div>
-
-      </section>
-
-      {/* SECTION 5 */}
-      <section className="bg-gray-50 py-16 px-6">
-        <div className="max-w-6xl mx-auto space-y-6">
-
-          <h2 className="text-3xl font-bold">5. Data Protection</h2>
-
-          <ul className="list-disc pl-6 space-y-3">
-            <li>Protect your information</li>
-            <li>Prevent unauthorized access</li>
-            <li>Maintain website security</li>
-          </ul>
-
-          <p>
-            However, no method of transmission over the internet is completely
-            secure, so absolute security cannot be guaranteed.
-          </p>
-
-        </div>
-      </section>
-
-      {/* SECTION 6,7,8,9 */}
-      <section className="max-w-6xl mx-auto px-6 py-16 space-y-10">
-
-        <div>
-          <h2 className="text-3xl font-bold mb-3">6. External Links</h2>
-          <p>
-            RU Explores may link to external websites. We are not responsible
-            for the content, privacy practices or policies of those sites.
-          </p>
-        </div>
-
-        <div>
-          <h2 className="text-3xl font-bold mb-3">7. Children’s Information</h2>
-          <p>
-            RU Explores does not knowingly collect personal data from children
-            under 13. If you believe a child has provided personal information,
-            please contact us and we will remove it promptly.
-          </p>
-        </div>
-
-        <div>
-          <h2 className="text-3xl font-bold mb-3">8. Your Consent</h2>
-          <p>
-            By using RU Explores, you consent to this Privacy Policy and the
-            collection and use of information described here.
-          </p>
-        </div>
-
-        <div>
-          <h2 className="text-3xl font-bold mb-3">9. Changes to This Policy</h2>
-          <p>
-            We may update this Privacy Policy from time to time. Any changes
-            will be posted on this page with an updated “Last updated” date.
-          </p>
         </div>
 
       </section>

@@ -6,6 +6,10 @@ import { motion, AnimatePresence } from "framer-motion";
 const MenuBar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+
+  const [openDestination, setOpenDestination] = useState(false);
+  const [openGuide, setOpenGuide] = useState(false);
+
   const location = useLocation();
 
   useEffect(() => {
@@ -20,21 +24,20 @@ const MenuBar = () => {
 
   const navLinks = [
     { name: "Home", path: "/" },
-    // { name: "Travel Guide", path: "/" },
+    { name: "Itineraries", path: "/" },
     { name: "Web Stories", path: "/webstories" },
     { name: "Events", path: "/" },
     { name: "Trending Now", path: "/" },
     { name: "Calender", path: "/" }
-    
   ];
 
   const destinations = ["Delhi", "Uttarakhand", "Uttar Pradesh"];
-  const Travel_Guide = ["Itineraries", "Stays/Hotels", "Rides","Treks"];
+  const Travel_Guide = ["Stays/Hotels", "Rides", "Treks"];
 
   return (
     <>
       <nav
-        className={`fixed  left-1/2 -translate-x-1/2 w-[92%] max-w-7xl z-[1000] transition-all duration-500 rounded-full border ${
+        className={`fixed left-1/2 -translate-x-1/2 w-[92%] max-w-7xl z-[1000] transition-all duration-500 rounded-full border ${
           scrolled || isOpen
             ? "bg-black shadow-xl border-slate-100"
             : "bg-black/60 backdrop-blur-md border-white/20"
@@ -52,27 +55,19 @@ const MenuBar = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-1">
-            
-            {/* Home */}
-            {/* <Link
-              to="/"
-              className="px-4 py-2 text-sm font-bold text-white hover:text-[#FF6B35] transition-all"
-            >
-              Home
-            </Link> */}
 
-            {/* Destination Dropdown */}
+            {/* Destination */}
             <div className="relative group px-4 py-2 text-sm font-bold text-white cursor-pointer flex items-center gap-1 hover:text-[#FF6B35] transition-all">
               <span>Destination</span>
               <ChevronDown size={14} className="group-hover:rotate-180 transition-transform duration-300" />
 
-              <div className="absolute top-full left-0 pt-4 hidden group-hover:block transition-all">
+              <div className="absolute top-full left-0 pt-4 hidden group-hover:block">
                 <ul className="w-48 bg-white rounded-2xl shadow-xl border border-slate-100 overflow-hidden">
                   {destinations.map((city) => (
                     <li key={city}>
                       <Link
                         to={`/destination/${city.toLowerCase().replace(" ", "-")}`}
-                        className="block px-5 py-3 text-sm font-medium text-slate-700 hover:bg-orange-50 hover:text-[#FF6B35] transition-colors"
+                        className="block px-5 py-3 text-sm font-medium text-slate-700 hover:bg-orange-50 hover:text-[#FF6B35]"
                       >
                         {city}
                       </Link>
@@ -82,20 +77,20 @@ const MenuBar = () => {
               </div>
             </div>
 
-            {/* Travel_Guide Dropdown */}
+            {/* Travel Guide */}
             <div className="relative group px-4 py-2 text-sm font-bold text-white cursor-pointer flex items-center gap-1 hover:text-[#FF6B35] transition-all">
               <span>Travel Guide</span>
               <ChevronDown size={14} className="group-hover:rotate-180 transition-transform duration-300" />
 
-              <div className="absolute top-full left-0 pt-4 hidden group-hover:block transition-all">
+              <div className="absolute top-full left-0 pt-4 hidden group-hover:block">
                 <ul className="w-48 bg-white rounded-2xl shadow-xl border border-slate-100 overflow-hidden">
-                  {Travel_Guide.map((city) => (
-                    <li key={city}>
+                  {Travel_Guide.map((item) => (
+                    <li key={item}>
                       <Link
-                        to={`/destination/${city.toLowerCase().replace(" ", "-")}`}
-                        className="block px-5 py-3 text-sm font-medium text-slate-700 hover:bg-orange-50 hover:text-[#FF6B35] transition-colors"
+                        to={`/destination/${item.toLowerCase().replace(" ", "-")}`}
+                        className="block px-5 py-3 text-sm font-medium text-slate-700 hover:bg-orange-50 hover:text-[#FF6B35]"
                       >
-                        {city}
+                        {item}
                       </Link>
                     </li>
                   ))}
@@ -103,24 +98,15 @@ const MenuBar = () => {
               </div>
             </div>
 
-            {/* Other Links */}
             {navLinks.slice(1).map((link) => (
               <Link
                 key={link.name}
                 to={link.path}
-                className="px-4 py-2 text-sm font-bold text-white hover:text-[#FF6B35] transition-all"
+                className="px-4 py-2 text-sm font-bold text-white hover:text-[#FF6B35]"
               >
                 {link.name}
               </Link>
             ))}
-
-            {/* CTA */}
-            {/* <Link
-              to="/donate"
-              className="ml-4 px-6 py-2.5 bg-[#FF6B35] text-white text-sm font-extrabold rounded-full hover:bg-[#e85a20] hover:scale-105 transition-all shadow-lg shadow-orange-200"
-            >
-              Book Now
-            </Link> */}
           </div>
 
           {/* Mobile Toggle */}
@@ -140,14 +126,76 @@ const MenuBar = () => {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="fixed inset-0 h-screen bg-[#4198db] z-[999] lg:hidden pt-28 px-8 pb-10 flex flex-col justify-between"
+            className="fixed inset-0 h-screen bg-[#4198db] z-[999] lg:hidden pt-28 px-8 pb-10 flex flex-col justify-between overflow-y-auto"
           >
-            <div className="space-y-1">
-              {navLinks.map((link) => (
+            <div className="space-y-2">
+
+              {/* Home */}
+              <Link
+                to="/"
+                className="flex items-center justify-between py-4 px-4 rounded-2xl text-white hover:bg-white/10"
+              >
+                <span className="text-xl font-bold">Home</span>
+                <ArrowRight size={18} />
+              </Link>
+
+              {/* Destination Toggle */}
+              <button
+                onClick={() => setOpenDestination(!openDestination)}
+                className="w-full flex justify-between items-center py-4 px-4 text-white"
+              >
+                <span className="text-xl font-bold">Destination</span>
+                <ChevronDown
+                  size={20}
+                  className={`transition-transform ${openDestination ? "rotate-180" : ""}`}
+                />
+              </button>
+
+              {openDestination && (
+                <div className="ml-6 space-y-2">
+                  {destinations.map((city) => (
+                    <Link
+                      key={city}
+                      to={`/destination/${city.toLowerCase().replace(" ", "-")}`}
+                      className="block py-2 text-lg text-white hover:text-orange-200"
+                    >
+                      {city}
+                    </Link>
+                  ))}
+                </div>
+              )}
+
+              {/* Travel Guide Toggle */}
+              <button
+                onClick={() => setOpenGuide(!openGuide)}
+                className="w-full flex justify-between items-center py-4 px-4 text-white"
+              >
+                <span className="text-xl font-bold">Travel Guide</span>
+                <ChevronDown
+                  size={20}
+                  className={`transition-transform ${openGuide ? "rotate-180" : ""}`}
+                />
+              </button>
+
+              {openGuide && (
+                <div className="ml-6 space-y-2">
+                  {Travel_Guide.map((item) => (
+                    <Link
+                      key={item}
+                      to={`/destination/${item.toLowerCase().replace(" ", "-")}`}
+                      className="block py-2 text-lg text-white hover:text-orange-200"
+                    >
+                      {item}
+                    </Link>
+                  ))}
+                </div>
+              )}
+
+              {navLinks.slice(1).map((link) => (
                 <Link
                   key={link.name}
                   to={link.path}
-                  className="flex items-center justify-between py-4 px-4 rounded-2xl text-white hover:bg-white/10 transition-all"
+                  className="flex items-center justify-between py-4 px-4 rounded-2xl text-white hover:bg-white/10"
                 >
                   <span className="text-xl font-bold">{link.name}</span>
                   <ArrowRight size={18} />
@@ -162,6 +210,7 @@ const MenuBar = () => {
               >
                 Book Your Trip Now
               </Link>
+
               <p className="text-center text-white text-[10px] font-bold tracking-widest uppercase">
                 RU Explore • Travel with Passion
               </p>

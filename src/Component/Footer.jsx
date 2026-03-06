@@ -19,7 +19,7 @@ const Footer = () => {
       {/* Content */}
       <div className="relative bg-transparent">
         <div className="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-3 gap-12">
-          
+
           {/* Left Section */}
           <div>
             {/* <h2 className="text-2xl font-bold mb-4 text-yellow-400 tracking-wide">
@@ -54,9 +54,9 @@ const Footer = () => {
               Quick Links
             </h2>
             <ul className="space-y-3">
-              <li><Link to="/about" className="hover:text-yellow-400">About Us</Link></li>
-              <li><Link to="/privacy" className="hover:text-yellow-400">Privacy Policy</Link></li>
-              <li><Link to="/Disc" className="hover:text-yellow-400">Disclaimer</Link></li>
+              <li><Link to="/" className="hover:text-yellow-400">About</Link></li>
+              <li><Link to="/latest-news" className="hover:text-yellow-400">Privacy Policy</Link></li>
+              <li><Link to="/insight" className="hover:text-yellow-400">Disclaimer</Link></li>
               <li><Link to="/donate" className="hover:text-yellow-400">Donate</Link></li>
             </ul>
           </div>
@@ -82,6 +82,9 @@ const Footer = () => {
               <a href="https://www.youtube.com/@theinsightindia" className="bg-black/60 hover:bg-yellow-500 transition p-3 rounded-full">
                 <FaYoutube />
               </a>
+            </div>
+            <div className="text-center py-4 text-white text-sm">
+              👁 Visitors: <span id="gc-visitors"></span>
             </div>
           </div>
         </div>
