@@ -24,9 +24,7 @@ export default function Home_Entertainment_News() {
     <>
       {/* SEO TAGS */}
       <Helmet>
-        <title>
-          Things To Do in Uttar Pradesh | Ayodhya, Varanasi & Spiritual Cities | RUExplores
-        </title>
+        <title>Welcome to RU Explores | Discover Travel Destinations</title>
 
         <meta
           name="description"

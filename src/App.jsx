@@ -57,12 +57,6 @@ function App() {
 
       {/* ✅ SEO META TAGS */}
       <Helmet>
-        <script
-  data-goatcounter="https://ruexplores.goatcounter.com/count"
-  async
-  src="//gc.zgo.at/count.js"
-></script>
-
         <title>RU Explores | Latest News, Web Stories & Updates</title>
         <meta
           name="description"
