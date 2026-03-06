@@ -25,7 +25,7 @@ export default function Home_Entertainment_News() {
         <h2 className="text-2xl sm:text-3xl font-bold mb-1 text-white">
           Things To Do in Uttar Pradesh
         </h2>
-        <p className="text-black mb-8">Cities and Spirituality</p>
+        <p className="text-white mb-8">Cities and Spirituality</p>
 
         {/* DESKTOP GRID */}
         <div className="hidden md:grid grid-cols-2 lg:grid-cols-4 gap-6 place-items-center">

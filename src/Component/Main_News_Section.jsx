@@ -25,7 +25,7 @@ export default function Main_News_Section() {
         <h2 className="text-2xl sm:text-3xl font-bold mb-1 text-white">
           Things To Do in Delhi
         </h2>
-        <p className="text-black mb-8">Explore and Travel</p>
+        <p className="text-white mb-8">Explore and Travel</p>
 
         {/* DESKTOP GRID */}
         <div className="hidden md:grid grid-cols-2 lg:grid-cols-4 gap-6 place-items-center">

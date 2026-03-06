@@ -54,9 +54,9 @@ const Footer = () => {
               Quick Links
             </h2>
             <ul className="space-y-3">
-              <li><Link to="/" className="hover:text-yellow-400">Home</Link></li>
-              <li><Link to="/latest-news" className="hover:text-yellow-400">About us</Link></li>
-              <li><Link to="/insight" className="hover:text-yellow-400">Vlogs</Link></li>
+              <li><Link to="/" className="hover:text-yellow-400">About Us</Link></li>
+              <li><Link to="/latest-news" className="hover:text-yellow-400">Privacy Policy</Link></li>
+              <li><Link to="/insight" className="hover:text-yellow-400">Disclaimer</Link></li>
               <li><Link to="/donate" className="hover:text-yellow-400">Donate</Link></li>
             </ul>
           </div>

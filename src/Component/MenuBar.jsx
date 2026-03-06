@@ -23,7 +23,8 @@ const MenuBar = () => {
     { name: "Travel Guide", path: "/" },
     { name: "Web Stories", path: "/webstories" },
     { name: "Events", path: "/" },
-    { name: "About us", path: "/" },
+    { name: "Trending Now", path: "/" },
+    { name: "Calender", path: "/" }
     
   ];
 
@@ -52,12 +53,12 @@ const MenuBar = () => {
           <div className="hidden lg:flex items-center gap-1">
             
             {/* Home */}
-            <Link
+            {/* <Link
               to="/"
               className="px-4 py-2 text-sm font-bold text-white hover:text-[#FF6B35] transition-all"
             >
               Home
-            </Link>
+            </Link> */}
 
             {/* Destination Dropdown */}
             <div className="relative group px-4 py-2 text-sm font-bold text-white cursor-pointer flex items-center gap-1 hover:text-[#FF6B35] transition-all">

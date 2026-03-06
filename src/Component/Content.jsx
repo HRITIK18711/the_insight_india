@@ -12,24 +12,15 @@ export default function Content() {
         <div className="absolute inset-0 bg-black/40"></div>
 
         {/* text */}
-        <div className="relative z-10 text-center px-4">
-          <h1 className="text-white font-extrabold text-4xl md:text-6xl lg:text-7xl tracking-widest mb-10">
+        <div className="relative z-10 text-center -pt-25">
+          <h1 className="text-white font-extrabold text-4xl md:text-6xl lg:text-7xl tracking-widest -mx-5 mb-10">
             WELCOME TO RU EXPLORES
           </h1>
 
           <div className="flex flex-wrap gap-4 justify-center">
-            <button className="bg-white mt-3 px-6 py-3 rounded-full font-semibold hover:bg-black hover:text-white transition">
-              See iconic landmarks
-            </button>
-            <button className="bg-white px-6 mt-3 py-3 rounded-full font-semibold hover:bg-black hover:text-white transition">
-              Go beyond the big city
-            </button>
-            <button className="bg-white px-6 py-3 mt-3 rounded-full font-semibold hover:bg-black hover:text-white transition">
-              Get road trip ideas
-            </button>
-            <button className="bg-white px-6 py-3 mt-3 rounded-full font-semibold hover:bg-black hover:text-white transition">
-              Plan a national park adventure
-            </button>
+            <h3 className="text-white font-extrabold text-xl md:text-6xl lg:text-2xl tracking-widest -mt-1 mb-10">
+            “We travel to understand the world — and in the process, understand ourselves.”
+          </h3>
           </div>
         </div>
       </div>
