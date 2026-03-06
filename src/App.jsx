@@ -24,17 +24,6 @@ function ScrollToTop() {
   useEffect(() => window.scrollTo({ top: 0, behavior: "smooth" }), [pathname]);
   return null;
 }
-useEffect(() => {
-    const script = document.createElement("script");
-    script.src = "//gc.zgo.at/count.js";
-    script.async = true;
-    script.setAttribute("data-goatcounter", "https://ruexplores.goatcounter.com/count");
-    document.body.appendChild(script);
-
-    return () => {
-      document.body.removeChild(script);
-    };
-  }, []);
 
 function MainContent() {
   const location = useLocation();
@@ -68,7 +57,11 @@ function App() {
 
       {/* ✅ SEO META TAGS */}
       <Helmet>
-        
+        <script
+  data-goatcounter="https://ruexplores.goatcounter.com/count"
+  async
+  src="//gc.zgo.at/count.js"
+></script>
 
         <title>RU Explores | Latest News, Web Stories & Updates</title>
         <meta
@@ -80,10 +73,6 @@ function App() {
           content="RU Explores, news, sports news, entertainment news, web stories, latest updates"
         />
         <meta name="author" content="RU Explores" />
-        <script data-goatcounter="https://ruexplore.goatcounter.com/count"
-        async src="//gc.zgo.at/count.js">
-          
-        </script>
       </Helmet>
 
       {/* 🌄 FULL SITE BACKGROUND */}
