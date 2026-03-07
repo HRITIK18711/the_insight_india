@@ -11,6 +11,7 @@ const MenuBar = () => {
 
   const [openDestination, setOpenDestination] = useState(false);
   const [openGuide, setOpenGuide] = useState(false);
+  const [openCalendar, setOpenCalendar] = useState(false);
 
   const [date, setDate] = useState(new Date());
 
@@ -25,6 +26,8 @@ const MenuBar = () => {
   useEffect(() => {
     setIsOpen(false);
   }, [location]);
+
+ 
 
   const navLinks = [
     { name: "Home", path: "/" },
@@ -60,7 +63,7 @@ const MenuBar = () => {
           <div className="hidden lg:flex items-center gap-1">
 
             {/* Destination */}
-            <div className="relative group px-4 py-2 text-sm font-bold text-white cursor-pointer flex items-center gap-1 hover:text-[#FF6B35]">
+            <div className="relative group px-4 py-2 text-sm font-bold text-white flex items-center gap-1 hover:text-[#FF6B35]">
               <span>Destination</span>
               <ChevronDown size={14} className="group-hover:rotate-180 transition-transform duration-300" />
 
@@ -81,7 +84,7 @@ const MenuBar = () => {
             </div>
 
             {/* Travel Guide */}
-            <div className="relative group px-4 py-2 text-sm font-bold text-white cursor-pointer flex items-center gap-1 hover:text-[#FF6B35]">
+            <div className="relative group px-4 py-2 text-sm font-bold text-white flex items-center gap-1 hover:text-[#FF6B35]">
               <span>Travel Guide</span>
               <ChevronDown size={14} className="group-hover:rotate-180 transition-transform duration-300" />
 
@@ -101,7 +104,6 @@ const MenuBar = () => {
               </div>
             </div>
 
-            {/* Normal Links */}
             {navLinks.slice(1).map((link) => (
               <Link
                 key={link.name}
@@ -113,7 +115,7 @@ const MenuBar = () => {
             ))}
 
             {/* Calendar */}
-            <div className="relative group px-4 py-2 text-sm font-bold text-white cursor-pointer flex items-center gap-1 hover:text-[#FF6B35]">
+            <div className="relative group px-4 py-2 text-sm font-bold text-white flex items-center gap-1 hover:text-[#FF6B35]">
               <span>Calendar</span>
               <ChevronDown size={14} className="group-hover:rotate-180 transition-transform duration-300" />
 
@@ -198,6 +200,32 @@ const MenuBar = () => {
                   ))}
                 </div>
               )}
+
+              {/* Calendar Mobile */}
+              <button
+                onClick={() => setOpenCalendar(!openCalendar)}
+                className="w-full flex justify-between items-center py-4 px-4 text-white"
+              >
+                <span className="text-xl font-bold">Calendar</span>
+                <ChevronDown size={20} className={`${openCalendar ? "rotate-180" : ""}`} />
+              </button>
+
+              {openCalendar && (
+                <div className="bg-white p-4 rounded-2xl">
+                  <Calendar onChange={setDate} value={date} />
+                </div>
+              )}
+
+              {navLinks.slice(1).map((link) => (
+                <Link
+                  key={link.name}
+                  to={link.path}
+                  className="flex items-center justify-between py-4 px-4 rounded-2xl text-white hover:bg-white/10"
+                >
+                  <span className="text-xl font-bold">{link.name}</span>
+                  <ArrowRight size={18} />
+                </Link>
+              ))}
 
             </div>
 

@@ -6,8 +6,8 @@ import {
   useLocation,
 } from "react-router-dom";
 import { useEffect } from "react";
-import { Helmet } from "react-helmet";   // ✅ SEO Import
-
+import { Helmet } from "react-helmet";
+import Stories from "./Component/Stories";
 import MenuBar from "./Component/MenuBar";
 import About from "./Component/About";
 import Privacy from "./Component/Privacy";
@@ -44,9 +44,36 @@ function MainContent() {
           <Route path="/about" element={<About />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/disc" element={<Disc />} />
+          <Route path="/story/:id" element={<Stories />} />
         </Routes>
       )}
     </main>
+  );
+}
+
+function AppLayout() {
+  const location = useLocation();
+
+  // ✅ hide menu bar on stories page
+  const hideMenu = location.pathname.startsWith("/story");
+
+  return (
+    <>
+      {/* MENU */}
+      {!hideMenu && (
+        <div className="sticky top-0 z-50 bg-black/70 backdrop-blur">
+          <MenuBar />
+        </div>
+      )}
+
+      {/* MAIN */}
+      <div className="flex-grow">
+        <MainContent />
+      </div>
+
+      {/* FOOTER */}
+      {!hideMenu && <Footer />}
+    </>
   );
 }
 
@@ -55,7 +82,7 @@ function App() {
     <Router>
       <ScrollToTop />
 
-      {/* ✅ SEO META TAGS */}
+      {/* SEO META TAGS */}
       <Helmet>
         <title>RU Explores | Latest News, Web Stories & Updates</title>
         <meta
@@ -69,34 +96,20 @@ function App() {
         <meta name="author" content="RU Explores" />
       </Helmet>
 
-      {/* 🌄 FULL SITE BACKGROUND */}
+      {/* FULL SITE BACKGROUND */}
       <div className="relative min-h-screen">
 
-        {/* Background Image */}
         <div
           className="fixed top-0 left-0 w-full h-screen bg-cover bg-top -z-20 opacity-40"
           style={{ backgroundImage: "url('/Image/hero.jpeg')" }}
         ></div>
 
-        {/* Soft overlay */}
         <div className="fixed top-0 left-0 w-full h-screen bg-black/20 -z-10"></div>
 
-        {/* APP CONTENT */}
         <div className="relative z-10 flex flex-col min-h-screen">
-
-          {/* MENU */}
-          <div className="sticky top-0 z-50 bg-black/70 backdrop-blur">
-            <MenuBar />
-          </div>
-
-          {/* MAIN */}
-          <div className="flex-grow">
-            <MainContent />
-          </div>
-
-          {/* FOOTER */}
-          <Footer />
+          <AppLayout />
         </div>
+
       </div>
     </Router>
   );
