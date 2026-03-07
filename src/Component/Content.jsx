@@ -5,7 +5,7 @@ export default function Content() {
     <>
       {/* HERO SECTION */}
       <div
-        className="relative w-full min-h-[100vh] flex items-center justify-center bg-no-repeat bg-center bg-cover"
+        className="relative w-full min-h-[100vh] flex items-center  justify-center bg-no-repeat bg-center bg-cover"
         style={{ backgroundImage: "url('/Image/hero.jpeg')" }}
       >
         {/* dark overlay */}

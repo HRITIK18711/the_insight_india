@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, ChevronDown, ArrowRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import Calendar from "react-calendar";
+import "react-calendar/dist/Calendar.css";
 
 const MenuBar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,6 +11,8 @@ const MenuBar = () => {
 
   const [openDestination, setOpenDestination] = useState(false);
   const [openGuide, setOpenGuide] = useState(false);
+
+  const [date, setDate] = useState(new Date());
 
   const location = useLocation();
 
@@ -27,8 +31,7 @@ const MenuBar = () => {
     { name: "Itineraries", path: "/" },
     { name: "Web Stories", path: "/webstories" },
     { name: "Events", path: "/" },
-    { name: "Trending Now", path: "/" },
-    { name: "Calender", path: "/" }
+    { name: "Trending Now", path: "/" }
   ];
 
   const destinations = ["Delhi", "Uttarakhand", "Uttar Pradesh"];
@@ -44,7 +47,7 @@ const MenuBar = () => {
         } py-2 md:py-3`}
       >
         <div className="px-6 flex justify-between items-center">
-          
+
           <Link to="/" className="flex items-center gap-2 z-[1010]">
             <img
               src="/Image/logo1.png"
@@ -57,7 +60,7 @@ const MenuBar = () => {
           <div className="hidden lg:flex items-center gap-1">
 
             {/* Destination */}
-            <div className="relative group px-4 py-2 text-sm font-bold text-white cursor-pointer flex items-center gap-1 hover:text-[#FF6B35] transition-all">
+            <div className="relative group px-4 py-2 text-sm font-bold text-white cursor-pointer flex items-center gap-1 hover:text-[#FF6B35]">
               <span>Destination</span>
               <ChevronDown size={14} className="group-hover:rotate-180 transition-transform duration-300" />
 
@@ -78,7 +81,7 @@ const MenuBar = () => {
             </div>
 
             {/* Travel Guide */}
-            <div className="relative group px-4 py-2 text-sm font-bold text-white cursor-pointer flex items-center gap-1 hover:text-[#FF6B35] transition-all">
+            <div className="relative group px-4 py-2 text-sm font-bold text-white cursor-pointer flex items-center gap-1 hover:text-[#FF6B35]">
               <span>Travel Guide</span>
               <ChevronDown size={14} className="group-hover:rotate-180 transition-transform duration-300" />
 
@@ -98,6 +101,7 @@ const MenuBar = () => {
               </div>
             </div>
 
+            {/* Normal Links */}
             {navLinks.slice(1).map((link) => (
               <Link
                 key={link.name}
@@ -107,6 +111,19 @@ const MenuBar = () => {
                 {link.name}
               </Link>
             ))}
+
+            {/* Calendar */}
+            <div className="relative group px-4 py-2 text-sm font-bold text-white cursor-pointer flex items-center gap-1 hover:text-[#FF6B35]">
+              <span>Calendar</span>
+              <ChevronDown size={14} className="group-hover:rotate-180 transition-transform duration-300" />
+
+              <div className="absolute top-full left-1/2 -translate-x-1/2 pt-4 hidden group-hover:block">
+                <div className="bg-white p-4 rounded-2xl shadow-xl border border-slate-100">
+                  <Calendar onChange={setDate} value={date} />
+                </div>
+              </div>
+            </div>
+
           </div>
 
           {/* Mobile Toggle */}
@@ -130,7 +147,6 @@ const MenuBar = () => {
           >
             <div className="space-y-2">
 
-              {/* Home */}
               <Link
                 to="/"
                 className="flex items-center justify-between py-4 px-4 rounded-2xl text-white hover:bg-white/10"
@@ -139,16 +155,12 @@ const MenuBar = () => {
                 <ArrowRight size={18} />
               </Link>
 
-              {/* Destination Toggle */}
               <button
                 onClick={() => setOpenDestination(!openDestination)}
                 className="w-full flex justify-between items-center py-4 px-4 text-white"
               >
                 <span className="text-xl font-bold">Destination</span>
-                <ChevronDown
-                  size={20}
-                  className={`transition-transform ${openDestination ? "rotate-180" : ""}`}
-                />
+                <ChevronDown size={20} className={`${openDestination ? "rotate-180" : ""}`} />
               </button>
 
               {openDestination && (
@@ -157,7 +169,7 @@ const MenuBar = () => {
                     <Link
                       key={city}
                       to={`/destination/${city.toLowerCase().replace(" ", "-")}`}
-                      className="block py-2 text-lg text-white hover:text-orange-200"
+                      className="block py-2 text-lg text-white"
                     >
                       {city}
                     </Link>
@@ -165,16 +177,12 @@ const MenuBar = () => {
                 </div>
               )}
 
-              {/* Travel Guide Toggle */}
               <button
                 onClick={() => setOpenGuide(!openGuide)}
                 className="w-full flex justify-between items-center py-4 px-4 text-white"
               >
                 <span className="text-xl font-bold">Travel Guide</span>
-                <ChevronDown
-                  size={20}
-                  className={`transition-transform ${openGuide ? "rotate-180" : ""}`}
-                />
+                <ChevronDown size={20} className={`${openGuide ? "rotate-180" : ""}`} />
               </button>
 
               {openGuide && (
@@ -183,7 +191,7 @@ const MenuBar = () => {
                     <Link
                       key={item}
                       to={`/destination/${item.toLowerCase().replace(" ", "-")}`}
-                      className="block py-2 text-lg text-white hover:text-orange-200"
+                      className="block py-2 text-lg text-white"
                     >
                       {item}
                     </Link>
@@ -191,16 +199,6 @@ const MenuBar = () => {
                 </div>
               )}
 
-              {navLinks.slice(1).map((link) => (
-                <Link
-                  key={link.name}
-                  to={link.path}
-                  className="flex items-center justify-between py-4 px-4 rounded-2xl text-white hover:bg-white/10"
-                >
-                  <span className="text-xl font-bold">{link.name}</span>
-                  <ArrowRight size={18} />
-                </Link>
-              ))}
             </div>
 
             <div className="space-y-4">
