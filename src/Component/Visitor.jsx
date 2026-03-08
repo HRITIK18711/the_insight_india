@@ -1,10 +1,12 @@
 import { useEffect, useState, useRef } from "react";
 
 export default function Visitor() {
+
   const [visits, setVisits] = useState(0);
   const hasRun = useRef(false);
 
   useEffect(() => {
+
     if (hasRun.current) return;
     hasRun.current = true;
 
@@ -18,6 +20,15 @@ export default function Visitor() {
 
     localStorage.setItem("site_visits", count);
     setVisits(count);
+
+    // Send event to Google Analytics
+    if (window.gtag) {
+      window.gtag("event", "page_visit", {
+        page_title: document.title,
+        page_path: window.location.pathname,
+      });
+    }
+
   }, []);
 
   return (
