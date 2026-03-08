@@ -2,7 +2,7 @@ import React from "react";
 import { FaEnvelope } from "react-icons/fa";
 import { FaFacebookF, FaInstagram, FaYoutube } from "react-icons/fa";
 import { Link } from "react-router-dom";
-
+import Visitor from "./Visitor";
 const Footer = () => {
   return (
     <footer
@@ -88,10 +88,9 @@ const Footer = () => {
         </div>
 
         {/* Footer Bottom */}
-        {/* <div className="border-t border-white/30 py-4 text-center text-sm text-gray-300">
-          <span className="text-yellow-400 font-semibold">Developed By:</span>{" "}
-          Hritik Upadhyay
-        </div> */}
+        <div className="border-t border-white/30 py-4 text-center text-sm text-gray-300">
+          <Visitor />
+        </div>
       </div>
     </footer>
   );
