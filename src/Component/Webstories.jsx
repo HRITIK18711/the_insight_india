@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
 
-const stories = [
+export const stories = [
   {
     id: 1,
     title: "Qutub Minar Delhi",
