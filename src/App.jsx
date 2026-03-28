@@ -18,6 +18,7 @@ import Home_Sports_News from "./Component/Home_Sports_News";
 import Webstories from "./Component/Webstories";
 import Home_Entertainment_News from "./Component/Home_Entertainment_News";
 import Footer from "./Component/Footer";
+import LatestNews from "./Component/LatestNews";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -34,6 +35,7 @@ function MainContent() {
       {isHome ? (
         <>
           <Content />
+          <LatestNews/>
           <Main_News_Section />
           <Home_Sports_News />
           <Home_Entertainment_News />
