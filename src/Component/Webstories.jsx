@@ -12,7 +12,7 @@ const stories = [
     id: 2,
     title: "Mahabodhi Temple Bodhgaya Bihar",
     createdBy: "Kriti Singh",
-    video: "/Video/mahabodhi-temple-bodhgaya-bihar/mahabodhi-temple-bodhgaya-bodhgaya-bihar-01.mp4",
+    video: "/Video/mahabodhi-temple-bodhgaya-bihar/mahabodhi-temple-bodhgaya-bihar-01.mp4",
   },
   {
     id: 3,
