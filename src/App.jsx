@@ -19,7 +19,7 @@ import Webstories from "./Component/Webstories";
 import Home_Entertainment_News from "./Component/Home_Entertainment_News";
 import Footer from "./Component/Footer";
 import LatestNews from "./Component/LatestNews";
-
+import Kedar from "./Component/Kedar";
 function ScrollToTop() {
   const { pathname } = useLocation();
   useEffect(() => window.scrollTo({ top: 0, behavior: "smooth" }), [pathname]);
@@ -47,6 +47,7 @@ function MainContent() {
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/disc" element={<Disc />} />
           <Route path="/story/:id" element={<Stories />} />
+          <Route path="/kedar" element={<Kedar />} />
         </Routes>
       )}
     </main>
