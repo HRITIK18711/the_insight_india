@@ -108,7 +108,7 @@ export default function LatestNews() {
         <div className="bg-white rounded-xl shadow p-4">
           <div className="flex border-b mb-4">
             <button
-              onClick={() => setActiveTab("recent")}
+              onClick={() => setActiveTab("Trending Stories")}
               className={`flex-1 py-2 text-sm font-semibold border-b-2 ${
                 activeTab === "recent"
                   ? "border-red-600 text-red-600"
@@ -119,7 +119,7 @@ export default function LatestNews() {
             </button>
 
             <button
-              onClick={() => setActiveTab("popular")}
+              onClick={() => setActiveTab("Upcoming Events")}
               className={`flex-1 py-2 text-sm font-semibold border-b-2 ${
                 activeTab === "popular"
                   ? "border-red-600 text-red-600"
