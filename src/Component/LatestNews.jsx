@@ -3,7 +3,7 @@ import { stories } from "./Webstories";
 import { Link } from "react-router-dom";
 
 // ✅ REQUIRED DATA (fix for blank screen)
-const recentNews = [
+const trending_stories = [
   {
     title: "३७ लाखमा आयो राइड हाइट ड्राइभ ‘फायरफ्लाई’",
     image: "/images/news1.jpg",
@@ -14,7 +14,7 @@ const recentNews = [
   },
 ];
 
-const popularNews = [
+const Upcoming_events = [
   {
     title: "लोकप्रिय: नयाँ इलेक्ट्रिक कार",
     image: "/images/news1.jpg",
@@ -131,7 +131,7 @@ export default function LatestNews() {
           </div>
 
           <div className="space-y-4">
-            {(activeTab === "recent" ? recentNews : popularNews).map(
+            {(activeTab === "recent" ? trending_stories : Upcoming_events).map(
               (news, index) => (
                 <div
                   key={index}
