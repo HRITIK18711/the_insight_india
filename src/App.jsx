@@ -20,6 +20,7 @@ import Home_Entertainment_News from "./Component/Home_Entertainment_News";
 import Footer from "./Component/Footer";
 import LatestNews from "./Component/LatestNews";
 import Kedar from "./Component/Kedar";
+import JamaNews from "./Component/JamaNews";
 function ScrollToTop() {
   const { pathname } = useLocation();
   useEffect(() => window.scrollTo({ top: 0, behavior: "smooth" }), [pathname]);
@@ -48,6 +49,7 @@ function MainContent() {
           <Route path="/disc" element={<Disc />} />
           <Route path="/story/:id" element={<Stories />} />
           <Route path="/kedar" element={<Kedar />} />
+          <Route path="/jamanews/:id" element={<JamaNews />} />
         </Routes>
       )}
     </main>

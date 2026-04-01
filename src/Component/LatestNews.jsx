@@ -4,38 +4,50 @@ import { Link } from "react-router-dom";
 
 const trending_stories = [
   {
-    title: "Jama Masjid Delhi Travel Guide: Timings, Entry Fee, History, How to Reach & Nearby Places",
+    id: 1,
+    title:
+      "Jama Masjid Delhi Travel Guide: Timings, Entry Fee, History, How to Reach & Nearby Places",
     image: "/Image/Jama-Masjid-Delhi.jpg",
   },
   {
-    title: "Jama Masjid Delhi Travel Guide: Timings, Entry Fee, History, How to Reach & Nearby Places",
+    id: 2,
+    title:
+      "Jama Masjid Delhi Travel Guide: Timings, Entry Fee, History, How to Reach & Nearby Places",
     image: "/Image/Jama-Masjid-Delhi.jpg",
   },
   {
-    title: "Jama Masjid Delhi Travel Guide: Timings, Entry Fee, History, How to Reach & Nearby Places",
+    id: 3,
+    title:
+      "Jama Masjid Delhi Travel Guide: Timings, Entry Fee, History, How to Reach & Nearby Places",
     image: "/Image/Jama-Masjid-Delhi.jpg",
   },
 ];
 
 const Upcoming_events = [
   {
-    title: "Jama Masjid Delhi Travel Guide: Timings, Entry Fee, History, How to Reach & Nearby Places",
+    id: 4,
+    title:
+      "Jama Masjid Delhi Travel Guide: Timings, Entry Fee, History, How to Reach & Nearby Places",
     image: "/Image/Jama-Masjid-Delhi.jpg",
   },
   {
-    title: "Jama Masjid Delhi Travel Guide: Timings, Entry Fee, History, How to Reach & Nearby Places",
+    id: 5,
+    title:
+      "Jama Masjid Delhi Travel Guide: Timings, Entry Fee, History, How to Reach & Nearby Places",
     image: "/Image/Jama-Masjid-Delhi.jpg",
   },
   {
-    title: "Jama Masjid Delhi Travel Guide: Timings, Entry Fee, History, How to Reach & Nearby Places",
+    id: 6,
+    title:
+      "Jama Masjid Delhi Travel Guide: Timings, Entry Fee, History, How to Reach & Nearby Places",
     image: "/Image/Jama-Masjid-Delhi.jpg",
   },
 ];
 
 export default function LatestNews() {
   const [activeTab, setActiveTab] = useState("trending");
-
   const [startIndex, setStartIndex] = useState(0);
+
   const itemsPerSlide = 3;
 
   const handleNext = () => {
@@ -65,35 +77,35 @@ export default function LatestNews() {
           </button>
 
           <div className="flex gap-6 justify-center">
-            {stories.length > 0 &&
-              stories
-                .slice(startIndex, startIndex + itemsPerSlide)
-                .map((item) => (
-                  <Link to={`/story/${item.id}`} key={item.id}>
-                    <div className="relative w-[220px] h-[380px] rounded-xl overflow-hidden shadow-lg">
-                      
-                      <video
-                        src={item.video}
-                        autoPlay
-                        muted
-                        loop
-                        playsInline
-                        className="w-full h-full object-cover"
-                      />
+            {stories
+              .slice(startIndex, startIndex + itemsPerSlide)
+              .map((item) => (
+                <Link to={`/story/${item.id}`} key={item.id}>
+                  <div className="relative w-[220px] h-[380px] rounded-xl overflow-hidden shadow-lg cursor-pointer">
 
-                      <div className="absolute inset-0 bg-black/40"></div>
+                    <video
+                      src={item.video}
+                      autoPlay
+                      muted
+                      loop
+                      playsInline
+                      className="w-full h-full object-cover"
+                    />
 
-                      <div className="absolute bottom-0 p-3 text-white">
-                        <p className="text-sm font-semibold">
-                          {item.title}
-                        </p>
-                        <p className="text-xs opacity-80">
-                          {item.createdBy}
-                        </p>
-                      </div>
+                    <div className="absolute inset-0 bg-black/40"></div>
+
+                    <div className="absolute bottom-0 p-3 text-white">
+                      <p className="text-sm font-semibold">
+                        {item.title}
+                      </p>
+                      <p className="text-xs opacity-80">
+                        {item.createdBy}
+                      </p>
                     </div>
-                  </Link>
-                ))}
+
+                  </div>
+                </Link>
+              ))}
           </div>
 
           <button
@@ -106,6 +118,7 @@ export default function LatestNews() {
 
         {/* RIGHT PANEL */}
         <div className="bg-white rounded-xl shadow p-4">
+
           <div className="flex border-b mb-4">
 
             <button
@@ -136,22 +149,27 @@ export default function LatestNews() {
             {(activeTab === "trending"
               ? trending_stories
               : Upcoming_events
-            ).map((news, index) => (
-              <div
-                key={index}
-                className="flex gap-3 items-start hover:bg-gray-50 p-2 rounded"
-              >
-                <img
-                  src={news.image}
-                  alt="news"
-                  className="w-20 h-16 object-cover rounded"
-                />
-                <p className="text-sm font-medium">
-                  {news.title}
-                </p>
-              </div>
+            ).map((news) => (
+
+              <Link to={`/jamanews/${news.id}`} key={news.id}>
+                <div className="flex gap-3 items-start hover:bg-gray-50 p-2 rounded cursor-pointer">
+
+                  <img
+                    src={news.image}
+                    alt="news"
+                    className="w-20 h-16 object-cover rounded"
+                  />
+
+                  <p className="text-sm font-medium">
+                    {news.title}
+                  </p>
+
+                </div>
+              </Link>
+
             ))}
           </div>
+
         </div>
 
       </div>
