@@ -115,7 +115,7 @@ export default function LatestNews() {
                   : "text-gray-500"
               }`}
             >
-              Recent News
+              Trending Stories
             </button>
 
             <button
@@ -126,7 +126,7 @@ export default function LatestNews() {
                   : "text-gray-500"
               }`}
             >
-              Popular News
+              Upcoming Events
             </button>
           </div>
 
