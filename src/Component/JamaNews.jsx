@@ -16,7 +16,7 @@ const SectionImage = ({ src, source = "Pexels" }) => (
 const JamaNews = () => {
     return (
         <div className="bg-gray-50 py-10 px-4">
-            <div className="max-w-4xl mx-auto bg-white p-6 md:p-10 shadow rounded-lg">
+            <div className="max-w-4xl mx-auto bg-white p-6 md:p-10 shadow rounded-lg mt-12">
 
                 {/* TITLE */}
                 <h1 className="text-3xl md:text-4xl font-bold leading-snug mb-4">
