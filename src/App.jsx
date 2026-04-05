@@ -57,7 +57,7 @@ function MainContent() {
         <Route path="/privacy" element={<Privacy />} />
         <Route path="/disc" element={<Disc />} />
         <Route path="/kedar" element={<Kedar />} />
-        <Route path="/jamanews/:slug" element={<JamaNews />} />
+       <Route path="/jama-masjid-delhi-travel-guide" element={<JamaNews />} />
 
       </Routes>
     </main>

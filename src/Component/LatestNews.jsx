@@ -49,7 +49,7 @@ export default function LatestNews() {
             {stories
               .slice(startIndex, startIndex + itemsPerSlide)
               .map((item) => (
-                <Link to={`/jamanews/${item.slug}`} key={item.slug}>
+                <Link to={`/${item.slug}`} key={item.slug}>
                   <div className="relative w-[220px] h-[380px] rounded-xl overflow-hidden shadow-lg cursor-pointer">
 
                     <video
@@ -120,7 +120,7 @@ export default function LatestNews() {
               : Upcoming_events
             ).map((news) => (
 
-              <Link to={`/jamanews/${news.slug}`} key={news.slug}>
+              <Link to={`/${news.slug}`} key={news.slug}>
                 <div className="flex gap-3 items-start hover:bg-gray-50 p-2 rounded cursor-pointer">
 
                   <img
