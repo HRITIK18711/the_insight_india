@@ -1,5 +1,4 @@
 import React from "react";
-
 const SectionImage = ({ src, source = "Pexels" }) => (
     <div className="my-6">
         <img
@@ -12,7 +11,6 @@ const SectionImage = ({ src, source = "Pexels" }) => (
         </p>
     </div>
 );
-
 const JamaNews = () => {
     return (
         <div className="bg-gray-50 py-10 px-4">
@@ -364,7 +362,11 @@ const JamaNews = () => {
 
                         {/* Author Content */}
                         <p className="text-gray-800 leading-relaxed text-justify text-lg mt-4 md:mt-10">
-                            <span className="font-semibold">Pragya Singh</span> is a Delhi-based travel writer and heritage enthusiast passionate about uncovering lesser-known historical places across India. From famous monuments like <span className="font-semibold">Qutub Minar</span> to hidden ruins inside the Ridge forest, she focuses on telling the stories behind forgotten architecture and overlooked heritage sites.
+                            <span className="font-semibold">Pragya Singh</span> is a Delhi-based travel writer and
+                             heritage enthusiast passionate about uncovering lesser-known historical places across India. 
+                             From famous monuments like Qutub Minar 
+                            to hidden ruins inside the Ridge forest, she focuses on telling the 
+                            stories behind forgotten architecture and overlooked heritage sites.
                         </p>
 
                     </div>
