@@ -357,11 +357,11 @@ const JamaNews = () => {
                         <img
                             src="/Image/pragya.jpg"
                             alt="Pragya Singh"
-                            className="w-44 h-44 md:w-80 md:h-80 object-cover rounded-md"
+                            className="w-44 h-44 md:w-40 md:h-40 object-cover rounded-md"
                         />
 
                         {/* Author Content */}
-                        <p className="text-gray-800 leading-relaxed text-justify text-lg mt-4 md:mt-10">
+                        <p className="text-gray-800 leading-relaxed text-justify text-lg mt-4 md:mt-1">
                             <span className="font-semibold">Pragya Singh</span> is a Delhi-based travel writer and
                              heritage enthusiast passionate about uncovering lesser-known historical places across India. 
                              From famous monuments like Qutub Minar 

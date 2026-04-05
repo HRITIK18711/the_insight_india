@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 import { useEffect } from "react";
 import { Helmet } from "react-helmet";
+
 import Stories from "./Component/Stories";
 import MenuBar from "./Component/MenuBar";
 import About from "./Component/About";
@@ -21,6 +22,7 @@ import Footer from "./Component/Footer";
 import LatestNews from "./Component/LatestNews";
 import Kedar from "./Component/Kedar";
 import JamaNews from "./Component/JamaNews";
+
 function ScrollToTop() {
   const { pathname } = useLocation();
   useEffect(() => window.scrollTo({ top: 0, behavior: "smooth" }), [pathname]);
@@ -36,7 +38,7 @@ function MainContent() {
       {isHome ? (
         <>
           <Content />
-          <LatestNews/>
+          <LatestNews />
           <Main_News_Section />
           <Home_Sports_News />
           <Home_Entertainment_News />
@@ -44,10 +46,10 @@ function MainContent() {
       ) : (
         <Routes>
           <Route path="/webstories" element={<Webstories />} />
+          <Route path="/webstories/:slug" element={<Stories />} />
           <Route path="/about" element={<About />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/disc" element={<Disc />} />
-          <Route path="/story/:id" element={<Stories />} />
           <Route path="/kedar" element={<Kedar />} />
           <Route path="/jamanews/:id" element={<JamaNews />} />
         </Routes>
@@ -59,13 +61,13 @@ function MainContent() {
 function AppLayout() {
   const location = useLocation();
 
-  // ✅ hide menu bar on stories page
-  const hideMenu = location.pathname.startsWith("/story");
+  // ✅ FIXED: correct variable use
+  const hideNavbar = location.pathname.startsWith("/webstories/");
 
   return (
     <>
       {/* MENU */}
-      {!hideMenu && (
+      {!hideNavbar && (
         <div className="sticky top-0 z-50 bg-black/70 backdrop-blur">
           <MenuBar />
         </div>
@@ -77,7 +79,7 @@ function AppLayout() {
       </div>
 
       {/* FOOTER */}
-      {!hideMenu && <Footer />}
+      {!hideNavbar && <Footer />}
     </>
   );
 }
@@ -101,7 +103,7 @@ function App() {
         <meta name="author" content="RU Explores" />
       </Helmet>
 
-      {/* FULL SITE BACKGROUND */}
+      {/* BACKGROUND */}
       <div className="relative min-h-screen">
 
         <div

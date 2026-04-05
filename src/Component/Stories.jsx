@@ -1,8 +1,10 @@
 import { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
+import { stories } from "./Webstories"; // make sure slug yaha defined ho
 
+// 🔥 SLUG BASED DATA
 const storiesData = {
-  1: [
+  "qutub-minar-delhi": [
     { video: "/Video/qutub-minar-delhi/qutub-minar-delhi-01.mp4" },
     { video: "/Video/qutub-minar-delhi/qutub-minar-delhi-02.mp4" },
     { video: "/Video/qutub-minar-delhi/qutub-minar-delhi-03.mp4" },
@@ -11,7 +13,7 @@ const storiesData = {
     { video: "/Video/qutub-minar-delhi/qutub-minar-delhi-06.mp4" },
   ],
 
-  2: [
+  "mahabodhi-temple-bodhgaya-bihar": [
     { video: "/Video/mahabodhi-temple-bodhgaya-bihar/mahabodhi-temple-bodhgaya-bihar-01.mp4" },
     { video: "/Video/mahabodhi-temple-bodhgaya-bihar/mahabodhi-temple-bodhgaya-bihar-02.mp4" },
     { video: "/Video/mahabodhi-temple-bodhgaya-bihar/mahabodhi-temple-bodhgaya-bihar-03.mp4" },
@@ -23,7 +25,7 @@ const storiesData = {
     { video: "/Video/mahabodhi-temple-bodhgaya-bihar/mahabodhi-temple-bodhgaya-bihar-09.mp4" },
   ],
 
-  3: [
+  "valley-of-flowers-trek-uttarakhand": [
     { video: "/Video/valley-of-flowers-trek-uttarakhand/valley-of-flowers-trek-uttarakhand-01.mp4" },
     { video: "/Video/valley-of-flowers-trek-uttarakhand/valley-of-flowers-trek-uttarakhand-02.mp4" },
     { video: "/Video/valley-of-flowers-trek-uttarakhand/valley-of-flowers-trek-uttarakhand-03.mp4" },
@@ -32,10 +34,10 @@ const storiesData = {
     { video: "/Video/valley-of-flowers-trek-uttarakhand/valley-of-flowers-trek-uttarakhand-06.mp4" },
     { video: "/Video/valley-of-flowers-trek-uttarakhand/valley-of-flowers-trek-uttarakhand-07.mp4" },
     { video: "/Video/valley-of-flowers-trek-uttarakhand/valley-of-flowers-trek-uttarakhand-08.mp4" },
-    { video: "/Video/valley-of-flowers-trek-uttarakhand/valley-of-flowers-trek-uttarakhand-09.mp4" },
+    { video: "/Video/valley-of-flowers-trek-uttarakhand/valley-of-flowers-trek-uttarakhand-09.mp4" }
   ],
 
-  4: [
+  "kedarkantha-trek-uttarakhand": [
     { video: "/Video/kedarkantha-trek-uttarakhand/kedarkantha-trek-uttarakhand-01.mp4" },
     { video: "/Video/kedarkantha-trek-uttarakhand/kedarkantha-trek-uttarakhand-02.mp4" },
     { video: "/Video/kedarkantha-trek-uttarakhand/kedarkantha-trek-uttarakhand-03.mp4" },
@@ -48,19 +50,12 @@ const storiesData = {
     { video: "/Video/kedarkantha-trek-uttarakhand/kedarkantha-trek-uttarakhand-10.mp4" },
   ],
 
-  5: [
-    { video: "/Video/the-great-buddha-statue-bodhgaya-bihar/the-great-buddha-statue-bodhgaya-bodhgaya-bihar-01.mp4" },
+  "the-great-buddha-statue-bodhgaya-bihar": [
+    { video: "/Video/the-great-buddha-statue-bodhgaya-bodhgaya-bihar/the-great-buddha-statue-bodhgaya-bodhgaya-bihar-01.mp4" },
     { video: "/Video/the-great-buddha-statue-bodhgaya-bodhgaya-bihar/the-great-buddha-statue-bodhgaya-bodhgaya-bihar-02.mp4" },
-    { video: "/Video/the-great-buddha-statue-bodhgaya-bodhgaya-bihar/the-great-buddha-statue-bodhgaya-bodhgaya-bihar-03.mp4" },
-    { video: "/Video/the-great-buddha-statue-bodhgaya-bodhgaya-bihar/the-great-buddha-statue-bodhgaya-bodhgaya-bihar-04.mp4" },
-    { video: "/Video/the-great-buddha-statue-bodhgaya-bodhgaya-bihar/the-great-buddha-statue-bodhgaya-bodhgaya-bihar-05.mp4" },
-    { video: "/Video/the-great-buddha-statue-bodhgaya-bodhgaya-bihar/the-great-buddha-statue-bodhgaya-bodhgaya-bihar-06.mp4" },
-    { video: "/Video/the-great-buddha-statue-bodhgaya-bodhgaya-bihar/the-great-buddha-statue-bodhgaya-bodhgaya-bihar-07.mp4" },
-    { video: "/Video/the-great-buddha-statue-bodhgaya-bodhgaya-bihar/the-great-buddha-statue-bodhgaya-bodhgaya-bihar-08.mp4" },
-    { video: "/Video/the-great-buddha-statue-bodhgaya-bodhgaya-bihar/the-great-buddha-statue-bodhgaya-bodhgaya-bihar-09.mp4" },
   ],
 
-  6: [
+  "jama-masjid-delhi": [
     { video: "/Video/jama-masjid-delhi/jama-masjid-delhi-01.mp4" },
     { video: "/Video/jama-masjid-delhi/jama-masjid-delhi-02.mp4" },
     { video: "/Video/jama-masjid-delhi/jama-masjid-delhi-03.mp4" },
@@ -69,16 +64,20 @@ const storiesData = {
     { video: "/Video/jama-masjid-delhi/jama-masjid-delhi-06.mp4" },
     { video: "/Video/jama-masjid-delhi/jama-masjid-delhi-07.mp4" },
     { video: "/Video/jama-masjid-delhi/jama-masjid-delhi-08.mp4" },
-    { video: "/Video/jama-masjid-delhi/jama-masjid-delhi-09.mp4" },
+    { video: "/Video/jama-masjid-delhi/jama-masjid-delhi-09.mp4" }
   ],
-  // apna baaki data same rakh
 };
 
 export default function Stories() {
-  const { id } = useParams();
+  const { slug } = useParams();
   const navigate = useNavigate();
 
-  const slides = storiesData[id] || [];
+  // 🔥 current story (title ke liye)
+  const currentStory = stories.find((s) => s.slug === slug);
+
+  // 🔥 slides
+  const slides = storiesData[slug] || [];
+
   const [index, setIndex] = useState(0);
 
   if (!slides.length) {
@@ -104,7 +103,7 @@ export default function Stories() {
   return (
     <div className="w-full h-screen flex items-center justify-center bg-black relative">
 
-      {/* CLOSE BUTTON */}
+      {/* ❌ CLOSE BUTTON */}
       <button
         onClick={() => navigate("/webstories")}
         className="absolute top-6 right-6 z-40 bg-white w-10 h-10 rounded-full flex items-center justify-center shadow"
@@ -112,10 +111,9 @@ export default function Stories() {
         ✕
       </button>
 
-      {/* CENTER WRAPPER (IMPORTANT) */}
       <div className="relative flex items-center justify-center">
 
-        {/* LEFT BUTTON (OUTSIDE FRAME) */}
+        {/* ⬅️ LEFT */}
         <button
           onClick={prevSlide}
           className="absolute -left-16 top-1/2 -translate-y-1/2 z-30 bg-white w-12 h-12 rounded-full flex items-center justify-center shadow-md"
@@ -123,10 +121,12 @@ export default function Stories() {
           &#8249;
         </button>
 
-        {/* STORY FRAME */}
+        {/* 📱 STORY FRAME */}
         <div className="relative w-[380px] h-[680px] rounded-2xl overflow-hidden bg-black">
 
-          {/* VIDEO */}
+        
+
+          {/* 🎥 VIDEO */}
           <video
             src={slides[index].video}
             autoPlay
@@ -136,7 +136,7 @@ export default function Stories() {
             className="w-full h-full object-cover"
           />
 
-          {/* PROGRESS BAR */}
+          {/* 📊 PROGRESS */}
           <div className="absolute top-3 left-3 right-3 flex gap-1 z-20">
             {slides.map((_, i) => (
               <div
@@ -149,7 +149,7 @@ export default function Stories() {
           </div>
         </div>
 
-        {/* RIGHT BUTTON (OUTSIDE FRAME) */}
+        {/* ➡️ RIGHT */}
         <button
           onClick={nextSlide}
           className="absolute -right-16 top-1/2 -translate-y-1/2 z-30 bg-white w-12 h-12 rounded-full flex items-center justify-center shadow-md"

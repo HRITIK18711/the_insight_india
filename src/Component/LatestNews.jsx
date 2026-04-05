@@ -9,39 +9,28 @@ const trending_stories = [
       "Jama Masjid Delhi Travel Guide: Timings, Entry Fee, History, How to Reach & Nearby Places",
     image: "/Image/Jama-Masjid-Delhi.jpg",
   },
-  {
-    id: 2,
-    title:
-      "Jama Masjid Delhi Travel Guide: Timings, Entry Fee, History, How to Reach & Nearby Places",
-    image: "/Image/Jama-Masjid-Delhi.jpg",
-  },
-  {
-    id: 3,
-    title:
-      "Jama Masjid Delhi Travel Guide: Timings, Entry Fee, History, How to Reach & Nearby Places",
-    image: "/Image/Jama-Masjid-Delhi.jpg",
-  },
+  
 ];
 
 const Upcoming_events = [
-  {
-    id: 4,
-    title:
-      "Jama Masjid Delhi Travel Guide: Timings, Entry Fee, History, How to Reach & Nearby Places",
-    image: "/Image/Jama-Masjid-Delhi.jpg",
-  },
-  {
-    id: 5,
-    title:
-      "Jama Masjid Delhi Travel Guide: Timings, Entry Fee, History, How to Reach & Nearby Places",
-    image: "/Image/Jama-Masjid-Delhi.jpg",
-  },
-  {
-    id: 6,
-    title:
-      "Jama Masjid Delhi Travel Guide: Timings, Entry Fee, History, How to Reach & Nearby Places",
-    image: "/Image/Jama-Masjid-Delhi.jpg",
-  },
+  // {
+  //   id: 4,
+  //   title:
+  //     "Jama Masjid Delhi Travel Guide: Timings, Entry Fee, History, How to Reach & Nearby Places",
+  //   image: "/Image/Jama-Masjid-Delhi.jpg",
+  // },
+  // {
+  //   id: 5,
+  //   title:
+  //     "Jama Masjid Delhi Travel Guide: Timings, Entry Fee, History, How to Reach & Nearby Places",
+  //   image: "/Image/Jama-Masjid-Delhi.jpg",
+  // },
+  // {
+  //   id: 6,
+  //   title:
+  //     "Jama Masjid Delhi Travel Guide: Timings, Entry Fee, History, How to Reach & Nearby Places",
+  //   image: "/Image/Jama-Masjid-Delhi.jpg",
+  // },
 ];
 
 export default function LatestNews() {
