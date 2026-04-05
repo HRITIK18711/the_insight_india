@@ -30,8 +30,6 @@ const JamaNews = () => {
 
                 {/* HERO */}
                 <SectionImage src="/Image/jama-masjid-01.jpg" />
-
-                <span className="text-shadow-sky-300 mb-6">Image Source:Pexels</span>
                 {/* INTRO */}
                 <p className="text-gray-700 mb-6">
                     Jama Masjid Delhi is one of the largest and most famous mosques in India and a must-visit tourist attraction in Old Delhi. Built by Mughal emperor Shah Jahan in the 17th century, this grand monument showcases stunning Mughal architecture, massive courtyards, tall minarets and beautiful marble domes.
@@ -133,7 +131,7 @@ const JamaNews = () => {
                     <li> <span className="font-bold"> By Metro</span>: The nearest metro station is Jama Masjid Metro Station (Violet Line)
                         which is just a few minutes’ walk from the mosque.</li>
                     <li><span className="font-bold">By Train:</span> Old Delhi Railway Station (2 km)</li>
-                    <li><span className="font-bold">By Road:</span> Auto-rickshaws, e-rickshaws, and taxis are easily available from Chandni Chowk,
+                    <li><span className="font-bold">By Road:</span> Auto-rickshaws, e-rickshaws and taxis are easily available from Chandni Chowk,
                         Red Fort and other parts of Delhi.</li>
                     <li><span className="font-bold">By Air:</span> IGI Airport (20 km)</li>
                 </ul>
@@ -344,31 +342,36 @@ const JamaNews = () => {
                     </p>
                 </div>
 
+                <h2 className="text-2xl font-bold mt-10 mb-4"> FAQs </h2> 
+                <div className="space-y-4 text-gray-700">
+                    <p> <b>Q1. What is the entry fee for Jama Masjid Delhi?</b><br /> Entry is free, but visitors may need to pay for photography and minaret climbing.
+                    </p> <p> <b>Q2. What are Jama Masjid visiting timings?</b><br /> Visitors can enter between 7 AM–12 PM and 1:30 PM–6:30 PM except during prayer times. </p> <p> <b>Q3. Which metro station is nearest to Jama Masjid?</b><br /> Jama Masjid Metro Station on the Violet Line is the nearest. </p> <p> <b>Q4. How much time is needed to explore Jama Masjid?</b><br /> Around 1–2 hours is enough including minaret climbing. </p> <p> <b>Q5. What is the best time to visit Jama Masjid?</b><br /> Early morning or sunset during winter months is ideal. </p>
+                </div>
+
+
                 {/* AUTHOR */}
-                <div className="mt-12 border-t pt-8">
-  <h3 className="text-2xl font-semibold mb-6">About the Author</h3>
+                <div className="mt-8">
+                    <h3 className="text-2xl font-semibold mb-6">About the Author</h3>
 
-  <div className="flex flex-col md:flex-row items-start gap-6">
+                    <div className="flex flex-col md:flex-row items-start gap-6">
 
-    {/* Author Image */}
-    <img
-      src="/Image/pragya.jpg"
-      alt="Pragya Singh"
-      className="w-44 h-44 md:w-80 md:h-80 object-cover rounded-md"
-    />
+                        {/* Author Image */}
+                        <img
+                            src="/Image/pragya.jpg"
+                            alt="Pragya Singh"
+                            className="w-44 h-44 md:w-80 md:h-80 object-cover rounded-md"
+                        />
 
-    {/* Author Content */}
-    <p className="text-gray-800 leading-relaxed text-justify text-lg mt-4 md:mt-10">
-      <span className="font-semibold">Pragya Singh</span> is a Delhi-based travel writer and heritage enthusiast passionate about uncovering lesser-known historical places across India. From famous monuments like <span className="font-semibold">Qutub Minar</span> to hidden ruins inside the Ridge forest, she focuses on telling the stories behind forgotten architecture and overlooked heritage sites.
-    </p>
+                        {/* Author Content */}
+                        <p className="text-gray-800 leading-relaxed text-justify text-lg mt-4 md:mt-10">
+                            <span className="font-semibold">Pragya Singh</span> is a Delhi-based travel writer and heritage enthusiast passionate about uncovering lesser-known historical places across India. From famous monuments like <span className="font-semibold">Qutub Minar</span> to hidden ruins inside the Ridge forest, she focuses on telling the stories behind forgotten architecture and overlooked heritage sites.
+                        </p>
 
-  </div>
-</div>
+                    </div>
+                </div>
 
                 {/* FAQ */}
-                <h2 className="text-2xl font-bold mt-10 mb-4"> FAQs </h2> <div className="space-y-4 text-gray-700">
-                     <p> <b>Q1. What is the entry fee for Jama Masjid Delhi?</b><br /> Entry is free, but visitors may need to pay for photography and minaret climbing. 
-                     </p> <p> <b>Q2. What are Jama Masjid visiting timings?</b><br /> Visitors can enter between 7 AM–12 PM and 1:30 PM–6:30 PM except during prayer times. </p> <p> <b>Q3. Which metro station is nearest to Jama Masjid?</b><br /> Jama Masjid Metro Station on the Violet Line is the nearest. </p> <p> <b>Q4. How much time is needed to explore Jama Masjid?</b><br /> Around 1–2 hours is enough including minaret climbing. </p> <p> <b>Q5. What is the best time to visit Jama Masjid?</b><br /> Early morning or sunset during winter months is ideal. </p> </div>
+                
 
             </div>
         </div>
