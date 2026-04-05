@@ -25,35 +25,41 @@ import JamaNews from "./Component/JamaNews";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
-  useEffect(() => window.scrollTo({ top: 0, behavior: "smooth" }), [pathname]);
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, [pathname]);
   return null;
 }
 
 function MainContent() {
-  const location = useLocation();
-  const isHome = location.pathname === "/";
-
   return (
     <main className="flex flex-col gap-6">
-      {isHome ? (
-        <>
-          <Content />
-          <LatestNews />
-          <Main_News_Section />
-          <Home_Sports_News />
-          <Home_Entertainment_News />
-        </>
-      ) : (
-        <Routes>
-          <Route path="/webstories" element={<Webstories />} />
-          <Route path="/webstories/:slug" element={<Stories />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/privacy" element={<Privacy />} />
-          <Route path="/disc" element={<Disc />} />
-          <Route path="/kedar" element={<Kedar />} />
-          <Route path="/jamanews/:id" element={<JamaNews />} />
-        </Routes>
-      )}
+      <Routes>
+
+        {/* ✅ HOME PAGE */}
+        <Route
+          path="/"
+          element={
+            <>
+              <Content />
+              <LatestNews />
+              <Main_News_Section />
+              <Home_Sports_News />
+              <Home_Entertainment_News />
+            </>
+          }
+        />
+
+        {/* OTHER PAGES */}
+        <Route path="/webstories" element={<Webstories />} />
+        <Route path="/webstories/:slug" element={<Stories />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/privacy" element={<Privacy />} />
+        <Route path="/disc" element={<Disc />} />
+        <Route path="/kedar" element={<Kedar />} />
+        <Route path="/jamanews/:slug" element={<JamaNews />} />
+
+      </Routes>
     </main>
   );
 }
@@ -61,7 +67,7 @@ function MainContent() {
 function AppLayout() {
   const location = useLocation();
 
-  // ✅ FIXED: correct variable use
+  // ✅ Navbar hide on stories
   const hideNavbar = location.pathname.startsWith("/webstories/");
 
   return (

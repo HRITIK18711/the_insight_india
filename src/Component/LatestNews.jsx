@@ -4,34 +4,14 @@ import { Link } from "react-router-dom";
 
 const trending_stories = [
   {
-    id: 1,
+    slug: "jama-masjid-delhi-travel-guide",
     title:
       "Jama Masjid Delhi Travel Guide: Timings, Entry Fee, History, How to Reach & Nearby Places",
     image: "/Image/Jama-Masjid-Delhi.jpg",
   },
-  
 ];
 
-const Upcoming_events = [
-  // {
-  //   id: 4,
-  //   title:
-  //     "Jama Masjid Delhi Travel Guide: Timings, Entry Fee, History, How to Reach & Nearby Places",
-  //   image: "/Image/Jama-Masjid-Delhi.jpg",
-  // },
-  // {
-  //   id: 5,
-  //   title:
-  //     "Jama Masjid Delhi Travel Guide: Timings, Entry Fee, History, How to Reach & Nearby Places",
-  //   image: "/Image/Jama-Masjid-Delhi.jpg",
-  // },
-  // {
-  //   id: 6,
-  //   title:
-  //     "Jama Masjid Delhi Travel Guide: Timings, Entry Fee, History, How to Reach & Nearby Places",
-  //   image: "/Image/Jama-Masjid-Delhi.jpg",
-  // },
-];
+const Upcoming_events = [];
 
 export default function LatestNews() {
   const [activeTab, setActiveTab] = useState("trending");
@@ -69,7 +49,7 @@ export default function LatestNews() {
             {stories
               .slice(startIndex, startIndex + itemsPerSlide)
               .map((item) => (
-                <Link to={`/story/${item.id}`} key={item.id}>
+                <Link to={`/jamanews/${item.slug}`} key={item.slug}>
                   <div className="relative w-[220px] h-[380px] rounded-xl overflow-hidden shadow-lg cursor-pointer">
 
                     <video
@@ -140,7 +120,7 @@ export default function LatestNews() {
               : Upcoming_events
             ).map((news) => (
 
-              <Link to={`/jamanews/${news.id}`} key={news.id}>
+              <Link to={`/jamanews/${news.slug}`} key={news.slug}>
                 <div className="flex gap-3 items-start hover:bg-gray-50 p-2 rounded cursor-pointer">
 
                   <img
