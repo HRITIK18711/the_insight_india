@@ -155,7 +155,7 @@ const JamaNews = () => {
                 <h2 className="text-2xl font-bold mt-10 mb-6">
                     Things to Do at Jama Masjid
                 </h2>
-                <SectionImage src="/Image/jama-masjid-07.jpg" />
+                <SectionImage src="/Image/jama-masjid-08.jpg" />
                 <div className="space-y-6">
 
                     {/* 1 */}
@@ -279,7 +279,7 @@ const JamaNews = () => {
                     Why Jama Masjid is Famous
                 </h2>
 
-                <SectionImage src="/Image/jama-masjid-07.jpg" source="Unsplash" />
+                <SectionImage src="/Image/jama-masjid-10.jpg" source="Unsplash" />
 
                 <p className="text-gray-700 mb-6">
                     Jama Masjid is famous for:
