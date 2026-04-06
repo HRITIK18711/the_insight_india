@@ -49,7 +49,7 @@ export default function LatestNews() {
             {stories
               .slice(startIndex, startIndex + itemsPerSlide)
               .map((item) => (
-                <Link to={`/${item.slug}`} key={item.slug}>
+                <Link to={`/webstories/${item.slug}`} key={item.slug}>
                   <div className="relative w-[220px] h-[380px] rounded-xl overflow-hidden shadow-lg cursor-pointer">
 
                     <video
