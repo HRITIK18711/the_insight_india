@@ -51,8 +51,15 @@ const storiesData = {
   ],
 
   "the-great-buddha-statue-bodhgaya-bihar": [
-    { video: "/Video/the-great-buddha-statue-bodhgaya-bodhgaya-bihar/the-great-buddha-statue-bodhgaya-bodhgaya-bihar-01.mp4" },
-    { video: "/Video/the-great-buddha-statue-bodhgaya-bodhgaya-bihar/the-great-buddha-statue-bodhgaya-bodhgaya-bihar-02.mp4" },
+    { video: "/Video/the-great-buddha-statue-bodhgaya-bihar/the-great-buddha-statue-bodhgaya-bihar-01.mp4" },
+    { video: "/Video/the-great-buddha-statue-bodhgaya-bihar/the-great-buddha-statue-bodhgaya-bihar-02.mp4" },
+    { video: "/Video/the-great-buddha-statue-bodhgaya-bihar/the-great-buddha-statue-bodhgaya-bihar-03.mp4" },
+    { video: "/Video/the-great-buddha-statue-bodhgaya-bihar/the-great-buddha-statue-bodhgaya-bihar-04.mp4" },
+    { video: "/Video/the-great-buddha-statue-bodhgaya-bihar/the-great-buddha-statue-bodhgaya-bihar-05.mp4" },
+    { video: "/Video/the-great-buddha-statue-bodhgaya-bihar/the-great-buddha-statue-bodhgaya-bihar-06.mp4" },
+    { video: "/Video/the-great-buddha-statue-bodhgaya-bihar/the-great-buddha-statue-bodhgaya-bihar-07.mp4" },
+    { video: "/Video/the-great-buddha-statue-bodhgaya-bihar/the-great-buddha-statue-bodhgaya-bihar-08.mp4" },
+    { video: "/Video/the-great-buddha-statue-bodhgaya-bihar/the-great-buddha-statue-bodhgaya-bihar-09.mp4" },
   ],
 
   "jama-masjid-delhi": [

@@ -35,7 +35,7 @@ export const stories = [
     slug: "the-great-buddha-statue-bodhgaya-bihar",
     title: "The Great Buddha Statue Bodhgaya Bihar",
     createdBy: "Kriti Singh",
-    video: "/Video/the-great-buddha-statue-bodhgaya-bodhgaya-bihar/the-great-buddha-statue-bodhgaya-bodhgaya-bihar-01.mp4",
+    video: "/Video/the-great-buddha-statue-bodhgaya-bihar/the-great-buddha-statue-bodhgaya-bihar-01.mp4",
   },
   {
     id: 6,
