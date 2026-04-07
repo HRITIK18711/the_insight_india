@@ -9,6 +9,12 @@ const trending_stories = [
       "Jama Masjid Delhi Travel Guide: Timings, Entry Fee, History, How to Reach & Nearby Places",
     image: "/Image/Jama-Masjid-Delhi.jpg",
   },
+  {
+    slug: "mahabodhi-temple-travel-guide",
+    title:
+      "Mahabodhi Temple, Bodh Gaya Bihar: The Sacred Place Where Lord Buddha Found Enlightenment",
+    image: "/Image/mahabhodi-temple-01.jpg",
+  },
 ];
 
 const Upcoming_events = [];
