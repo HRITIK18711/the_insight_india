@@ -100,7 +100,7 @@ function App() {
                 element={<JamaNews />}
               />
               <Route
-                path="/mahabodhi-temple-travel-guide"
+                path="/mahabodhi-temple-bihar-travel-guide"
                 element={<Mahabhodi />}
               />
             </Routes>
