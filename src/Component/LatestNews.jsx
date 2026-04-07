@@ -10,7 +10,7 @@ const trending_stories = [
     image: "/Image/Jama-Masjid-Delhi.jpg",
   },
   {
-    slug: "mahabodhi-temple-bihar-travel-guide",
+    slug: "mahabodhi-temple-travel-guide",
     title:
       "Mahabodhi Temple, Bodh Gaya Bihar: The Sacred Place Where Lord Buddha Found Enlightenment",
     image: "/Image/mahabhodi-temple-01.jpg",
