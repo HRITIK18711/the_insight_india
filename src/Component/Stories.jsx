@@ -73,6 +73,18 @@ const storiesData = {
     { video: "/Video/jama-masjid-delhi/jama-masjid-delhi-08.mp4" },
     { video: "/Video/jama-masjid-delhi/jama-masjid-delhi-09.mp4" }
   ],
+
+  "pench-national-park-safari-maharashtra": [
+    {image: "/Image/pench-national-park-safari-maharashtra-01.jpg"},
+    {image: "/Image/pench-national-park-safari-maharashtra-02.jpg"},
+    {image: "/Image/pench-national-park-safari-maharashtra-03.jpg"},
+    {image: "/Image/pench-national-park-safari-maharashtra-04.jpg"},
+    {image: "/Image/pench-national-park-safari-maharashtra-05.jpg"},
+    {image: "/Image/pench-national-park-safari-maharashtra-06.jpg"},
+    {image: "/Image/pench-national-park-safari-maharashtra-07.jpg"},
+    {image: "/Image/pench-national-park-safari-maharashtra-08.jpg"},
+    {image: "/Image/pench-national-park-safari-maharashtra-09.jpg"},
+  ],
 };
 
 export default function Stories() {
@@ -129,32 +141,40 @@ export default function Stories() {
         </button>
 
         {/* 📱 STORY FRAME */}
-        <div className="relative w-[380px] h-[680px] rounded-2xl overflow-hidden bg-black">
+        {/* 📱 STORY FRAME */}
+<div className="relative w-[380px] h-[680px] rounded-2xl overflow-hidden bg-black">
 
-        
+  {/* 🎥 / 🖼 MEDIA */}
+  {slides[index].video ? (
+    <video
+      src={slides[index].video}
+      autoPlay
+      muted
+      playsInline
+      preload="auto"
+      className="w-full h-full object-cover"
+    />
+  ) : (
+    <img
+      src={slides[index].image}
+      alt="story"
+      className="w-full h-full object-cover"
+    />
+  )}
 
-          {/* 🎥 VIDEO */}
-          <video
-            src={slides[index].video}
-            autoPlay
-            muted
-            playsInline
-            preload="auto"
-            className="w-full h-full object-cover"
-          />
+  {/* 📊 PROGRESS */}
+  <div className="absolute top-3 left-3 right-3 flex gap-1 z-20">
+    {slides.map((_, i) => (
+      <div
+        key={i}
+        className={`h-1 flex-1 rounded-full ${
+          i <= index ? "bg-white" : "bg-white/30"
+        }`}
+      />
+    ))}
+  </div>
 
-          {/* 📊 PROGRESS */}
-          <div className="absolute top-3 left-3 right-3 flex gap-1 z-20">
-            {slides.map((_, i) => (
-              <div
-                key={i}
-                className={`h-1 flex-1 rounded-full ${
-                  i <= index ? "bg-white" : "bg-white/30"
-                }`}
-              />
-            ))}
-          </div>
-        </div>
+</div>
 
         {/* ➡️ RIGHT */}
         <button

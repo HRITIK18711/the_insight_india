@@ -23,6 +23,12 @@ import LatestNews from "./Component/LatestNews";
 import Kedar from "./Component/Kedar";
 import JamaNews from "./Component/JamaNews";
 import Mahabhodi from "./Component/Mahabhodi";
+import Metro from "./Component/Metro";
+import IndiaGate from "./Component/IndiaGate";
+import GreatBuddha from "./Component/GreatBuddha";
+import DelhiMysterious from "./Component/DelhiMysterious";
+import MalchaMahal from "./Component/MalchaMahal";
+import QutubMinar from "./Component/QutubMinar";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -93,6 +99,7 @@ function App() {
               <Route path="/privacy" element={<Privacy />} />
               <Route path="/disc" element={<Disc />} />
               <Route path="/kedar" element={<Kedar />} />
+              <Route path="/metro" element={<Metro />} />
 
               {/* IMPORTANT */}
               <Route
@@ -100,9 +107,35 @@ function App() {
                 element={<JamaNews />}
               />
               <Route
-                path="/mahabodhi-temple-travel-guide"
+                path="/mahabodhi-temple-bihar-travel-guide"
                 element={<Mahabhodi />}
               />
+
+              <Route
+                path="/india-gate-delhi-travel-guide"
+                element={<IndiaGate />}
+              />
+
+              <Route
+                path="/great-buddha-travel-guide"
+                element={<GreatBuddha />}
+              />
+
+              <Route
+                path="/delhi-mysterious-place-travel-guide"
+                element={<DelhiMysterious />}
+              />
+
+              <Route
+                path="/malcha-mahal-travel-guide"
+                element={<MalchaMahal/>}
+
+              />
+              <Route
+                path="/qutub-minar-travel-guide"
+                element={<QutubMinar />}
+              />
+
             </Routes>
           </Layout>
         </div>

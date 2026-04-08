@@ -34,10 +34,11 @@ const MenuBar = () => {
     { name: "Itineraries", path: "/" },
     { name: "Web Stories", path: "/webstories" },
     { name: "Events", path: "/" },
-    { name: "Trending Now", path: "/" }
+    { name: "Trending Now", path: "/" },
+    { name: "Metro Maps", path: "/metro" }
+
   ];
 
-  const destinations = ["Delhi", "Uttarakhand", "Uttar Pradesh"];
   const Travel_Guide = ["Stays/Hotels", "Rides", "Treks"];
 
   return (
@@ -63,25 +64,7 @@ const MenuBar = () => {
           <div className="hidden lg:flex items-center gap-1">
 
             {/* Destination */}
-            <div className="relative group px-4 py-2 text-sm font-bold text-white flex items-center gap-1 hover:text-[#FF6B35]">
-              <span>Destination</span>
-              <ChevronDown size={14} className="group-hover:rotate-180 transition-transform duration-300" />
-
-              <div className="absolute top-full left-0 pt-4 hidden group-hover:block">
-                <ul className="w-48 bg-white rounded-2xl shadow-xl border border-slate-100 overflow-hidden">
-                  {destinations.map((city) => (
-                    <li key={city}>
-                      <Link
-                        to={`/destination/${city.toLowerCase().replace(" ", "-")}`}
-                        className="block px-5 py-3 text-sm font-medium text-slate-700 hover:bg-orange-50 hover:text-[#FF6B35]"
-                      >
-                        {city}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
+            
 
             {/* Travel Guide */}
             <div className="relative group px-4 py-2 text-sm font-bold text-white flex items-center gap-1 hover:text-[#FF6B35]">

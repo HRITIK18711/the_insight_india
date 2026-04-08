@@ -10,14 +10,61 @@ const trending_stories = [
     image: "/Image/Jama-Masjid-Delhi.jpg",
   },
   {
-    slug: "mahabodhi-temple-travel-guide",
+    slug: "mahabodhi-temple-bihar-travel-guide",
     title:
       "Mahabodhi Temple, Bodh Gaya Bihar: The Sacred Place Where Lord Buddha Found Enlightenment",
     image: "/Image/mahabhodi-temple-01.jpg",
   },
+  {
+    slug: "india-gate-delhi-travel-guide",
+    title:
+      "India Gate Delhi Travel Guide: History, Timings, Best Time to Visit & How to Reach",
+    image: "/Image/mahabhodi-temple-01.jpg",
+  },
+  {
+    slug: "great-buddha-travel-guide",
+    title:
+      "Great Buddha Statue Bodh Gaya, Bihar: Exploring the 80-Foot Symbol of Peace and Spiritual Calm",
+    image: "/Image/mahabhodi-temple-01.jpg",
+  },
+  {
+    slug: "malcha-mahal-travel-guide",
+    title:
+      "Malcha Mahal Delhi: The Haunted Palace Hidden Inside a Forest (Complete Travel Guide)",
+    image: "/Image/mahabhodi-temple-01.jpg",
+  },
+  {
+    slug: "delhi-mysterious-place-travel-guide",
+    title:
+      "Delhi’s Most Mysterious Places People Still Talk About",
+    image: "/Image/mahabhodi-temple-01.jpg",
+  },
+  {
+    slug: "qutub-minar-travel-guide",
+    title:
+      "Qutub Minar Delhi: History, Height, Timings, Entry Fee, How to Reach & Nearby Places",
+    image: "/Image/mahabhodi-temple-01.jpg",
+  },
+  
 ];
 
-const Upcoming_events = [];
+const Upcoming_events = [
+  {
+    slug: "javed-ali-spellbound-tour-noida",
+    title: "Javed Ali Spellbound Tour Noida",
+    image: "/Image/Jama-Masjid-Delhi.jpg",
+  },
+  {
+    slug: "sanam-night-of-nostalgia-delhi",
+    title: "Sanam Night Of Nostalgia Delhi",
+    image: "/Image/mahabhodi-temple-01.jpg",
+  },
+  {
+    slug: "whipmantra-concert-gurugram",
+    title: "Whipmantra Concert Gurugram",
+    image: "/Image/mahabhodi-temple-01.jpg",
+  },
+];
 
 export default function LatestNews() {
   const [activeTab, setActiveTab] = useState("trending");
@@ -41,9 +88,10 @@ export default function LatestNews() {
     <div className="w-full py-8 px-4 md:px-10">
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
 
-        {/* LEFT PANEL */}
+        {/* LEFT PANEL (SLIDER) */}
         <div className="lg:col-span-3 relative">
 
+          {/* LEFT BUTTON */}
           <button
             onClick={handlePrev}
             className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-black text-white px-3 py-2 rounded-full"
@@ -51,6 +99,7 @@ export default function LatestNews() {
             ◀
           </button>
 
+          {/* SLIDER */}
           <div className="flex gap-6 justify-center">
             {stories
               .slice(startIndex, startIndex + itemsPerSlide)
@@ -83,6 +132,7 @@ export default function LatestNews() {
               ))}
           </div>
 
+          {/* RIGHT BUTTON */}
           <button
             onClick={handleNext}
             className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-black text-white px-3 py-2 rounded-full"
@@ -91,11 +141,11 @@ export default function LatestNews() {
           </button>
         </div>
 
-        {/* RIGHT PANEL */}
-        <div className="bg-white rounded-xl shadow p-4">
+        {/* RIGHT PANEL (SCROLLABLE) */}
+        <div className="bg-white rounded-xl shadow p-4 h-[500px] flex flex-col">
 
+          {/* TABS */}
           <div className="flex border-b mb-4">
-
             <button
               onClick={() => setActiveTab("trending")}
               className={`flex-1 py-2 text-sm font-semibold border-b-2 ${
@@ -117,10 +167,11 @@ export default function LatestNews() {
             >
               Upcoming Events
             </button>
-
           </div>
 
-          <div className="space-y-4">
+          {/* SCROLLABLE LIST */}
+          <div className="space-y-4 overflow-y-auto pr-1 flex-1">
+
             {(activeTab === "trending"
               ? trending_stories
               : Upcoming_events
@@ -143,6 +194,7 @@ export default function LatestNews() {
               </Link>
 
             ))}
+
           </div>
 
         </div>

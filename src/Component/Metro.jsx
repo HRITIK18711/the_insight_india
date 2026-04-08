@@ -4,60 +4,68 @@ import { Helmet } from "react-helmet";
 export const stories = [
   {
     id: 1,
-    slug: "qutub-minar-delhi",
-    title: "Qutub Minar Delhi",
-    createdBy: "Pragya Singh",
+    slug: "delhi-metro",
+    title: "Delhi Metro",
     video: "/Video/qutub-minar-delhi/qutub-minar-delhi-01.mp4",
   },
   {
     id: 2,
-    slug: "mahabodhi-temple-bodhgaya-bihar",
-    title: "Mahabodhi Temple Bodhgaya Bihar",
-    createdBy: "Kriti Singh",
+    slug: "lucknow-metro",
+    title: "Lucknow Metro",
     video: "/Video/mahabodhi-temple-bodhgaya-bihar/mahabodhi-temple-bodhgaya-bihar-01.mp4",
   },
   {
     id: 3,
-    slug: "valley-of-flowers-trek-uttarakhand",
-    title: "Valley Of Flowers Trek Uttarakhand",
-    createdBy: "Rohit Upadhyay",
+    slug: "kanpur-metro",
+    title: "Kanpur Metro",
+    
     video: "/Video/valley-of-flowers-trek-uttarakhand/valley-of-flowers-trek-uttarakhand-01.mp4",
   },
   {
     id: 4,
-    slug: "kedarkantha-trek-uttarakhand",
-    title: "Kedarkantha Trek Uttarakhand",
-    createdBy: "Rohit Upadhyay",
+    slug: "agra-metro",
+    title: "Agra Metro",
+    
     video: "/Video/kedarkantha-trek-uttarakhand/kedarkantha-trek-uttarakhand-01.mp4",
   },
   {
     id: 5,
-    slug: "the-great-buddha-statue-bodhgaya-bihar",
-    title: "The Great Buddha Statue Bodhgaya Bihar",
-    createdBy: "Kriti Singh",
+    slug: "jaipur-metro",
+    title: "Jaipur Metro",
+    
     video: "/Video/the-great-buddha-statue-bodhgaya-bihar/the-great-buddha-statue-bodhgaya-bihar-01.mp4",
   },
   {
     id: 6,
-    slug: "jama-masjid-delhi",
-    title: "Jama Masjid Delhi",
-    createdBy: "Pragya Singh",
+    slug: "noida-metro",
+    title: "Noida Metro",
+    
     video: "/Video/jama-masjid-delhi/jama-masjid-delhi-01.mp4",
   },
+
   {
     id: 7,
-    slug: "pench-national-park-safari-maharashtra",
-    title: "Pench National Park",
-    createdBy: "Shubham Ghodke",
-    image: "/Image/pench-national-park-safari-maharashtra-01.jpg",
+    slug: "noida-metro",
+    title: "Noida Metro",
+    
+    video: "/Video/jama-masjid-delhi/jama-masjid-delhi-01.mp4",
   },
+
+  {
+    id: 8,
+    slug: "noida-metro",
+    title: "Noida Metro",
+    
+    video: "/Video/jama-masjid-delhi/jama-masjid-delhi-01.mp4",
+  },
+  
 ];
 
-export default function Webstories() {
+export default function Metro() {
   return (
     <>
       <Helmet>
-        <title>Travel Web Stories | RUExplores</title>
+        <title>Metro Stories | RUExplores</title>
       </Helmet>
 
       <div className="pt-32 pb-20 max-w-7xl mx-auto px-6">
@@ -72,24 +80,16 @@ export default function Webstories() {
               className="relative w-[240px] aspect-[9/16] rounded-[20px] overflow-hidden shadow-xl group cursor-pointer"
             >
 
-              {/* MEDIA (VIDEO OR IMAGE) */}
-              {story.video ? (
-                <video
-                  src={story.video}
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                  preload="metadata"
-                  className="w-full h-full object-cover group-hover:scale-110 transition duration-500"
-                />
-              ) : (
-                <img
-                  src={story.image}
-                  alt={story.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition duration-500"
-                />
-              )}
+              {/* VIDEO */}
+              <video
+                src={story.video}
+                autoPlay
+                muted
+                loop
+                playsInline
+                preload="metadata"
+                className="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+              />
 
               {/* OVERLAY */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
