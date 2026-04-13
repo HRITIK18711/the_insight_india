@@ -29,7 +29,7 @@ import GreatBuddha from "./Component/GreatBuddha";
 import DelhiMysterious from "./Component/DelhiMysterious";
 import MalchaMahal from "./Component/MalchaMahal";
 import QutubMinar from "./Component/QutubMinar";
-import Events from "./Component/events";
+import Events from "./Component/Events";
 import CP from "./Component/CP";
 import Lotus from "./Component/Lotus";
 import Nizamuddin from "./Component/Nizamuddin";
