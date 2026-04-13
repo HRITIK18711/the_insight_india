@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import { stories } from "./Webstories"; // make sure slug yaha defined ho
+import { stories } from "./Webstories";
 
 // 🔥 SLUG BASED DATA
 const storiesData = {
@@ -14,7 +14,7 @@ const storiesData = {
   ],
 
   "mahabodhi-temple-bodhgaya-bihar": [
-    { video: "/Video/mahabodhi-temple-bodhgaya-bihar/mahabodhi-temple-bodhgaya-bihar-01.mp4" },
+    { video: "/Video/mahabodhi-temple-bodhgaya-bihar/mahabodhi-temple-bodhgaya-bodhgaya-bihar-01.mp4" },
     { video: "/Video/mahabodhi-temple-bodhgaya-bihar/mahabodhi-temple-bodhgaya-bihar-02.mp4" },
     { video: "/Video/mahabodhi-temple-bodhgaya-bihar/mahabodhi-temple-bodhgaya-bihar-03.mp4" },
     { video: "/Video/mahabodhi-temple-bodhgaya-bihar/mahabodhi-temple-bodhgaya-bihar-04.mp4" },
@@ -34,7 +34,7 @@ const storiesData = {
     { video: "/Video/valley-of-flowers-trek-uttarakhand/valley-of-flowers-trek-uttarakhand-06.mp4" },
     { video: "/Video/valley-of-flowers-trek-uttarakhand/valley-of-flowers-trek-uttarakhand-07.mp4" },
     { video: "/Video/valley-of-flowers-trek-uttarakhand/valley-of-flowers-trek-uttarakhand-08.mp4" },
-    { video: "/Video/valley-of-flowers-trek-uttarakhand/valley-of-flowers-trek-uttarakhand-09.mp4" }
+    { video: "/Video/valley-of-flowers-trek-uttarakhand/valley-of-flowers-trek-uttarakhand-09.mp4" },
   ],
 
   "kedarkantha-trek-uttarakhand": [
@@ -71,9 +71,8 @@ const storiesData = {
     { video: "/Video/jama-masjid-delhi/jama-masjid-delhi-06.mp4" },
     { video: "/Video/jama-masjid-delhi/jama-masjid-delhi-07.mp4" },
     { video: "/Video/jama-masjid-delhi/jama-masjid-delhi-08.mp4" },
-    { video: "/Video/jama-masjid-delhi/jama-masjid-delhi-09.mp4" }
+    { video: "/Video/jama-masjid-delhi/jama-masjid-delhi-09.mp4" },
   ],
-
   "pench-national-park-safari-maharashtra": [
     {image: "/Image/pench-national-park-safari-maharashtra-01.jpg"},
     {image: "/Image/pench-national-park-safari-maharashtra-02.jpg"},
@@ -85,18 +84,35 @@ const storiesData = {
     {image: "/Image/pench-national-park-safari-maharashtra-08.jpg"},
     {image: "/Image/pench-national-park-safari-maharashtra-09.jpg"},
   ],
+
+  "gawilgad-fort-amravati-maharashtra": [
+    {image: "/Image/gawilgad-fort-amravati-maharashtra-01.jpg"},
+    {image: "/Image/gawilgad-fort-amravati-maharashtra-02.jpg"},
+    {image: "/Image/gawilgad-fort-amravati-maharashtra-03.jpg"},
+    {image: "/Image/gawilgad-fort-amravati-maharashtra-04.jpg"},
+    {image: "/Image/gawilgad-fort-amravati-maharashtra-05.jpg"},
+    {image: "/Image/gawilgad-fort-amravati-maharashtra-06.jpg"},
+    {image: "/Image/gawilgad-fort-amravati-maharashtra-07.jpg"},
+    {image: "/Image/gawilgad-fort-amravati-maharashtra-08.jpg"},
+  ],
+
+  "nawegaon-nagzira-tiger-researve-maharashtra": [
+    {image: "/Image/nawegaon-nagzira-tiger-researve-maharashtra-01.jpg"},
+    {image: "/Image/nawegaon-nagzira-tiger-researve-maharashtra-02.jpg"},
+    {image: "/Image/nawegaon-nagzira-tiger-researve-maharashtra-03.jpg"},
+    {image: "/Image/nawegaon-nagzira-tiger-researve-maharashtra-04.jpg"},
+    {image: "/Image/nawegaon-nagzira-tiger-researve-maharashtra-05.jpg"},
+    {image: "/Image/nawegaon-nagzira-tiger-researve-maharashtra-06.jpg"},
+    {image: "/Image/nawegaon-nagzira-tiger-researve-maharashtra-07.jpg"},
+    
+  ],
 };
 
 export default function Stories() {
   const { slug } = useParams();
   const navigate = useNavigate();
 
-  // 🔥 current story (title ke liye)
-  const currentStory = stories.find((s) => s.slug === slug);
-
-  // 🔥 slides
   const slides = storiesData[slug] || [];
-
   const [index, setIndex] = useState(0);
 
   if (!slides.length) {
@@ -107,79 +123,67 @@ export default function Stories() {
     );
   }
 
-  const nextSlide = () => {
-    if (index < slides.length - 1) {
-      setIndex(index + 1);
-    }
-  };
-
-  const prevSlide = () => {
-    if (index > 0) {
-      setIndex(index - 1);
-    }
-  };
+  const nextSlide = () => index < slides.length - 1 && setIndex(index + 1);
+  const prevSlide = () => index > 0 && setIndex(index - 1);
 
   return (
-    <div className="w-full h-screen flex items-center justify-center bg-black relative">
+    <div className="w-full h-screen flex items-center justify-center bg-black relative px-2 sm:px-4">
 
-      {/* ❌ CLOSE BUTTON */}
+      {/* CLOSE */}
       <button
         onClick={() => navigate("/webstories")}
-        className="absolute top-6 right-6 z-40 bg-white w-10 h-10 rounded-full flex items-center justify-center shadow"
+        className="absolute top-4 right-4 sm:top-6 sm:right-6 z-40 bg-white w-9 h-9 sm:w-10 sm:h-10 rounded-full flex items-center justify-center shadow"
       >
         ✕
       </button>
 
-      <div className="relative flex items-center justify-center">
+      <div className="relative flex items-center justify-center w-full max-w-md">
 
-        {/* ⬅️ LEFT */}
+        {/* LEFT */}
         <button
           onClick={prevSlide}
-          className="absolute -left-16 top-1/2 -translate-y-1/2 z-30 bg-white w-12 h-12 rounded-full flex items-center justify-center shadow-md"
+          className="absolute left-1 sm:-left-14 top-1/2 -translate-y-1/2 z-30 bg-white w-9 h-9 sm:w-12 sm:h-12 rounded-full flex items-center justify-center shadow-md"
         >
           &#8249;
         </button>
 
-        {/* 📱 STORY FRAME */}
-        {/* 📱 STORY FRAME */}
-<div className="relative w-[380px] h-[680px] rounded-2xl overflow-hidden bg-black">
+        {/* FRAME */}
+        <div className="relative w-full h-[75vh] sm:h-[80vh] md:h-[85vh] max-h-[700px] rounded-2xl overflow-hidden bg-black">
 
-  {/* 🎥 / 🖼 MEDIA */}
-  {slides[index].video ? (
-    <video
-      src={slides[index].video}
-      autoPlay
-      muted
-      playsInline
-      preload="auto"
-      className="w-full h-full object-cover"
-    />
-  ) : (
-    <img
-      src={slides[index].image}
-      alt="story"
-      className="w-full h-full object-cover"
-    />
-  )}
+          {slides[index].video ? (
+            <video
+              src={slides[index].video}
+              autoPlay
+              muted
+              playsInline
+              className="w-full h-full object-cover"
+            />
+          ) : (
+            <img
+              src={slides[index].image}
+              alt="story"
+              className="w-full h-full object-cover"
+            />
+          )}
 
-  {/* 📊 PROGRESS */}
-  <div className="absolute top-3 left-3 right-3 flex gap-1 z-20">
-    {slides.map((_, i) => (
-      <div
-        key={i}
-        className={`h-1 flex-1 rounded-full ${
-          i <= index ? "bg-white" : "bg-white/30"
-        }`}
-      />
-    ))}
-  </div>
+          {/* PROGRESS */}
+          <div className="absolute top-2 sm:top-3 left-2 sm:left-3 right-2 sm:right-3 flex gap-1 z-20">
+            {slides.map((_, i) => (
+              <div
+                key={i}
+                className={`h-1 flex-1 rounded-full ${
+                  i <= index ? "bg-white" : "bg-white/30"
+                }`}
+              />
+            ))}
+          </div>
 
-</div>
+        </div>
 
-        {/* ➡️ RIGHT */}
+        {/* RIGHT */}
         <button
           onClick={nextSlide}
-          className="absolute -right-16 top-1/2 -translate-y-1/2 z-30 bg-white w-12 h-12 rounded-full flex items-center justify-center shadow-md"
+          className="absolute right-1 sm:-right-14 top-1/2 -translate-y-1/2 z-30 bg-white w-9 h-9 sm:w-12 sm:h-12 rounded-full flex items-center justify-center shadow-md"
         >
           &#8250;
         </button>

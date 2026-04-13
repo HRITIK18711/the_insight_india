@@ -29,7 +29,7 @@ const MalchaMahal = () => {
                 </p>
 
                 {/* HERO */}
-                <SectionImage src="/Image/malcha-mahal-delhi-01.jpg" source="Times Now" />
+                <SectionImage src="/Image/malcha-mahal-delhi-01.png" source="Times Now" />
 
                 {/* INTRO */}
                 <p className="text-gray-700 mb-6">
@@ -75,12 +75,15 @@ const MalchaMahal = () => {
 
                 {/* HISTORY */}
                 <h2 className="text-2xl font-bold mt-10 mb-4">History of Malcha Mahal</h2>
-                <SectionImage src="/Image/malcha-mahal-delhi-02.jpg" source="India Today" />
+                <SectionImage src="/Image/malcha-mahal-delhi-02.png" source="India Today" />
 
                 <h8 className="text-xs font-bold mt-10 mb-4">The ruins of Malcha Mahal hidden within the dense Central Ridge Forest of Delhi
                 </h8>
                 <p className="text-gray-700 mb-6">
-                    The origins of Malcha Mahal date back to the 14th century during the reign of Feroz Shah Tughlaq. At the time, the forests of the Delhi Ridge were used as royal hunting grounds. To support these expeditions, the sultan constructed a hunting lodge known as Malcha Mahal Shikar Gah.
+                    The origins of Malcha Mahal date back to the <span className= "text-black font-bold mr-1">14th century</span>
+                     during the reign of Feroz Shah Tughlaq. At the time, the forests of the Delhi Ridge were used as
+                      royal hunting grounds. To support these expeditions, the sultan constructed a hunting lodge known as 
+                       <span className="text-black font-bold ml-1">Malcha Mahal Shikar Gah</span>.
                 </p>
 
                 <p className="text-gray-700 mb-6">
@@ -96,8 +99,9 @@ const MalchaMahal = () => {
                     The Strange Royal Story of Begum Wilayat Mahal
                 </h2>
 
-                <SectionImage src="/Image/malcha-mahal-delhi-03.jpg" source="The New York Times" />
-                <h8 className="text-xs font-bold mt-10 mb-4">Malcha Mahal gained international attention after the mysterious royal family led by Begum Wilayat Mahal moved into the ruins in 1985
+                <SectionImage src="/Image/malcha-mahal-delhi-03.png" source="The New York Times" />
+                <h8 className="text-xs font-bold mt-10 mb-4">Malcha Mahal gained international attention after the mysterious royal family 
+                    led by Begum Wilayat Mahal moved into the ruins in 1985
                 </h8>
                 <p className="text-gray-700 mb-6">
                     In 1975, a woman appeared at a railway station in Delhi claiming to be royalty.
@@ -120,7 +124,7 @@ const MalchaMahal = () => {
 
                 {/* ARCHITECTURE */}
                 <h2 className="text-2xl font-bold mt-10 mb-4">Architecture of Malcha Mahal</h2>
-                <SectionImage src="/Image/malcha-mahal-delhi-04.jpg" source="Hindustan Times" />
+                <SectionImage src="/Image/malcha-mahal-delhi-04.png" source="Hindustan Times" />
                 <h8 className="text-xs font-bold mt-10 mb-4">The thick stone walls and large arches
                     reflect the defensive architecture of the Tughlaq dynasty</h8>
                 <p className="text-gray-700 mb-6">
@@ -143,11 +147,23 @@ const MalchaMahal = () => {
                     Why Most Tourists Never Find Malcha Mahal
                 </h2>
 
-                <SectionImage src="/Image/malcha-mahal-delhi-05.jpg" source="Wikimedia Commons" />
+                <SectionImage src="/Image/malcha-mahal-delhi-05.png" source="Wikimedia Commons" />
                 <h8 className="text-xs font-bold mt-10 mb-4">The trail leading to Malcha Mahal winds through the wild forest of the Delhi Ridge</h8>
-                <p className="text-gray-700 mb-6">
+                <p className="text-gray-700 mb-3">
                     Despite being in central Delhi, Malcha Mahal remains one of the city’s least visited monuments.
+                    
+
+                </p>
+
+                <p className="text-gray-700 mb-4">
+                   
                     There are several reasons why the palace is hidden deep inside the Ridge forest, there are very few signs directing visitors to the trail and no ticket counters or tourism facilities exist here.
+                    
+
+                </p>
+
+                <p className="text-gray-700 mt-1">
+                    
                     Unlike major attractions such as Qutub Minar or Humayun's Tomb, Malcha Mahal is not part of the typical tourist circuit.
                     Ironically, this hidden nature is exactly what makes it so special.
 
@@ -156,7 +172,7 @@ const MalchaMahal = () => {
                 {/* THINGS */}
                 <h2 className="text-2xl font-bold mt-10 mb-4">Things to See at Malcha Mahal</h2>
 
-                <SectionImage src="/Image/malcha-mahal-delhi-06.jpg" source="Wikimedia Commons" />
+                <SectionImage src="/Image/malcha-mahal-delhi-06.png" source="Wikimedia Commons" />
                 <h8 className="text-xs font-bold mt-10 mb-4">The central ruins of Malcha Mahal still stand after more than 700 years.</h8>
                 <ul className="list-disc pl-6 text-gray-700 mb-6 space-y-2">
                     <li><b>The Main Ruins:</b>The central structure contains large arches and thick stone walls typical of Tughlaq construction.</li>
@@ -172,12 +188,13 @@ const MalchaMahal = () => {
                     How Much Time Should You Spend Here?
                 </h2>
 
-                <p className="text-gray-700 mb-6">
+                <p className="text-gray-700 mb-2">
                     Most visitors spend 45 minutes to 1 hour exploring Malcha Mahal.
-                    The forest trail takes around 10–15 minutes each way, while exploring the ruins and taking photographs typically takes another 30 minutes.
-                    If you enjoy photography, you may want to stay longer especially during sunset when golden light filters through the trees.
-
                 </p>
+                <p className="text-gray-700 mb-2">The forest trail takes around 10–15 minutes each way, while exploring the ruins and taking photographs typically takes another 30 minutes.</p>
+
+                <p className="text-gray-700 mb-2">If you enjoy photography, you may want to stay longer especially during sunset when golden light filters through the trees.</p>
+                    
 
                 {/* HOW TO REACH */}
                 <h2 className="text-2xl font-bold mt-10 mb-4">How to Reach Malcha Mahal</h2>
@@ -245,22 +262,28 @@ const MalchaMahal = () => {
 
                 {/* AUTHOR */}
                 <div className="mt-8">
-          <h3 className="text-2xl font-semibold mb-6">About the Author</h3>
+                    <h3 className="text-2xl font-semibold mb-6">About the Author</h3>
 
-          <div className="flex flex-col md:flex-row items-start gap-6">
+                    <div className="flex flex-col md:flex-row items-start gap-6">
 
-            <img
-              src="/Image/kritisingh.jpg"
-              alt="Kriti Singh"
-              className="w-44 h-44 md:w-40 md:h-40 object-cover rounded-md"
-            />
+                        {/* Author Image */}
+                        <img
+                            src="/Image/pragya.jpg"
+                            alt="Pragya Singh"
+                            className="w-44 h-44 md:w-40 md:h-40 object-cover rounded-md"
+                        />
 
-            <p className="text-gray-800 leading-relaxed text-lg">
-              Kriti Singh began writing out of curiosity but it soon became her way of observing and making sense of the world around her. Her writing reflects real experiences, thoughtful observations and an honest perspective of everyday life.
-            </p>
+                        {/* Author Content */}
+                        <p className="text-gray-800 leading-relaxed text-justify text-lg mt-4 md:mt-1">
+                            <span className="font-semibold">Pragya Singh</span> is a Delhi-based travel writer and
+                            heritage enthusiast passionate about uncovering lesser-known historical places across India.
+                            From famous monuments like Qutub Minar
+                            to hidden ruins inside the Ridge forest, she focuses on telling the
+                            stories behind forgotten architecture and overlooked heritage sites.
+                        </p>
 
-          </div>
-        </div>
+                    </div>
+                </div>
 
             </div>
         </div>

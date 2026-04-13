@@ -127,7 +127,7 @@ const IndiaGate = () => {
                 </p>
 
                 {/* KARTAVYA PATH */}
-                <h2 className="text-2xl font-bold mt-10 mb-4">Kartavya Path</h2>
+                <h2 className="text-2xl font-bold mt-10 mb-4">Kartavya Path– Delhi’s Grand Boulevard</h2>
                 <SectionImage src="/Image/india-gate-delhi-06.png" source="The Print" />
 
                 <p className="text-gray-700 leading-relaxed mb-4">
@@ -154,67 +154,68 @@ const IndiaGate = () => {
                 </p>
 
                 {/* BEST TIME */}
-                <h2 className="text-2xl font-bold mt-10 mb-4">Best Time to Visit</h2>
+                <h2 className="text-2xl font-bold mt-10 mb-4">Best Time to Visit India Gate</h2>
                 <SectionImage src="/Image/india-gate-delhi-07.png" source="Pexels" />
 
                 <table className="w-full text-left border border-gray-200">
-                        <tbody>
-                            <tr className="border-b"><td className="p-3 font-semibold">Season</td><td className="p-3">Months</td><td className="p-3">Experience</td></tr>
-                            <tr className="border-b"><td className="p-3 font-semibold">Winter</td><td className="p-3">October – March</td><td className="p-3">Best weather for sightseeing</td></tr>
-                            <tr className="border-b"><td className="p-3 font-semibold">Monsoon</td><td className="p-3">July – September</td><td className="p-3">Green lawns and dramatic skies</td></tr>
-                            <tr className="border-b"><td className="p-3 font-semibold">Summer</td><td className="p-3">April – June</td><td className="p-3">Very hot afternoons</td></tr>
-                        </tbody>
-                    </table>
-                    <p className="text-gray-700 leading-relaxed">The best time to visit India Gate Delhi
-                         is during the evening. As the sun sets, the monument is illuminated with 
-                         golden lighting and the surrounding lawns fill with people enjoying the cooler air. 
-                         This is also the best time for photography.
-</p>
+                    <tbody>
+                        <tr className="border-b"><td className="p-3 font-semibold">Season</td><td className="p-3">Months</td><td className="p-3">Experience</td></tr>
+                        <tr className="border-b"><td className="p-3 font-semibold">Winter</td><td className="p-3">October – March</td><td className="p-3">Best weather for sightseeing</td></tr>
+                        <tr className="border-b"><td className="p-3 font-semibold">Monsoon</td><td className="p-3">July – September</td><td className="p-3">Green lawns and dramatic skies</td></tr>
+                        <tr className="border-b"><td className="p-3 font-semibold">Summer</td><td className="p-3">April – June</td><td className="p-3">Very hot afternoons</td></tr>
+                    </tbody>
+                </table>
+                <p className="text-gray-700 leading-relaxed">The best time to visit India Gate Delhi
+                    is during the evening. As the sun sets, the monument is illuminated with
+                    golden lighting and the surrounding lawns fill with people enjoying the cooler air.
+                    This is also the best time for photography.
+                </p>
                 {/* NEARBY */}
-                <h2 className="text-2xl font-bold mt-10 mb-4">Things to See Nearby</h2>
-                <SectionImage src="/Image/india-gate-delhi-08.png" source="Rashtrapati Bhavan" />
+                <h2 className="text-2xl font-bold mt-10 mb-4">Things to See near India Gate</h2>
+                <SectionImage src="/Image/india-gate-delhi-08.jpg" source="Rashtrapati Bhavan" />
 
-                <p className="text-gray-700 leading-relaxed">One of the best things about visiting India Gate is its location in the center of Delhi’s heritage district. Located just 5 minutes away, 
+                <p className="text-gray-700 leading-relaxed">One of the best things about visiting India Gate is its location in the center of Delhi’s heritage district. Located just 5 minutes away,
                     there is the modern National War Memorial that honours soldiers who sacrificed their lives after independence.</p>
 
-                 <p className="text-gray-700 leading-relaxed">At the opposite end of Kartavya Path stands the Presidential Palace, one of the largest residences of any head of state in the world. Then there is the National Museum that houses artefacts covering over 5,000 years of Indian history. You can also explore Khan Market which is one of Delhi’s most popular neighbourhoods for cafes, restaurants, bookstores and boutique shopping.
-</p>
+                <p className="text-gray-700 leading-relaxed">At the opposite end of Kartavya Path stands the Presidential Palace, one of the largest residences of any head of state in the world. Then there is the National Museum that houses artefacts covering over 5,000 years of Indian history. You can also explore Khan Market which is one of Delhi’s most popular neighbourhoods for cafes, restaurants, bookstores and boutique shopping.
+                </p>
                 <p className="text-gray-700 leading-relaxed">The lawns surrounding the monument are famous for local snacks like gol gappa, kulfi, chaat, ice cream. Enjoying these snacks while sitting on the grass is one of Delhi’s simplest pleasures.
-</p>
+                </p>
 
                 {/* HOW TO REACH */}
-                <h2 className="text-2xl font-bold mt-10 mb-4">How to Reach</h2>
+                <h2 className="text-2xl font-bold mt-10 mb-4">How to Reach India Gate</h2>
                 <SectionImage src="/Image/india-gate-delhi-09.png" source="Unsplash" />
 
                 <ul className="list-disc pl-6 text-gray-700 mb-6">
                     <li><b>Metro:</b> The nearest metro station is Central Secretariat on the Yellow and Violet lines.
-                    From there you can take an auto-rickshaw
-book a taxi
-walk for about 15 minutes
-</li>
+                        From there you can take an auto-rickshaw
+                        book a taxi
+                        walk for about 15 minutes
+                    </li>
                     <li><b>Cab:</b> Uber / Ola</li>
                     <li><b>Distance:</b> 3 km from Connaught Place</li>
                 </ul>
 
                 {/* TIPS */}
-                <h2 className="text-2xl font-bold mt-10 mb-4">Travel Tips</h2>
+                <h2 className="text-2xl font-bold mt-10 mb-4">Practical Travel Tips</h2>
                 <ul className="list-disc pl-6 text-gray-700 mb-6">
                     <li>Visit during golden hour for the best photos.</li>
                     <li>Weekday mornings are the quietest time.</li>
                     <li>Weekends can get crowded.</li>
                     <li>Wear comfortable shoes if walking along Kartavya Path.</li>
                     <li>The canals near the monument are perfect for reflection photos.
-Most importantly, take your time. India Gate is not just a place to take pictures - it is a place to slow down and appreciate history.</li>
+                        Most importantly, take your time. India Gate is not just a place to take pictures - it is a place to slow down and appreciate history.</li>
                 </ul>
 
                 {/* EXPERIENCE */}
                 <h2 className="text-2xl font-bold mt-10 mb-4">The Real Experience of Visit India Gate/ Why Every Traveller Should Visit India Gate at Least Once</h2>
                 <p className="text-gray-700 mb-6">
-                    India Gate is far more than a monument. It represents remembrance, sacrifice and the spirit of the nation.
-                     Yet it is also a place where everyday life unfolds where families relax on the lawns, tourists admire the 
-                     architecture and the city of Delhi gathers in the cool evening air. Whether you visit for the history, 
-                     photography or simply to experience one of Delhi’s most iconic landmarks, India Gate is a place you will 
-                     remember long after your trip ends.
+                    India Gate is far more than a monument. It represents remembrance, sacrifice and the spirit of the nation. 
+                    Yet it is also a place where everyday life unfolds where families relax on the lawns, 
+                    tourists admire the architecture and the city of Delhi gathers in the cool evening air. 
+                    Whether you visit for the history, photography or simply to experience one of Delhi’s most iconic landmarks, 
+                    India Gate is a place you will remember long after your trip ends.
+
                 </p>
 
                 {/* FAQs */}
@@ -222,7 +223,7 @@ Most importantly, take your time. India Gate is not just a place to take picture
                 <div className="space-y-3 text-gray-700">
                     <p><b>Is India Gate open 24 hours?</b><br />Yes, India Gate is open to visitors at all times.</p>
                     <p><b>Is there an entry fee for India Gate??</b><br />No, visiting India Gate is completely free.
-</p>
+                    </p>
                     <p><b>Which metro station is closest to India Gate?</b><br />Central Secretariat Metro Station is the nearest.</p>
                     <p><b>What is the best time to visit India Gate?</b><br />Evening around sunset is the best time.</p>
                     <p><b>How far is India Gate from Connaught Place?</b><br />Approximately 3 kilometres about a 10-minute drive.</p>
@@ -244,9 +245,9 @@ Most importantly, take your time. India Gate is not just a place to take picture
                         {/* Author Content */}
                         <p className="text-gray-800 leading-relaxed text-justify text-lg mt-4 md:mt-1">
                             <span className="font-semibold">Pragya Singh</span> is a Delhi-based travel writer and
-                             heritage enthusiast passionate about uncovering lesser-known historical places across India. 
-                             From famous monuments like Qutub Minar 
-                            to hidden ruins inside the Ridge forest, she focuses on telling the 
+                            heritage enthusiast passionate about uncovering lesser-known historical places across India.
+                            From famous monuments like Qutub Minar
+                            to hidden ruins inside the Ridge forest, she focuses on telling the
                             stories behind forgotten architecture and overlooked heritage sites.
                         </p>
 

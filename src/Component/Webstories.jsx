@@ -51,6 +51,20 @@ export const stories = [
     createdBy: "Shubham Ghodke",
     image: "/Image/pench-national-park-safari-maharashtra-01.jpg",
   },
+  {
+    id: 8,
+    slug: "gawilgad-fort-amravati-maharashtra",
+    title: "Gawilgad Fort",
+    createdBy: "Shubham Ghodke",
+    image: "/Image/gawilgad-fort-amravati-maharashtra-01.jpg",
+  },
+  {
+    id: 9,
+    slug: "nawegaon-nagzira-tiger-researve-maharashtra",
+    title: "Nawegaon Nagzira Tiger Researve",
+    createdBy: "Shubham Ghodke",
+    image: "/Image/nawegaon-nagzira-tiger-researve-maharashtra-01.jpg",
+  },
 ];
 
 export default function Webstories() {

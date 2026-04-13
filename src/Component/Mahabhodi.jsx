@@ -31,16 +31,17 @@ const Mahabhodi = () => {
                 <SectionImage src="/Image/mahabhodi-temple-01.jpg" />
                 {/* INTRO */}
                 <p className="text-gray-700 mb-6">
-                    In the small spiritual town of Bodh Gaya, Bihar stands one of the most sacred places in the world - the Mahabodhi Temple.
-                    This is the exact spot where Gautama Buddha attained enlightenment more than 2,500 years ago while meditating under the Bodhi Tree.
+                   In the small spiritual town of Bodh Gaya, Bihar stands one of the most sacred places in the world - 
+                   The Mahabodhi Temple. This is the exact spot where Gautama Buddha attained enlightenment more than 
+                   2,500 years ago while meditating under the Bodhi Tree.
                 </p>
 
                 <p className="text-gray-700 mb-6">
-                    Today, the temple attracts thousands of pilgrims, monks and travellers from across the world.
+                    Today, the temple attracts thousands of pilgrims, monks and travellers from across the world. 
                     The peaceful atmosphere, ancient architecture and deep spiritual history make Mahabodhi Temple one of
-                    the most meaningful places to visit in India. Whether you are a spiritual seeker, a history lover or
-                    simply a curious traveller, the experience of standing at the place where Buddha achieved enlightenment
-                    is truly unforgettable
+                     the most meaningful places to visit in India. Whether you are a spiritual seeker, a history lover or simply 
+                     a curious traveller, 
+                    the experience of standing at the place where Lord Buddha achieved enlightenment is truly unforgettable.
                 </p>
 
                 {/* HISTORY */}
@@ -48,30 +49,31 @@ const Mahabhodi = () => {
                 <SectionImage src="/Image/mahabhodi-temple-02.jpg" />
 
                 <p className="text-gray-700 mb-6">
-                    The story of Mahabodhi Temple begins when Prince Siddhartha Gautama came to Bodh Gaya in search of truth.
-                    After years of spiritual practice, he meditated under a sacred fig tree and eventually
-                    attained enlightenment, becoming the Buddha.
+                    The story of Mahabodhi Temple begins when Prince Siddhartha Gautama came to Bodh Gaya in search of truth. After years of spiritual practice, he meditated under a sacred fig tree and eventually attained enlightenment, becoming the Buddha
                 </p>
 
                 <p className="text-gray-700 mb-6">
-                    In the 3rd century BCE, the great Mauryan ruler Ashoka visited this sacred site and built the first
-                    temple to honour Buddha’s enlightenment.
-                    Over centuries, the temple was restored and protected by different Buddhist communities.
-                    Because of its immense religious and historical importance, the temple complex was recognised as
-                    a World Heritage Site by UNESCO in 2002.
+                    In the 3rd century BCE, the great Mauryan ruler Ashoka visited this sacred site and built the first temple to honour Lord Buddha’s enlightenment. Over centuries, the temple was restored and protected by different Buddhist communities.
+Because of its immense religious and historical importance, the temple complex was recognized as a World Heritage Site by UNESCO in 2002.
+
 
                 </p>
 
                 {/* ARCHITECTURE */}
                 <h2 className="text-2xl font-bold mt-10 mb-4">What Makes This Place Special</h2>
                 <SectionImage src="/Image/mahabhodi-temple-03.jpg" />
-                <p className="text-gray-700 mb-6">What makes Mahabodhi Temple truly unique is the Bodhi Tree, located just behind the temple.
-                    This sacred tree is believed to be a direct descendant of the original tree where Buddha attained enlightenment.</p>
-                <p className="text-gray-700 mb-6">Another striking feature is the
-                    55-metre-tall temple tower, which rises beautifully above the complex. Built in ancient Indian architectural style,
-                    the temple is decorated with intricate carvings and statues that reflect centuries of devotion.
-                    The entire temple complex is filled with ancient stupas,
-                    prayer flags and meditation areas, creating an atmosphere that feels calm, sacred and timeless.</p>
+                <p className="text-gray-700 mb-6">
+                    What makes Mahabodhi Temple truly unique is the Bodhi Tree,
+                     located just behind the temple. This sacred tree is believed to be a direct
+                      descendant of the original tree where Lord Buddha attained enlightenment.
+                    </p>
+                <p className="text-gray-700 mb-6">
+                    Another striking feature is the 55-metre-tall temple tower, 
+                    which rises beautifully above the complex. Built in ancient Indian architectural style, 
+                    the temple is decorated with intricate carvings and statues that reflect centuries of devotion. 
+                    The entire temple complex is filled with ancient stupas, prayer flags and meditation areas creating 
+                    an atmosphere that feels calm, sacred and timeless.
+                    </p>
 
                 
 
@@ -79,8 +81,7 @@ const Mahabhodi = () => {
                 <h2 className="text-2xl font-bold mt-10 mb-4">Things to See or Experience</h2>
                 <SectionImage src="/Image/mahabhodi-temple-04.jpg" />
                 <p className="text-gray-700 mb-6">
-                    Visitors can spend time meditating near the Bodhi Tree, one of the most peaceful spots in the complex.
-                    Inside the temple, you can see a beautiful statue of Buddha sitting in meditation posture.
+                    Visitors can spend time meditating near the Bodhi Tree, one of the most peaceful spots in the complex. Inside the temple, you can see a beautiful statue of Lord Buddha sitting in meditation posture. Walking around the temple reveals hundreds of small stupas built by pilgrims over centuries. Many visitors also enjoy simply sitting quietly, listening to monks chanting prayers and experiencing the serene environment. The temple looks especially beautiful in the evening when soft lights illuminate the complex and the atmosphere becomes even more peaceful.
                 </p>
 
                 <p className="text-gray-700 mb-6">
@@ -247,10 +248,15 @@ const Mahabhodi = () => {
 
                         {/* Author Content */}
                         <p className="text-gray-800 leading-relaxed text-justify text-lg mt-4 md:mt-1">
-                            <span className="font-semibold">Kriti Singh</span> started writing just to explore something new.
-                            Somewhere between daily routines, she began noticing stories hidden in Delhi’s streets
-                            and rooted deep in Bihar’s culture. She writes not as an expert but as someone
-                            living the moments - real, simple and a little unfiltered.
+                            <span className="font-semibold">Kriti Singh</span> began writing out of curiosity but
+                            it soon became her way of observing and making sense of the world around her. 
+                            Originally from Bihar and now living in Delhi for her studies, her perspective 
+                            is shaped by both, where rooted culture meets the fast pace of city life. 
+                            She finds stories in everyday spaces, from crowded streets to familiar food corners, 
+                            not to romanticize them but to understand and capture them as they are. Her writing reflects 
+                            this in-between space, personal yet grounded, thoughtful yet unfiltered. She doesn’t 
+                            claim expertise but writes with honesty, clarity and a sharp eye for detail.
+
                         </p>
 
                     </div>

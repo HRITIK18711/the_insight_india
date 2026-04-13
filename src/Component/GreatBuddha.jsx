@@ -29,7 +29,7 @@ const GreatBuddha = () => {
         </p>
 
         {/* HERO */}
-        <SectionImage src="/Image/great-buddha-01.jpg" source="Kriti Singh" />
+        <SectionImage src="/Image/great-buddha-statue-bodh-gaya-bihar-01.png" source="Kriti Singh" />
 
         {/* INTRO */}
         <p className="text-gray-700 mb-6">
@@ -45,7 +45,7 @@ const GreatBuddha = () => {
           History of Great Buddha Statue
         </h2>
 
-        <SectionImage src="/Image/great-buddha-02.jpg" source="Kriti Singh" />
+        <SectionImage src="/Image/great-buddha-statue-bodh-gaya-bihar-02.png" source="Kriti Singh" />
 
         <p className="text-gray-700 mb-6">
           The Great Buddha Statue was constructed between 1982 and 1989 with support from the Japanese Buddhist organization Daijokyo Buddhist Sect. The project was initiated with the goal of building a monument that would honour the teachings of Buddha and promote the message of peace and compassion across the world.
@@ -64,7 +64,7 @@ const GreatBuddha = () => {
           What Makes This Place Special?
         </h2>
 
-        <SectionImage src="/Image/great-buddha-03.jpg" />
+        <SectionImage src="/Image/great-buddha-statue-bodh-gaya-bihar-03.png" />
 
         <p className="text-gray-700 mb-6">
           The most striking feature of the Great Buddha Statue is its impressive height of about 80 feet. When visitors stand near the monument, they immediately notice the calm and dignified posture of Buddha, seated in deep meditation. This posture symbolizes enlightenment, wisdom and inner balance.
@@ -87,7 +87,7 @@ const GreatBuddha = () => {
           Things to See or Experience Around
         </h2>
 
-        <SectionImage src="/Image/great-buddha-04.jpg" />
+        <SectionImage src="/Image/great-buddha-statue-bodh-gaya-bihar-04.png" />
 
         <p className="text-gray-700 mb-6">
           Visitors coming to the Great Buddha Statue can enjoy several experiences while exploring the complex. The main attraction is of course, the enormous statue itself. From every angle, the monument looks impressive and offers excellent opportunities for photography.
@@ -110,7 +110,7 @@ const GreatBuddha = () => {
           How to Reach Bodh Gaya
         </h2>
 
-        <SectionImage src="/Image/great-buddha-05.jpg" />
+        <SectionImage src="/Image/great-buddha-statue-bodh-gaya-bihar-05.png" />
 
         <ul className="list-disc pl-6 space-y-2 text-gray-700">
           <li><span className="font-bold">By Air:</span> Gaya International Airport (10 km)</li>
@@ -123,7 +123,7 @@ const GreatBuddha = () => {
           Best Time to Visit Bodh Gaya
         </h2>
 
-        <SectionImage src="/Image/great-buddha-06.jpg" />
+        <SectionImage src="/Image/great-buddha-statue-bodh-gaya-bihar-06.png" />
 
         <p className="text-gray-700 mb-6">
           The most comfortable time to visit the Great Buddha Statue is between October and March. During these months, the weather in Bodh Gaya remains cool and pleasant, making sightseeing more enjoyable.
@@ -142,11 +142,13 @@ const GreatBuddha = () => {
           Travel Tips
         </h2>
 
-        <SectionImage src="/Image/great-buddha-07.jpg" />
+        <SectionImage src="/Image/great-buddha-statue-bodh-gaya-bihar-07.png" />
 
         <p className="text-gray-700 mb-6">
-          Entry to the Great Buddha Statue complex is free for all visitors. The site is generally open daily from 7:00 AM to 5:30 PM.
-Since Bodh Gaya is an important religious destination, visitors are encouraged to maintain a peaceful and respectful atmosphere. Speaking softly and keeping the surroundings clean helps preserve the spiritual environment of the place.
+          Entry to the Great Buddha Statue complex is free for all visitors. The site is generally open daily from 7:00 AM to 5:30
+           PM.
+<p  className="text-gray-700 mb-6"> Bodh Gaya is an important religious destination, visitors are encouraged to maintain a peaceful and 
+respectful atmosphere. Speaking softly and keeping the surroundings clean helps preserve the spiritual environment of the place.</p>
 
         </p>
 
@@ -162,7 +164,7 @@ Since Bodh Gaya is an important religious destination, visitors are encouraged t
           Nearby Places to Visit
         </h2>
 
-        <SectionImage src="/Image/great-buddha-08.jpg" />
+        <SectionImage src="/Image/great-buddha-statue-bodh-gaya-bihar-08.png" />
         <p className="text-gray-700 mb-6">
          While visiting the Great Buddha Statue, travellers should also explore other important attractions in Bodh Gaya. 
 
@@ -177,7 +179,7 @@ Since Bodh Gaya is an important religious destination, visitors are encouraged t
         </ul>
 
         {/* FINAL */}
-        <SectionImage src="/Image/great-buddha-09.jpg" />
+        <SectionImage src="/Image/great-buddha-statue-bodh-gaya-bihar-09.png" />
 
         <p className="text-gray-700 mb-6">
           The Great Buddha Statue in Bodh Gaya is much more than an impressive monument.
@@ -231,7 +233,13 @@ Since Bodh Gaya is an important religious destination, visitors are encouraged t
             />
 
             <p className="text-gray-800 leading-relaxed text-lg">
-              Kriti Singh began writing out of curiosity but it soon became her way of observing and making sense of the world around her. Her writing reflects real experiences, thoughtful observations and an honest perspective of everyday life.
+              Kriti Singh began writing out of curiosity but it soon became her way of observing 
+              and making sense of the world around her. Originally from Bihar and now living in Delhi for her studies, 
+              her perspective is shaped by both, where rooted culture meets the fast pace of city life. She finds stories 
+              in everyday spaces, from crowded streets to familiar food corners, not to romanticize them but to understand 
+              and capture them as they are. Her writing reflects this in-between space, personal yet grounded,
+               thoughtful yet unfiltered. She doesn’t claim expertise but writes with honesty, clarity and a sharp eye for 
+               detail.
             </p>
 
           </div>

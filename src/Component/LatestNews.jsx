@@ -19,50 +19,70 @@ const trending_stories = [
     slug: "india-gate-delhi-travel-guide",
     title:
       "India Gate Delhi Travel Guide: History, Timings, Best Time to Visit & How to Reach",
-    image: "/Image/mahabhodi-temple-01.jpg",
+    image: "/Image/india-gate-delhi-01.png",
   },
   {
-    slug: "great-buddha-travel-guide",
+    slug: "great-buddha-statue-bihar-travel-guide",
     title:
       "Great Buddha Statue Bodh Gaya, Bihar: Exploring the 80-Foot Symbol of Peace and Spiritual Calm",
-    image: "/Image/mahabhodi-temple-01.jpg",
+    image: "/Image/great-buddha-statue-bodh-gaya-bihar-01.png",
   },
   {
-    slug: "malcha-mahal-travel-guide",
+    slug: "malcha-mahal-delhi-travel-guide",
     title:
       "Malcha Mahal Delhi: The Haunted Palace Hidden Inside a Forest (Complete Travel Guide)",
-    image: "/Image/mahabhodi-temple-01.jpg",
+    image: "/Image/malcha-mahal-delhi-01.png",
   },
   {
     slug: "delhi-mysterious-place-travel-guide",
     title:
       "Delhi’s Most Mysterious Places People Still Talk About",
-    image: "/Image/mahabhodi-temple-01.jpg",
+    image: "/Image/mysterious-places-in-delhi-01.png",
   },
   {
-    slug: "qutub-minar-travel-guide",
+    slug: "qutub-minar-delhi-travel-guide",
     title:
       "Qutub Minar Delhi: History, Height, Timings, Entry Fee, How to Reach & Nearby Places",
-    image: "/Image/mahabhodi-temple-01.jpg",
+    image: "/Image/qutub-minar-delhi-01.png",
   },
-  
+  {
+    slug: "connaught-place-new-delhi-travel-guide",
+    title:
+      "Things to Do in Connaught Place Delhi: Best Places & Food Guide",
+    image: "/Image/connaught-place-new-delhi-travel-guide-01.png",
+  },
+  {
+    slug: "lotus-temple-delhi-travel-guide",
+    title:
+      "Lotus Temple Delhi: A Silent Escape in the Heart of Chaos",
+    image: "/Image/lotus-temple-delhi-travel-guide-01.png",
+  },
+
+  {
+    slug: "hazrat-nizamuddin-dargah-delhi-travel-guide",
+    title:
+      "Hazrat Nizamuddin Dargah, Delhi: History, Qawwali Timings, Entry & Complete Travel Guide",
+    image: "/Image/hazrat-nizamuddin-dargah-delhi-travel-guide-01.png",
+  },
+
+
 ];
 
 const Upcoming_events = [
   {
     slug: "javed-ali-spellbound-tour-noida",
     title: "Javed Ali Spellbound Tour Noida",
-    image: "/Image/Jama-Masjid-Delhi.jpg",
+    image: "/Image/javed-ali-spellbound-tour-noida.jpg",
   },
   {
     slug: "sanam-night-of-nostalgia-delhi",
     title: "Sanam Night Of Nostalgia Delhi",
-    image: "/Image/mahabhodi-temple-01.jpg",
+    image: "/Image/sanam-night-of-nostalgia-delhi.jpg",
   },
   {
     slug: "whipmantra-concert-gurugram",
     title: "Whipmantra Concert Gurugram",
-    image: "/Image/mahabhodi-temple-01.jpg",
+    image: "/Image/whipmantra-concert-gurugram.jpg",
   },
 ];
 
@@ -89,6 +109,7 @@ export default function LatestNews() {
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
 
         {/* LEFT PANEL (SLIDER) */}
+        {/* LEFT PANEL (SLIDER) */}
         <div className="lg:col-span-3 relative">
 
           {/* LEFT BUTTON */}
@@ -104,20 +125,32 @@ export default function LatestNews() {
             {stories
               .slice(startIndex, startIndex + itemsPerSlide)
               .map((item) => (
+
                 <Link to={`/webstories/${item.slug}`} key={item.slug}>
                   <div className="relative w-[220px] h-[380px] rounded-xl overflow-hidden shadow-lg cursor-pointer">
 
-                    <video
-                      src={item.video}
-                      autoPlay
-                      muted
-                      loop
-                      playsInline
-                      className="w-full h-full object-cover"
-                    />
+                    {/* 🔥 IMAGE + VIDEO SUPPORT */}
+                    {item.video ? (
+                      <video
+                        src={item.video}
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
+                        className="w-full h-full object-cover"
+                      />
+                    ) : (
+                      <img
+                        src={item.image}
+                        alt={item.title}
+                        className="w-full h-full object-cover"
+                      />
+                    )}
 
+                    {/* OVERLAY */}
                     <div className="absolute inset-0 bg-black/40"></div>
 
+                    {/* TEXT */}
                     <div className="absolute bottom-0 p-3 text-white">
                       <p className="text-sm font-semibold">
                         {item.title}
@@ -129,6 +162,7 @@ export default function LatestNews() {
 
                   </div>
                 </Link>
+
               ))}
           </div>
 
@@ -139,6 +173,7 @@ export default function LatestNews() {
           >
             ▶
           </button>
+
         </div>
 
         {/* RIGHT PANEL (SCROLLABLE) */}
@@ -148,22 +183,20 @@ export default function LatestNews() {
           <div className="flex border-b mb-4">
             <button
               onClick={() => setActiveTab("trending")}
-              className={`flex-1 py-2 text-sm font-semibold border-b-2 ${
-                activeTab === "trending"
-                  ? "border-red-600 text-red-600"
-                  : "text-gray-500"
-              }`}
+              className={`flex-1 py-2 text-sm font-semibold border-b-2 ${activeTab === "trending"
+                ? "border-red-600 text-red-600"
+                : "text-gray-500"
+                }`}
             >
               Trending Stories
             </button>
 
             <button
               onClick={() => setActiveTab("upcoming")}
-              className={`flex-1 py-2 text-sm font-semibold border-b-2 ${
-                activeTab === "upcoming"
-                  ? "border-red-600 text-red-600"
-                  : "text-gray-500"
-              }`}
+              className={`flex-1 py-2 text-sm font-semibold border-b-2 ${activeTab === "upcoming"
+                ? "border-red-600 text-red-600"
+                : "text-gray-500"
+                }`}
             >
               Upcoming Events
             </button>
@@ -173,11 +206,18 @@ export default function LatestNews() {
           <div className="space-y-4 overflow-y-auto pr-1 flex-1">
 
             {(activeTab === "trending"
-              ? trending_stories
-              : Upcoming_events
-            ).map((news) => (
+  ? trending_stories
+  : Upcoming_events
+).map((news) => (
 
-              <Link to={`/${news.slug}`} key={news.slug}>
+  <Link
+    to={
+      activeTab === "upcoming"
+        ? `/events/${news.slug}`
+        : `/${news.slug}`
+    }
+    key={news.slug}
+  >
                 <div className="flex gap-3 items-start hover:bg-gray-50 p-2 rounded cursor-pointer">
 
                   <img
