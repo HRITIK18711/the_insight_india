@@ -7,7 +7,6 @@ import {
 } from "react-router-dom";
 import { useEffect } from "react";
 import { Helmet } from "react-helmet";
-
 import Stories from "./Component/Stories";
 import MenuBar from "./Component/MenuBar";
 import About from "./Component/About";
@@ -33,7 +32,8 @@ import Events from "./Component/Events";
 import CP from "./Component/CP";
 import Lotus from "./Component/Lotus";
 import Nizamuddin from "./Component/Nizamuddin";
-
+import PhotoStory from "./Component/PhotoStory";
+import MetroData from "./Component/Metrodata";
 function ScrollToTop() {
   const { pathname } = useLocation();
   useEffect(() => {
@@ -69,6 +69,7 @@ function HomePage() {
     <>
       <Content />
       <LatestNews />
+      <PhotoStory />
       <Main_News_Section />
       <Home_Sports_News />
       <Home_Entertainment_News />
@@ -124,6 +125,7 @@ function App() {
                 path="/jama-masjid-delhi-travel-guide"
                 element={<JamaNews />}
               />
+              <Route path="/metro/:slug" element={<MetroData />} />
 
               <Route
                 path="/mahabodhi-temple-bihar-travel-guide"

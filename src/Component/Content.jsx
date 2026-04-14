@@ -12,7 +12,7 @@ export default function Content() {
         <div className="absolute inset-0 bg-black/40"></div>
 
         {/* text */}
-        <div className="relative z-10 text-center -pt-15">
+        <div className="relative z-10 text-center ">
           <h1 className="text-white font-extrabold text-4xl md:text-6xl lg:text-7xl tracking-widest mb-10">
             WELCOME TO RU EXPLORES
           </h1>

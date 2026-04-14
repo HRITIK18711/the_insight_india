@@ -2,63 +2,12 @@ import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
 
 export const stories = [
-  {
-    id: 1,
-    slug: "delhi-metro",
-    title: "Delhi Metro",
-    video: "/Video/qutub-minar-delhi/qutub-minar-delhi-01.mp4",
-  },
-  {
-    id: 2,
-    slug: "lucknow-metro",
-    title: "Lucknow Metro",
-    video: "/Video/mahabodhi-temple-bodhgaya-bihar/mahabodhi-temple-bodhgaya-bihar-01.mp4",
-  },
-  {
-    id: 3,
-    slug: "kanpur-metro",
-    title: "Kanpur Metro",
-    
-    video: "/Video/valley-of-flowers-trek-uttarakhand/valley-of-flowers-trek-uttarakhand-01.mp4",
-  },
-  {
-    id: 4,
-    slug: "agra-metro",
-    title: "Agra Metro",
-    
-    video: "/Video/kedarkantha-trek-uttarakhand/kedarkantha-trek-uttarakhand-01.mp4",
-  },
-  {
-    id: 5,
-    slug: "jaipur-metro",
-    title: "Jaipur Metro",
-    
-    video: "/Video/the-great-buddha-statue-bodhgaya-bihar/the-great-buddha-statue-bodhgaya-bihar-01.mp4",
-  },
-  {
-    id: 6,
-    slug: "noida-metro",
-    title: "Noida Metro",
-    
-    video: "/Video/jama-masjid-delhi/jama-masjid-delhi-01.mp4",
-  },
-
-  {
-    id: 7,
-    slug: "noida-metro",
-    title: "Noida Metro",
-    
-    video: "/Video/jama-masjid-delhi/jama-masjid-delhi-01.mp4",
-  },
-
-  {
-    id: 8,
-    slug: "noida-metro",
-    title: "Noida Metro",
-    
-    video: "/Video/jama-masjid-delhi/jama-masjid-delhi-01.mp4",
-  },
-  
+  { id: 1, slug: "delhi-metro", title: "Delhi Metro", image: "/Image/delhi-metro.png" },
+  { id: 2, slug: "jaipur-metro", title: "Jaipur Metro", image: "/Image/jaipur-metro.png" },
+  { id: 3, slug: "mumbai-metro", title: "Mumbai Metro", image: "/Image/mumbai-metro.png" },
+  { id: 4, slug: "patna-metro", title: "Patna Metro", image: "/Image/patna-metro.png" },
+  { id: 5, slug: "pune-metro", title: "Pune Metro", image: "/Image/pune-metro.png" },
+  { id: 6, slug: "uttar-pradesh-metro", title: "Uttar Pradesh Metro", image: "/Image/uttar-pradesh-metro.png" },
 ];
 
 export default function Metro() {
@@ -68,46 +17,76 @@ export default function Metro() {
         <title>Metro Stories | RUExplores</title>
       </Helmet>
 
-      <div className="pt-32 pb-20 max-w-7xl mx-auto px-6">
+      <div className="pt-24 pb-16 max-w-5xl mx-auto px-4">
+
+        {/* HEADING */}
+        <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12 tracking-tight">
+          🚇 Metro Stories
+        </h2>
 
         {/* GRID */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-6 justify-items-center">
+        <div className="grid grid-cols-3 sm:grid-cols-3 gap-10 place-items-center">
 
           {stories.map((story) => (
-            <Link
-              key={story.id}
-              to={`/webstories/${story.slug}`}
-              className="relative w-[240px] aspect-[9/16] rounded-[20px] overflow-hidden shadow-xl group cursor-pointer"
-            >
+           <Link
+  key={story.id}
+  to={`/metro/${story.slug}`}   // ✅ FIXED
+  className="flex flex-col items-center group"
+>
 
-              {/* VIDEO */}
-              <video
-                src={story.video}
-                autoPlay
-                muted
-                loop
-                playsInline
-                preload="metadata"
-                className="w-full h-full object-cover group-hover:scale-110 transition duration-500"
-              />
+              {/* OUTER CIRCLE */}
+              <div className="
+                relative
+                w-[100px] h-[100px] sm:w-[120px] sm:h-[120px]
+                rounded-full
+                bg-gradient-to-br from-gray-100 via-gray-200 to-gray-300
+                shadow-md
+                flex items-center justify-center
+                
+                transition-all duration-300 ease-in-out
+                group-hover:scale-110 group-hover:shadow-xl
+              ">
 
-              {/* OVERLAY */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
+                {/* INNER WHITE CIRCLE (LOGO FIX) */}
+                <div className="
+                  w-[70%] h-[70%]
+                  bg-white
+                  rounded-full
+                  flex items-center justify-center
+                  p-2
+                  shadow-inner
+                ">
 
-              {/* TEXT */}
-              <div className="absolute bottom-0 p-4 text-white">
-                <h3 className="text-base font-semibold leading-tight">
-                  {story.title}
-                </h3>
-                <p className="text-xs opacity-80 mt-1">
-                  {story.createdBy}
-                </p>
+                  <img
+                    src={story.image}
+                    alt={story.title}
+                    className={`
+                      max-w-full max-h-full object-contain
+                      transition duration-300
+
+                      ${story.slug === "mumbai-metro" ? "scale-90" : ""}
+                      ${story.slug === "patna-metro" ? "scale-95" : ""}
+                    `}
+                  />
+
+                </div>
+
               </div>
+
+              {/* TITLE */}
+              <p className="
+                mt-4 text-xl sm:text-base text-center font-semibold
+                text-black group-hover:text-black
+                transition duration-300
+              ">
+                {story.title}
+              </p>
 
             </Link>
           ))}
 
         </div>
+
       </div>
     </>
   );

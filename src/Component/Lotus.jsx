@@ -18,7 +18,7 @@ const Lotus = () => {
 
       {/* Title */}
       <h1 className="text-4xl font-bold leading-tight mb-3">
-        Lotus Temple Delhi: A Silent Escape in the Heart of Chaos
+        Lotus Temple Delhi: A Silent Escape in the Heart of Chaos-Timings, Entry & Travel Guide
       </h1>
       <p className="text-gray-500 mb-8">By Kriti Singh</p>
 
