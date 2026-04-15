@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { stories } from "./Webstories";
 import { Link } from "react-router-dom";
 
@@ -21,150 +21,131 @@ const Upcoming_events = [
 ];
 
 export default function LatestNews() {
-  const [startIndex, setStartIndex] = useState(0);
-  const [autoIndex, setAutoIndex] = useState(0);
+  const [index, setIndex] = useState(0);
+  const intervalRef = useRef(null);
 
-  const itemsPerSlide = 4;
+  const visibleCards = 4;
 
-  // 🔥 AUTO SLIDER (mobile)
+  // 🔥 card width (240 + gap 16)
+  const cardWidth = 256;
+
+  // 🔥 Clone
+  const extendedStories = [
+    ...stories,
+    ...stories.slice(0, visibleCards),
+  ];
+
+  // 👉 AUTO SLIDE
+  const startAutoSlide = () => {
+    intervalRef.current = setInterval(() => {
+      setIndex((prev) => prev + 1);
+    }, 2000);
+  };
+
+  const stopAutoSlide = () => clearInterval(intervalRef.current);
+
   useEffect(() => {
-    const interval = setInterval(() => {
-      setAutoIndex((prev) =>
-        prev + 1 >= stories.length ? 0 : prev + 1
-      );
-    }, 4000);
-
-    return () => clearInterval(interval);
+    startAutoSlide();
+    return () => stopAutoSlide();
   }, []);
 
-  const handleNext = () => {
-    if (startIndex + itemsPerSlide < stories.length) {
-      setStartIndex(startIndex + itemsPerSlide);
+  // 👉 RESET LOOP
+  useEffect(() => {
+    if (index >= stories.length) {
+      setTimeout(() => {
+        setIndex(0);
+      }, 200);
     }
-  };
-
-  const handlePrev = () => {
-    if (startIndex - itemsPerSlide >= 0) {
-      setStartIndex(startIndex - itemsPerSlide);
-    }
-  };
+  }, [index]);
 
   return (
-    <div className="w-full py-8 px-4 md:px-10">
+    <div className="w-full py-10 px-4 md:px-10">
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
 
         {/* LEFT PANEL */}
         <div className="lg:col-span-3 relative overflow-hidden">
 
-          {/* DESKTOP (UNCHANGED) */}
-          <div className="hidden sm:block mr-1">
+          {/* FADE EDGES */}
+          <div className="hidden lg:block absolute left-0 top-0 h-full w-24 bg-gradient-to-r from-black/80 to-transparent z-10 pointer-events-none"></div>
+          <div className="hidden lg:block absolute right-0 top-0 h-full w-24 bg-gradient-to-l from-black/80 to-transparent z-10 pointer-events-none"></div>
 
-            <button
-              onClick={handlePrev}
-              className="absolute left-1 top-1/2 -translate-y-1/2 z-10 bg-black text-white px-3 py-2 rounded-full"
-            >
-              ◀
-            </button>
+          {/* WRAPPER (IMPORTANT FIX) */}
+          <div className="pl-3"> {/* 👈 LEFT OFFSET FIX */}
 
-            <div className="flex gap-6 justify-center">
-              {stories
-                .slice(startIndex, startIndex + itemsPerSlide)
-                .map((item) => (
-                  <Link to={`/webstories/${item.slug}`} key={item.slug}>
-                    <div className="relative w-[220px] h-[380px] rounded-xl overflow-hidden shadow-lg cursor-pointer">
-
-                      {item.video ? (
-                        <video
-                          src={item.video}
-                          autoPlay
-                          muted
-                          loop
-                          playsInline
-                          className="w-full h-full object-cover"
-                        />
-                      ) : (
-                        <img
-                          src={item.image}
-                          alt={item.title}
-                          className="w-full h-full object-cover"
-                        />
-                      )}
-
-                      <div className="absolute inset-0 bg-black/40"></div>
-
-                      <div className="absolute bottom-0 p-3 text-white">
-                        <p className="text-sm font-semibold">{item.title}</p>
-                        <p className="text-xs opacity-80">{item.createdBy}</p>
-                      </div>
-
-                    </div>
-                  </Link>
-                ))}
-            </div>
-
-            <button
-              onClick={handleNext}
-              className="absolute right-1 top-1/2 -translate-y-1/2 z-10 bg-black text-white px-3 py-2 rounded-full"
-            >
-              ▶
-            </button>
-
-          </div>
-
-          {/* MOBILE */}
-          <div className="sm:hidden overflow-hidden w-full">
-
+            {/* SLIDER */}
             <div
-              className="flex transition-transform duration-500 w-full"
+              className="flex gap-4 items-center transition-all duration-700 ease-in-out"
               style={{
-                transform: `translateX(-${autoIndex * 100}%)`,
+                transform: `translateX(-${index * cardWidth}px)`,
               }}
+              onMouseEnter={stopAutoSlide}
+              onMouseLeave={startAutoSlide}
             >
-              {stories.map((item) => (
-                <div className="w-full flex-shrink-0" key={item.slug}>
+              {extendedStories.map((item, i) => {
+                const isActive = i >= index && i < index + visibleCards;
 
-                  <Link to={`/webstories/${item.slug}`}>
-                    <div className="relative w-full h-[380px] rounded-xl overflow-hidden shadow-lg cursor-pointer">
+                return (
+                  <div
+                    key={i}
+                    className={`
+                      flex-shrink-0 transition-all duration-700
+                      ${isActive ? "opacity-100 scale-100" : "opacity-40 scale-95"}
+                    `}
+                    style={{ width: "240px" }}
+                  >
+                    <Link to={`/webstories/${item.slug}`}>
 
-                      {item.video ? (
-                        <video
-                          src={item.video}
-                          autoPlay
-                          muted
-                          loop
-                          playsInline
-                          className="w-full h-full object-cover"
-                        />
-                      ) : (
-                        <img
-                          src={item.image}
-                          alt={item.title}
-                          className="w-full h-full object-cover"
-                        />
-                      )}
+                      {/* CARD */}
+                      <div className="relative w-full aspect-[9/16] rounded-[20px] overflow-hidden shadow-xl group cursor-pointer">
 
-                      <div className="absolute inset-0 bg-black/40"></div>
+                        {/* MEDIA */}
+                        {item.video ? (
+                          <video
+                            src={item.video}
+                            autoPlay
+                            muted
+                            loop
+                            playsInline
+                            className="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+                          />
+                        ) : (
+                          <img
+                            src={item.image}
+                            alt={item.title}
+                            className="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+                          />
+                        )}
 
-                      <div className="absolute bottom-0 p-3 text-white">
-                        <p className="text-sm font-semibold">{item.title}</p>
-                        <p className="text-xs opacity-80">{item.createdBy}</p>
+                        {/* OVERLAY */}
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+
+                        {/* TEXT */}
+                        <div className="absolute bottom-0 p-4 text-white">
+                          <p className="text-sm font-semibold leading-tight">
+                            {item.title}
+                          </p>
+                          <p className="text-xs opacity-80 mt-1">
+                            {item.createdBy}
+                          </p>
+                        </div>
+
                       </div>
 
-                    </div>
-                  </Link>
-
-                </div>
-              ))}
+                    </Link>
+                  </div>
+                );
+              })}
             </div>
 
           </div>
-
         </div>
 
-        {/* RIGHT PANEL (ONLY UPCOMING) */}
+        {/* RIGHT PANEL */}
         <div className="bg-white rounded-xl shadow p-4 h-[380px] flex flex-col">
 
-          <h2 className="text-lg font-semibold mb-4">Upcoming Events</h2>
+          <h2 className="text-lg font-semibold mb-4">
+            Upcoming Events
+          </h2>
 
           <div className="space-y-4 overflow-y-auto pr-1 flex-1">
             {Upcoming_events.map((news) => (

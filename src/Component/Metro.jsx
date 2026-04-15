@@ -28,11 +28,11 @@ export default function Metro() {
         <div className="grid grid-cols-3 sm:grid-cols-3 gap-10 place-items-center">
 
           {stories.map((story) => (
-           <Link
-  key={story.id}
-  to={`/metro/${story.slug}`}   // ✅ FIXED
-  className="flex flex-col items-center group"
->
+            <Link
+              key={story.id}
+              to={`/webstories/${story.slug}`}
+              className="flex flex-col items-center group"
+            >
 
               {/* OUTER CIRCLE */}
               <div className="
