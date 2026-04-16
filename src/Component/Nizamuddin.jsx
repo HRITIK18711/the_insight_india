@@ -19,6 +19,9 @@ const Nizamuddin = () => {
       <h1 className="text-4xl font-bold leading-tight mb-3">
         Hazrat Nizamuddin Dargah, Delhi: History, Qawwali Timings, Entry & Complete Travel Guide
       </h1>
+      <p className="text-gray-600 mb-6">
+         <span className="font-semibold">Published On: 10 April, 2026</span>
+        </p>
       <p className="text-gray-500 mb-8">By Pragya Singh</p>
 
       <SectionImage src="/Image/hazrat-nizamuddin-dargah-delhi-travel-guide-01.png" source="x/hazratnizamuddindargah" />
@@ -115,7 +118,7 @@ const Nizamuddin = () => {
         The Nizamuddin neighbourhood is full of historical sites. Humayun's Tomb is only a short drive away and is one of the most beautiful Mughal monuments in India. The nearby Sundar Nursery is a restored heritage park that many people visit after seeing the tomb. A little further away stands Purana Qila, one of Delhi's oldest forts. If you enjoy exploring the historical layers of the city, this entire area can easily fill half a day. If you ever find yourself in Delhi on a Thursday evening, walk down that narrow lane and follow the sound of music. You will know when you arrive.
       </p>
 
-      <h2 className="text-3xl font-semibold mt-12 mb-6">Frequently Asked Questions (FAQs)</h2>
+      <h2 className="text-3xl font-semibold mt-12 mb-6">Frequently Asked Questions (FAQs) about Hazrat Nizamuddin Dargah</h2>
 
       <div className="space-y-4 text-lg leading-relaxed">
         <p><strong>1.</strong> What is Hazrat Nizamuddin Dargah famous for?<br/>It is the shrine of the revered Sufi saint Nizamuddin Auliya and one of the most important Sufi pilgrimage sites in India. It is also famous for its centuries-old Qawwali tradition, performed every Thursday evening.</p>
@@ -154,7 +157,7 @@ const Nizamuddin = () => {
 
     </div>
     </div>
-  );
+  ); 
 };
 
 export default Nizamuddin;

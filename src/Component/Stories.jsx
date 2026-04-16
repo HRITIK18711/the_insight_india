@@ -106,6 +106,32 @@ const storiesData = {
     {image: "/Image/nawegaon-nagzira-tiger-researve-maharashtra-07.jpg"},
     
   ],
+
+  "humayun-tomb-delhi": [
+    {image: "/Image/humayun-tomb-delhi-travel-guide-01.jpg"},
+    {image: "/Image/humayun-tomb-delhi-travel-guide-02.jpg"},
+    {image: "/Image/humayun-tomb-delhi-travel-guide-03.jpg"},
+    {image: "/Image/humayun-tomb-delhi-travel-guide-04.jpg"},
+    {image: "/Image/humayun-tomb-delhi-travel-guide-05.jpg"},
+    {image: "/Image/humayun-tomb-delhi-travel-guide-06.jpg"},
+    {image: "/Image/humayun-tomb-delhi-travel-guide-07.jpg"},
+    {image: "/Image/humayun-tomb-delhi-travel-guide-08.jpg"},
+    {image: "/Image/humayun-tomb-delhi-travel-guide-09.jpg"},
+    
+  ],
+
+
+  "akshardham-temple-delhi": [
+    {image: "/Image/akshardham-temple-delhi-travel-guide-01.jpg"},
+    {image: "/Image/akshardham-temple-delhi-travel-guide-02.jpg"},
+    {image: "/Image/akshardham-temple-delhi-travel-guide-03.jpg"},
+    {image: "/Image/akshardham-temple-delhi-travel-guide-04.jpg"},
+    {image: "/Image/akshardham-temple-delhi-travel-guide-05.jpg"},
+    {image: "/Image/akshardham-temple-delhi-travel-guide-06.jpg"},
+    {image: "/Image/akshardham-temple-delhi-travel-guide-07.jpg"},
+    {image: "/Image/akshardham-temple-delhi-travel-guide-08.jpg"},
+    {image: "/Image/akshardham-temple-delhi-travel-guide-09.jpg"},
+  ],
   // ⚡ (baaki tumhara same data — unchanged)
 };
 

@@ -21,7 +21,9 @@ const Mahabhodi = () => {
                 <h1 className="text-3xl md:text-4xl font-bold leading-snug mb-4">
                     Mahabodhi Temple, Bodh Gaya Bihar: The Sacred Place Where Lord Buddha Found Enlightenment
                 </h1>
-
+                <p className="text-gray-600 mb-6">
+         <span className="font-semibold">Published On: 24 March, 2026</span>
+        </p>
                 {/* AUTHOR */}
                 <p className="text-gray-600 mb-6">
                     By <span className="font-semibold">Kriti Singh</span>
@@ -205,7 +207,8 @@ Because of its immense religious and historical importance, the temple complex w
 
 
 
-                <h2 className="text-2xl font-bold mt-10 mb-4"> FAQs </h2>
+                <h2 className="text-2xl font-bold mt-10 mb-4">Frequently Asked Questions (FAQs) about the Mahabodhi Temple
+ </h2>
                 <div className="space-y-4 text-gray-700">
                     <p> <b>Q1. Why is Mahabodhi Temple famous?
                     </b><br /> It is the place where Gautama Buddha attained enlightenment.
@@ -259,7 +262,7 @@ Because of its immense religious and historical importance, the temple complex w
 
                         </p>
 
-                    </div>
+                    </div> 
                 </div>
 
 

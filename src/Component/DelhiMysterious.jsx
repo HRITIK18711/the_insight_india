@@ -26,7 +26,9 @@ const DelhiMysterious = () => {
         <p className="text-xl font-bold text-black mb-4">
           From forgotten palaces to eerie ruins, these places reveal the darker legends of the capital
         </p>
-
+        <p className="text-gray-600 mb-6">
+          <span className="font-semibold">Published On: 2 April, 2026</span>
+        </p>
         {/* AUTHOR */}
         <p className="text-gray-600 mb-6">
           By <span className="font-semibold">Pragya Singh</span>
@@ -206,7 +208,7 @@ const DelhiMysterious = () => {
 
         {/* FAQ */}
         <h2 className="text-2xl font-bold mt-10 mb-4">
-          Frequently Asked Questions (FAQs)
+          Frequently Asked Questions (FAQs) about mysterious places in Delhi
         </h2>
 
         <div className="space-y-4 text-gray-700">

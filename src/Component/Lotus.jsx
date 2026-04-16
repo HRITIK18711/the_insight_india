@@ -20,13 +20,16 @@ const Lotus = () => {
       <h1 className="text-4xl font-bold leading-tight mb-3">
         Lotus Temple Delhi: A Silent Escape in the Heart of Chaos-Timings, Entry & Travel Guide
       </h1>
+      <p className="text-gray-600 mb-6">
+         <span className="font-semibold">Published On: 8 April, 2026</span>
+        </p>
       <p className="text-gray-500 mb-8">By Kriti Singh</p>
 
       <SectionImage src="/Image/lotus-temple-delhi-travel-guide-01.png" source="Canva" />
 
       {/* Intro */}
       <div className="space-y-4 text-lg leading-relaxed text-justify">
-        <p>
+        <p> 
           Delhi is loud. Constant traffic, honking and endless rush define the city. But right in the middle of all this chaos lies a place where silence isn’t just present - it’s powerful.
         </p>
         <p>
@@ -130,7 +133,7 @@ const Lotus = () => {
       </p>
 
       {/* FAQs */}
-      <h2 className="text-3xl font-semibold mt-12 mb-6">Frequently Asked Questions (FAQs)</h2>
+      <h2 className="text-3xl font-semibold mt-12 mb-6">Frequently Asked Questions (FAQs) about Lotus Temple</h2>
 
       <div className="space-y-4 text-lg leading-relaxed">
         <p><strong>1.</strong> <b>What are the Lotus Temple Delhi timings?</b><br/>The Lotus Temple is open from 9:00 AM to 7:00 PM (summer) and 9:30 AM to 5:30 PM (winter). Closed on Mondays.</p>

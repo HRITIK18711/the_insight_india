@@ -21,6 +21,9 @@ const QutubMinar = () => {
         <h1 className="text-3xl md:text-4xl font-bold mb-4">
           Qutub Minar Delhi: History, Height, Timings, Entry Fee, How to Reach & Nearby Places
         </h1>
+        <p className="text-gray-600 mb-6">
+         <span className="font-semibold">Published On: 4 April, 2026</span>
+        </p>
 
         <p className="text-gray-600 mb-6">
           By <span className="font-semibold">Pragya Singh</span>
@@ -371,7 +374,7 @@ const QutubMinar = () => {
         {/* FAQ FULL */}
         {/* FAQ */}
         <h2 className="text-2xl font-bold mt-10 mb-4">
-          Frequently Asked Questions (FAQs)
+          Frequently Asked Questions (FAQs) about Qutub Minar
         </h2>
 
         <div className="space-y-4 text-gray-700">
@@ -444,7 +447,7 @@ const QutubMinar = () => {
               to hidden ruins inside the Ridge forest, she focuses on telling the
               stories behind forgotten architecture and overlooked heritage sites.
             </p>
-
+ 
           </div>
         </div>
 

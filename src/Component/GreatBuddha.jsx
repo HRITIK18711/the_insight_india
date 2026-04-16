@@ -22,7 +22,9 @@ const GreatBuddha = () => {
         <h1 className="text-3xl md:text-4xl font-bold leading-snug mb-4">
           Great Buddha Statue Bodh Gaya, Bihar: Exploring the 80-Foot Symbol of Peace and Spiritual Calm
         </h1>
-
+        <p className="text-gray-600 mb-6">
+         <span className="font-semibold">Published On: 28 March, 2026</span>
+        </p>
         {/* AUTHOR */}
         <p className="text-gray-600 mb-6">
           By <span className="font-semibold">Kriti Singh</span>
@@ -81,7 +83,7 @@ const GreatBuddha = () => {
         <p className="text-gray-700 mb-6">
           The surrounding garden area also contributes to the peaceful atmosphere of the place. The neatly maintained pathways, greenery and open space make the entire complex feel calm and welcoming for visitors.
         </p>
-
+ 
         {/* EXPERIENCE */}
         <h2 className="text-2xl font-bold mt-10 mb-4">
           Things to See or Experience Around
@@ -126,7 +128,8 @@ const GreatBuddha = () => {
         <SectionImage src="/Image/great-buddha-statue-bodh-gaya-bihar-06.png" />
 
         <p className="text-gray-700 mb-6">
-          The most comfortable time to visit the Great Buddha Statue is between October and March. During these months, the weather in Bodh Gaya remains cool and pleasant, making sightseeing more enjoyable.
+          The most comfortable time to visit the Great Buddha Statue is between October and March. 
+          During these months, the weather in Bodh Gaya remains cool and pleasant, making sightseeing more enjoyable.
         </p>
 
         <p className="text-gray-700 mb-6">
@@ -196,7 +199,7 @@ respectful atmosphere. Speaking softly and keeping the surroundings clean helps 
         </p>
 
         {/* FAQ */}
-        <h2 className="text-2xl font-bold mt-10 mb-4">FAQs</h2>
+        <h2 className="text-2xl font-bold mt-10 mb-4">Frequently Asked Questions (FAQs) about the Great Buddha Statue</h2>
 
 <div className="space-y-4 text-gray-700">
   <p><b>1. Why is the Great Buddha Statue famous?</b><br />It is one of the tallest Buddha statues in India and a major spiritual attraction.</p>

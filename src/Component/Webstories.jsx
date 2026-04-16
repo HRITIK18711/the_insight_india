@@ -2,6 +2,26 @@ import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
 
 export const stories = [
+
+
+  {
+    id: 10,
+    slug: "humayun-tomb-delhi",
+    title: "Humayun Tomb Delhi",
+    createdBy: "Pragya Gautam",
+    image: "/Image/humayun-tomb-delhi-travel-guide-01.jpg",
+  },
+
+
+  {
+    id: 11,
+    slug: "akshardham-temple-delhi",
+    title: "Akshardham Temple Delhi",
+    createdBy: "Pragya Gautam",
+    image: "/Image/akshardham-temple-delhi-travel-guide-01.jpg",
+  },
+
+
   {
     id: 1,
     slug: "qutub-minar-delhi",

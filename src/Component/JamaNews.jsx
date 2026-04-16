@@ -21,7 +21,9 @@ const JamaNews = () => {
                 <h1 className="text-3xl md:text-4xl font-bold leading-snug mb-4">
                     Jama Masjid Delhi Travel Guide: Timings, Entry Fee, History, How to Reach & Nearby Places
                 </h1>
-
+                <p className="text-gray-600 mb-6">
+         <span className="font-semibold">Published On: 27 March, 2026</span>
+        </p>
                 {/* AUTHOR */}
                 <p className="text-gray-600 mb-6">
                     By <span className="font-semibold">Pragya Singh</span>
@@ -341,14 +343,15 @@ const JamaNews = () => {
                     </p>
                 </div>
 
-                <h2 className="text-2xl font-bold mt-10 mb-4"> FAQs </h2> 
+                <h2 className="text-2xl font-bold mt-10 mb-4"> Frequently Asked Questions (FAQs) about the Jama Masjid
+ </h2> 
                 <div className="space-y-4 text-gray-700">
                     <p> <b>Q1. What is the entry fee for Jama Masjid Delhi?</b><br /> Entry is free, but visitors may need to pay for photography and minaret climbing.
                     </p> <p> <b>Q2. What are Jama Masjid visiting timings?</b><br /> Visitors can enter between 7 AM–12 PM and 1:30 PM–6:30 PM except during prayer times. </p> <p> <b>Q3. Which metro station is nearest to Jama Masjid?</b><br /> Jama Masjid Metro Station on the Violet Line is the nearest. </p> <p> <b>Q4. How much time is needed to explore Jama Masjid?</b><br /> Around 1–2 hours is enough including minaret climbing. </p> <p> <b>Q5. What is the best time to visit Jama Masjid?</b><br /> Early morning or sunset during winter months is ideal. </p>
                 </div>
 
 
-                {/* AUTHOR */}
+                {/* AUTHOR */} 
                 <div className="mt-8">
                     <h3 className="text-2xl font-semibold mb-6">About the Author</h3>
 

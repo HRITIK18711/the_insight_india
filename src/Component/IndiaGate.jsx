@@ -22,7 +22,9 @@ const IndiaGate = () => {
                 <h1 className="text-3xl md:text-4xl font-bold leading-snug mb-4">
                     India Gate Delhi Travel Guide: History, Timings, Best Time to Visit & How to Reach
                 </h1>
-
+                <p className="text-gray-600 mb-6">
+         <span className="font-semibold">Published On: 26 March, 2026</span>
+        </p>
                 {/* AUTHOR */}
                 <p className="text-gray-600 mb-6">
                     By <span className="font-semibold">Pragya Singh</span>
@@ -219,7 +221,7 @@ const IndiaGate = () => {
                 </p>
 
                 {/* FAQs */}
-                <h2 className="text-2xl font-bold mt-10 mb-4">FAQs</h2>
+                <h2 className="text-2xl font-bold mt-10 mb-4">Frequently Asked Questions (FAQs) about the India Gate</h2>
                 <div className="space-y-3 text-gray-700">
                     <p><b>Is India Gate open 24 hours?</b><br />Yes, India Gate is open to visitors at all times.</p>
                     <p><b>Is there an entry fee for India Gate??</b><br />No, visiting India Gate is completely free.
@@ -252,7 +254,7 @@ const IndiaGate = () => {
                         </p>
 
                     </div>
-                </div>
+                </div> 
 
             </div>
         </div>

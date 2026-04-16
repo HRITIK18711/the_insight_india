@@ -22,7 +22,9 @@ const CP = () => {
         <h1 className="text-3xl md:text-4xl font-bold mb-4">
           Connaught Place Delhi: Why Everyone Ends Up in CP (Best Places & Food Guide)
         </h1>
-
+        <p className="text-gray-600 mb-6">
+         <span className="font-semibold">Published On: 6 April, 2026</span>
+        </p>
         {/* AUTHOR */}
         <p className="text-gray-600 mb-6">
           By <span className="font-semibold">Kriti Singh</span>
@@ -147,7 +149,7 @@ const CP = () => {
         <p className="text-gray-700 mb-6">
           It is the place where Delhi’s most iconic flavours come alive in every corner. Start your trail with the legendary cold coffee from Depaul's creamy, chilled and perfectly nostalgic. For a hearty South Indian fix, Sagar Ratna serves crispy masala dosas and soft idlis soaked in rich, flavourful sambar. When the heat kicks in, nothing beats the thick and creamy lassi from Baba Nagpal Corner. Craving proper Delhi street indulgence? The chhole bhature and rajma chawal at Jain Chawal Wale is spicy, tangy and unapologetically satisfying. And to end on a classic note, Wenger's offers old-school burgers, pastries and patties that never go out of style.
         </p>
-
+ 
         {/* NEARBY */}
         <h2 className="text-2xl font-bold mt-10 mb-4">
           Places to Visit near Connaught Place
@@ -210,7 +212,7 @@ const CP = () => {
 
         {/* FAQ */}
         <h2 className="text-2xl font-bold mt-10 mb-4">
-          Frequently Asked Questions (FAQs)
+          Frequently Asked Questions (FAQs) about Connaught Place
         </h2>
 
         <div className="space-y-4 text-gray-700">
