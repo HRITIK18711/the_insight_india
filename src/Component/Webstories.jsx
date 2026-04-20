@@ -1,8 +1,8 @@
-import { Link } from "react-router-dom";
+import { Link, useParams, useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet";
+import { useEffect, useState } from "react";
 
 export const stories = [
-
 
   {
     id: 10,
@@ -12,7 +12,6 @@ export const stories = [
     image: "/Image/humayun-tomb-delhi-travel-guide-01.jpg",
   },
 
-
   {
     id: 11,
     slug: "akshardham-temple-delhi",
@@ -20,7 +19,6 @@ export const stories = [
     createdBy: "Pragya Gautam",
     image: "/Image/akshardham-temple-delhi-travel-guide-01.jpg",
   },
-
 
   {
     id: 1,
@@ -34,7 +32,7 @@ export const stories = [
     slug: "mahabodhi-temple-bodhgaya-bihar",
     title: "Mahabodhi Temple Bodhgaya Bihar",
     createdBy: "Kriti Singh",
-    video: "/Video/mahabodhi-temple-bodhgaya-bihar/mahabodhi-temple-bodhgaya-bihar-01.mp4",
+    video: "/Video/mahabodhi-temple-bodhgaya-bihar/mahabodhi-temple-bodhgaya-bodhgaya-bihar-01.mp4",
   },
   {
     id: 3,
@@ -88,25 +86,150 @@ export const stories = [
 ];
 
 export default function Webstories() {
+  const { slug } = useParams();
+  const navigate = useNavigate();
+
+  const currentIndex = stories.findIndex((s) => s.slug === slug);
+  const [progress, setProgress] = useState(0);
+
+  // ================= VIEWER MODE =================
+  if (slug) {
+    const story = stories[currentIndex];
+
+    useEffect(() => {
+      setProgress(0);
+
+      const duration = 5000;
+      const interval = 50;
+      let current = 0;
+
+      const timer = setInterval(() => {
+        current += interval;
+        setProgress((current / duration) * 100);
+
+        if (current >= duration) {
+          clearInterval(timer);
+
+          if (currentIndex < stories.length - 1) {
+            navigate(`/webstories/${stories[currentIndex + 1].slug}`);
+          } else {
+            navigate("/webstories");
+          }
+        }
+      }, interval);
+
+      return () => clearInterval(timer);
+    }, [slug]);
+
+    const handleClick = (e) => {
+      const x = e.clientX;
+      const width = window.innerWidth;
+
+      if (x < width / 2) {
+        if (currentIndex > 0) {
+          navigate(`/webstories/${stories[currentIndex - 1].slug}`);
+        }
+      } else {
+        if (currentIndex < stories.length - 1) {
+          navigate(`/webstories/${stories[currentIndex + 1].slug}`);
+        }
+      }
+    };
+
+    return (
+      <div
+        className="h-[100dvh] w-full bg-black flex justify-center items-center"
+        onClick={handleClick}
+      >
+        <div className="relative w-full max-w-md h-full">
+
+          {/* PROGRESS */}
+          <div className="absolute top-0 w-full flex gap-1 px-2 pt-2 z-50">
+            {stories.map((_, i) => (
+              <div key={i} className="flex-1 h-[3px] bg-white/30">
+                <div
+                  className="h-full bg-white"
+                  style={{
+                    width:
+                      i < currentIndex
+                        ? "100%"
+                        : i === currentIndex
+                        ? `${progress}%`
+                        : "0%",
+                  }}
+                />
+              </div>
+            ))}
+          </div>
+
+          {/* MEDIA */}
+          {story.video ? (
+            <video
+              src={story.video}
+              autoPlay
+              muted
+              playsInline
+              className="w-full h-full object-cover"
+            />
+          ) : (
+            <img
+              src={story.image}
+              className="w-full h-full object-cover"
+            />
+          )}
+
+          {/* OVERLAY */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent"></div>
+
+          {/* TEXT */}
+          <div className="absolute bottom-0 w-full px-5 pb-12 text-white">
+            <h2 className="text-lg font-semibold leading-snug">
+              {story.title}
+            </h2>
+            <p className="text-sm mt-2 opacity-80">
+              By {story.createdBy}
+            </p>
+          </div>
+
+        </div>
+      </div>
+    );
+  }
+
+  // ================= GRID MODE =================
   return (
     <>
       <Helmet>
         <title>Travel Web Stories | RUExplores</title>
       </Helmet>
 
-      <div className="pt-32 pb-20 max-w-7xl mx-auto px-6">
+      <div className="pt-24 pb-16 max-w-7xl mx-auto px-4">
 
-        {/* GRID */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-6 justify-items-center">
+        <div className="
+          grid 
+          grid-cols-2 
+          sm:grid-cols-2 
+          md:grid-cols-4 
+          gap-3 md:gap-6 
+          justify-items-center
+        ">
 
           {stories.map((story) => (
             <Link
               key={story.id}
               to={`/webstories/${story.slug}`}
-              className="relative w-[240px] aspect-[9/16] rounded-[20px] overflow-hidden shadow-xl group cursor-pointer"
+              className="
+                relative 
+                w-full 
+                max-w-[240px] 
+                aspect-[9/16] 
+                rounded-[20px] 
+                overflow-hidden 
+                shadow-xl 
+                group
+              "
             >
 
-              {/* MEDIA (VIDEO OR IMAGE) */}
               {story.video ? (
                 <video
                   src={story.video}
@@ -114,23 +237,19 @@ export default function Webstories() {
                   muted
                   loop
                   playsInline
-                  preload="metadata"
-                  className="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+                  className="w-full h-full object-cover"
                 />
               ) : (
                 <img
                   src={story.image}
-                  alt={story.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition"
+                  className="w-full h-full object-cover"
                 />
               )}
 
-              {/* OVERLAY */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
 
-              {/* TEXT */}
-              <div className="absolute bottom-0 p-4 text-white">
-                <h3 className="text-base font-semibold leading-tight">
+              <div className="absolute bottom-0 w-full px-4 pb-10 text-white">
+                <h3 className="text-sm font-semibold leading-snug line-clamp-3">
                   {story.title}
                 </h3>
                 <p className="text-xs opacity-80 mt-1">

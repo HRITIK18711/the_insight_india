@@ -11,7 +11,12 @@ const trending_stories = [
   { slug: "qutub-minar-delhi-travel-guide", title: "Qutub Minar Delhi: History, Height, Timings, Entry Fee, How to Reach & Nearby Places", image: "/Image/qutub-minar-delhi-01.png" },
   { slug: "connaught-place-new-delhi-travel-guide", title: "Things to Do in Connaught Place Delhi: Best Places & Food Guide", image: "/Image/connaught-place-new-delhi-travel-guide-01.png" },
   { slug: "lotus-temple-delhi-travel-guide", title: "Lotus Temple Delhi: A Silent Escape in the Heart of Chaos–Timings, Entry & Travel Guide", image: "/Image/lotus-temple-delhi-travel-guide-01.png" },
-  { slug: "hazrat-nizamuddin-dargah-delhi-travel-guide", title: "Hazrat Nizamuddin Dargah, Delhi: History, Qawwali Timings, Entry & Complete Travel Guide", image: "/Image/hazrat-nizamuddin-dargah-delhi-travel-guide-01.png" }
+  { slug: "hazrat-nizamuddin-dargah-delhi-travel-guide", title: "Hazrat Nizamuddin Dargah, Delhi: History, Qawwali Timings, Entry & Complete Travel Guide", image: "/Image/hazrat-nizamuddin-dargah-delhi-travel-guide-01.png" },
+  { slug: "chopta-tungnath-chandrashila-trek-uttarakhand-travel-guide", title: "Chopta Tungnath Chandrashila Trek Uttarakhand – Best Time, Itinerary & Travel Guide", image: "/Image/chopta-tungnath-chandrashila-trek-uttarakhand-01.jpg" },
+  { slug: "red-fort-delhi-travel-guide", title: "Red Fort, Delhi: History, Timings, Best Time to Visit & The Story Most People Miss", image: "/Image/red-fort-delhi-01.png" },
+  { slug: "safdarjung-tomb-delhi-travel-guide", title: "Safdarjung’s Tomb: Delhi’s Most Underrated Mughal Monument History, Timings and Travel Guide", image: "/Image/safdarjung-tomb-delhi-travel-guide-01.jpg" }
+
+
 ];
 
 export default function TrendingSidebar() {

@@ -34,6 +34,9 @@ import Lotus from "./Component/Lotus";
 import Nizamuddin from "./Component/Nizamuddin";
 import PhotoStory from "./Component/PhotoStory";
 import MetroData from "./Component/Metrodata";
+import Tunghnath from "./Component/tunghnath"; 
+import RedFort from "./Component/RedFort";
+import Safdarjung from "./Component/safdarjung";
 function ScrollToTop() {
   const { pathname } = useLocation();
   useEffect(() => {
@@ -130,6 +133,20 @@ function App() {
               <Route
                 path="/mahabodhi-temple-bihar-travel-guide"
                 element={<Mahabhodi />}
+              />
+              <Route
+                path="/safdarjung-tomb-delhi-travel-guide"
+                element={<Safdarjung/>}
+              />
+              
+              <Route
+                path="/red-fort-delhi-travel-guide"
+                element={<RedFort />}
+              />
+
+              <Route
+                path="/chopta-tungnath-chandrashila-trek-uttarakhand-travel-guide"
+                element={<Tunghnath/>}
               />
 
               <Route
