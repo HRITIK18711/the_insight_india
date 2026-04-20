@@ -36,7 +36,7 @@ import PhotoStory from "./Component/PhotoStory";
 import MetroData from "./Component/Metrodata";
 import Tunghnath from "./Component/tunghnath"; 
 import RedFort from "./Component/RedFort";
-import Safdarjung from "./Component/safdarjung";
+import Safdarjunga from "./Component/Safdarjunga";
 function ScrollToTop() {
   const { pathname } = useLocation();
   useEffect(() => {
@@ -136,7 +136,7 @@ function App() {
               />
               <Route
                 path="/safdarjung-tomb-delhi-travel-guide"
-                element={<Safdarjung/>}
+                element={<Safdarjunga/>}
               />
               
               <Route

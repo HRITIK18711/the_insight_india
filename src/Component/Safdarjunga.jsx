@@ -7,7 +7,7 @@ const SectionImage = ({ src, source }) => (
   </div>
 );
 
-const Safdarjung = () => {
+const Safdarjunga = () => {
   return (
     <div className="bg-gray-50 py-10 px-4">
       <div className="max-w-4xl mx-auto bg-white p-6 md:p-10 shadow rounded-lg mt-12">
@@ -350,4 +350,4 @@ Stand there long enough and you begin to realize that this is not a lesser versi
   );
 };
 
-export default Safdarjung;
+export default Safdarjunga;
