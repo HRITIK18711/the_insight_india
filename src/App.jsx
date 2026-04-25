@@ -37,6 +37,7 @@ import MetroData from "./Component/Metrodata";
 import Tunghnath from "./Component/tunghnath"; 
 import RedFort from "./Component/RedFort";
 import Safdarjunga from "./Component/Safdarjunga";
+import PhotoStory1 from "./Component/PhotoStory1";
 function ScrollToTop() {
   const { pathname } = useLocation();
   useEffect(() => {
@@ -115,6 +116,8 @@ function App() {
 
               {/* EVENTS FIXED */}
               <Route path="/events" element={<Events />} />
+
+              <Route path="/photostory" element={<PhotoStory1 />} />
               <Route path="/events/:slug" element={<Events />} />
 
               <Route path="/about" element={<About />} />

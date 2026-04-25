@@ -13,6 +13,14 @@ export const stories = [
   },
 
   {
+    id: 15,
+    slug: "red-fort-delhi",
+    title: "Red Fort Delhi",
+    createdBy: "Kriti Singh",
+    image: "/Image/red-fort-delhi-01.jpg",
+  }, 
+
+  {
     id: 11,
     slug: "akshardham-temple-delhi",
     title: "Akshardham Temple Delhi",
@@ -21,67 +29,93 @@ export const stories = [
   },
 
   {
+    id: 12,
+    slug: "connaught-place-delhi",
+    title: "Connaught Place Delhi",
+    createdBy: "Kirti Singh",
+    image: "/Image/connaught-place-delhi-01.jpg",
+  },
+
+
+  {
+    id: 13,
+    slug: "delhi-most-mysterious-places",
+    title: "Delhi Most Mysterious Places",
+    createdBy: "Pragya Singh",
+    image: "/Image/delhi-most-mysterious-places-01.jpg",
+  },
+
+
+  {
+    id: 14,
+    slug: "hazrat-nizamuddin-dargah-delhi",
+    title: "Hazrat Nizamuddin Dargah Delhi",
+    createdBy: "Pragya Singh",
+    image: "/Image/hazrat-nizamuddin-dargah-delhi-01.jpg",
+  },
+
+  {
     id: 1,
     slug: "qutub-minar-delhi",
     title: "Qutub Minar Delhi",
     createdBy: "Pragya Singh",
-    video: "/Video/qutub-minar-delhi/qutub-minar-delhi-01.mp4",
+    image: "/Image/qutub-minar-delhi-01.jpg",
   },
   {
     id: 2,
-    slug: "mahabodhi-temple-bodhgaya-bihar",
+    slug: "mahabodhi-temple-bodh-gaya-bihar",
     title: "Mahabodhi Temple Bodhgaya Bihar",
     createdBy: "Kriti Singh",
-    video: "/Video/mahabodhi-temple-bodhgaya-bihar/mahabodhi-temple-bodhgaya-bodhgaya-bihar-01.mp4",
+    image: "/Image/mahabodhi-temple-bodh-gaya-bihar-01.jpg",
   },
   {
     id: 3,
     slug: "valley-of-flowers-trek-uttarakhand",
     title: "Valley Of Flowers Trek Uttarakhand",
     createdBy: "Rohit Upadhyay",
-    video: "/Video/valley-of-flowers-trek-uttarakhand/valley-of-flowers-trek-uttarakhand-01.mp4",
+    image: "/Image/valley-of-flowers-trek-uttarakhand-01.jpg",
   },
   {
     id: 4,
     slug: "kedarkantha-trek-uttarakhand",
     title: "Kedarkantha Trek Uttarakhand",
     createdBy: "Rohit Upadhyay",
-    video: "/Video/kedarkantha-trek-uttarakhand/kedarkantha-trek-uttarakhand-01.mp4",
+    image: "/Image/kedarkantha-trek-uttarakhand-01.jpg",
   },
   {
     id: 5,
-    slug: "the-great-buddha-statue-bodhgaya-bihar",
-    title: "The Great Buddha Statue Bodhgaya Bihar",
+    slug: "the-great-buddha-statue-bodh-gaya-bihar",
+    title: "The Great Buddha Statue Bodh gaya Bihar",
     createdBy: "Kriti Singh",
-    video: "/Video/the-great-buddha-statue-bodhgaya-bihar/the-great-buddha-statue-bodhgaya-bihar-01.mp4",
+    image: "/Image/the-great-buddha-statue-bodh-gaya-bihar-01.jpg"
   },
   {
     id: 6,
     slug: "jama-masjid-delhi",
     title: "Jama Masjid Delhi",
     createdBy: "Pragya Singh",
-    video: "/Video/jama-masjid-delhi/jama-masjid-delhi-01.mp4",
+    image: "/Image/jama-masjid-delhi-01.jpg"
   },
   {
     id: 7,
     slug: "pench-national-park-safari-maharashtra",
     title: "Pench National Park",
     createdBy: "Shubham Ghodke",
-    image: "/Image/pench-national-park-safari-maharashtra-01.jpg",
+    image: "/Image/pench-national-park-safari-maharashtra-01.jpg"
   },
   {
     id: 8,
     slug: "gawilgad-fort-amravati-maharashtra",
     title: "Gawilgad Fort",
     createdBy: "Shubham Ghodke",
-    image: "/Image/gawilgad-fort-amravati-maharashtra-01.jpg",
+   image: "/Image/gawilgad-fort-amravati-maharashtra-01.jpg"
   },
   {
     id: 9,
     slug: "nawegaon-nagzira-tiger-researve-maharashtra",
     title: "Nawegaon Nagzira Tiger Researve",
     createdBy: "Shubham Ghodke",
-    image: "/Image/nawegaon-nagzira-tiger-researve-maharashtra-01.jpg",
+   image: "/Image/nawegaon-nagzira-tiger-researve-maharashtra-01.jpg"
   },
 ];
 

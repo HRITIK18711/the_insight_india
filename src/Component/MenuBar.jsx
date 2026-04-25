@@ -34,7 +34,7 @@ const MenuBar = () => {
     { name: "Itineraries", path: "/" },
     { name: "Web Stories", path: "/webstories" },
     { name: "Events", path: "/events" },
-    { name: "Trending Now", path: "/" },
+    { name: "Photo Stories", path: "/photostory" },
     { name: "Metro Maps", path: "/metro" }
 
   ];

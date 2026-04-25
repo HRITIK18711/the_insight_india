@@ -5,73 +5,124 @@ import { stories } from "./Webstories";
 
 // 🔥 SLUG BASED DATA
 const storiesData = {
-  "qutub-minar-delhi": [
-    { video: "/Video/qutub-minar-delhi/qutub-minar-delhi-01.mp4" },
-    { video: "/Video/qutub-minar-delhi/qutub-minar-delhi-02.mp4" },
-    { video: "/Video/qutub-minar-delhi/qutub-minar-delhi-03.mp4" },
-    { video: "/Video/qutub-minar-delhi/qutub-minar-delhi-04.mp4" },
-    { video: "/Video/qutub-minar-delhi/qutub-minar-delhi-05.mp4" },
-    { video: "/Video/qutub-minar-delhi/qutub-minar-delhi-06.mp4" },
+"connaught-place-delhi": [
+    { image: "/Image/connaught-place-delhi-01.jpg" },
+    { image: "/Image/connaught-place-delhi-02.jpg" },
+    { image: "/Image/connaught-place-delhi-03.jpg" },
+    { image: "/Image/connaught-place-delhi-04.jpg" },
+    { image: "/Image/connaught-place-delhi-05.jpg" },
+    { image: "/Image/connaught-place-delhi-06.jpg" },
+    { image: "/Image/connaught-place-delhi-07.jpg" },
+    { image: "/Image/connaught-place-delhi-08.jpg" },
+    { image: "/Image/connaught-place-delhi-9.jpg" },
+    { image: "/Image/connaught-place-delhi-10.jpg" },
   ],
 
-  "mahabodhi-temple-bodhgaya-bihar": [
-    { video: "/Video/mahabodhi-temple-bodhgaya-bihar/mahabodhi-temple-bodhgaya-bihar-01.mp4" },
-    { video: "/Video/mahabodhi-temple-bodhgaya-bihar/mahabodhi-temple-bodhgaya-bihar-02.mp4" },
-    { video: "/Video/mahabodhi-temple-bodhgaya-bihar/mahabodhi-temple-bodhgaya-bihar-03.mp4" },
-    { video: "/Video/mahabodhi-temple-bodhgaya-bihar/mahabodhi-temple-bodhgaya-bihar-04.mp4" },
-    { video: "/Video/mahabodhi-temple-bodhgaya-bihar/mahabodhi-temple-bodhgaya-bihar-05.mp4" },
-    { video: "/Video/mahabodhi-temple-bodhgaya-bihar/mahabodhi-temple-bodhgaya-bihar-06.mp4" },
-    { video: "/Video/mahabodhi-temple-bodhgaya-bihar/mahabodhi-temple-bodhgaya-bihar-07.mp4" },
-    { video: "/Video/mahabodhi-temple-bodhgaya-bihar/mahabodhi-temple-bodhgaya-bodhgaya-bihar-08.mp4" },
-    { video: "/Video/mahabodhi-temple-bodhgaya-bihar/mahabodhi-temple-bodhgaya-bodhgaya-bihar-09.mp4" },
+   "red-fort-delhi": [
+    { image: "/Image/red-fort-delhi-01.jpg" },
+    { image: "/Image/red-fort-delhi-02.jpg" },
+    { image: "/Image/red-fort-delhi-03.jpg" },
+    { image: "/Image/red-fort-delhi-04.jpg" },
+    { image: "/Image/red-fort-delhi-05.jpg" },
+    { image: "/Image/red-fort-delhi-06.jpg" },
+    { image: "/Image/red-fort-delhi-07.jpg" },
+    { image: "/Image/red-fort-delhi-08.jpg" },
+    { image: "/Image/red-fort-delhi-09.jpg" },
+  ],
+
+
+"delhi-most-mysterious-places": [
+    { image: "/Image/delhi-most-mysterious-places-01.jpg" },
+    { image: "/Image/delhi-most-mysterious-places-02.jpg" },
+    { image: "/Image/delhi-most-mysterious-places-03.jpg" },
+    { image: "/Image/delhi-most-mysterious-places-04.jpg" },
+    { image: "/Image/delhi-most-mysterious-places-05.jpg" },
+    { image: "/Image/delhi-most-mysterious-places-06.jpg" },
+    { image: "/Image/delhi-most-mysterious-places-07.jpg" },
+    
+  ],
+"hazrat-nizamuddin-dargah-delhi": [
+    { image: "/Image/hazrat-nizamuddin-dargah-delhi-01.jpg" },
+    { image: "/Image/hazrat-nizamuddin-dargah-delhi-02.jpg" },
+    { image: "/Image/hazrat-nizamuddin-dargah-delhi-03.jpg" },
+    { image: "/Image/hazrat-nizamuddin-dargah-delhi-04.jpg" },
+    { image: "/Image/hazrat-nizamuddin-dargah-delhi-05.jpg" },
+    { image: "/Image/hazrat-nizamuddin-dargah-delhi-06.jpg" },
+    { image: "/Image/hazrat-nizamuddin-dargah-delhi-07.jpg" },
+    { image: "/Image/hazrat-nizamuddin-dargah-delhi-08.jpg" },
+    { image: "/Image/hazrat-nizamuddin-dargah-delhi-09.jpg" },
+    { image: "/Image/hazrat-nizamuddin-dargah-delhi-10.jpg" },
+    
+  ],
+
+
+  "qutub-minar-delhi": [
+    { image: "/Image/qutub-minar-delhi-01.jpg" },
+    { image: "/Image/qutub-minar-delhi-02.jpg" },
+    { image: "/Image/qutub-minar-delhi-03.jpg" },
+    { image: "/Image/qutub-minar-delhi-04.jpg" },
+    { image: "/Image/qutub-minar-delhi-05.jpg" },
+    { image: "/Image/qutub-minar-delhi-06.jpg" },
+  ],
+
+  "mahabodhi-temple-bodh-gaya-bihar": [
+    {image: "/Image/mahabodhi-temple-bodh-gaya-bihar-01.jpg" },
+    {image: "/Image/mahabodhi-temple-bodh-gaya-bihar-02.jpg" },
+    {image: "/Image/mahabodhi-temple-bodh-gaya-bihar-03.jpg" },
+    {image: "/Image/mahabodhi-temple-bodh-gaya-bihar-04.jpg" },
+    {image: "/Image/mahabodhi-temple-bodh-gaya-bihar-05.jpg" },
+    {image: "/Image/mahabodhi-temple-bodh-gaya-bihar-06.jpg" },
+    {image: "/Image/mahabodhi-temple-bodh-gaya-bihar-07.jpg" },
+    {image: "/Image/mahabodhi-temple-bodh-gaya-bihar-08.jpg" },
+    {image: "/Image/mahabodhi-temple-bodh-gaya-bihar-09.jpg" },
   ],
 "valley-of-flowers-trek-uttarakhand": [
-    { video: "/Video/valley-of-flowers-trek-uttarakhand/valley-of-flowers-trek-uttarakhand-01.mp4" },
-    { video: "/Video/valley-of-flowers-trek-uttarakhand/valley-of-flowers-trek-uttarakhand-02.mp4" },
-    { video: "/Video/valley-of-flowers-trek-uttarakhand/valley-of-flowers-trek-uttarakhand-03.mp4" },
-    { video: "/Video/valley-of-flowers-trek-uttarakhand/valley-of-flowers-trek-uttarakhand-04.mp4" },
-    { video: "/Video/valley-of-flowers-trek-uttarakhand/valley-of-flowers-trek-uttarakhand-05.mp4" },
-    { video: "/Video/valley-of-flowers-trek-uttarakhand/valley-of-flowers-trek-uttarakhand-06.mp4" },
-    { video: "/Video/valley-of-flowers-trek-uttarakhand/valley-of-flowers-trek-uttarakhand-07.mp4" },
-    { video: "/Video/valley-of-flowers-trek-uttarakhand/valley-of-flowers-trek-uttarakhand-08.mp4" },
-    { video: "/Video/valley-of-flowers-trek-uttarakhand/valley-of-flowers-trek-uttarakhand-09.mp4" },
+    { image: "/Image/valley-of-flowers-trek-uttarakhand-01.jpg" },
+    { image: "/Image/valley-of-flowers-trek-uttarakhand-02.jpg" },
+    { image: "/Image/valley-of-flowers-trek-uttarakhand-03.jpg" },
+    { image: "/Image/valley-of-flowers-trek-uttarakhand-04.jpg" },
+    { image: "/Image/valley-of-flowers-trek-uttarakhand-05.jpg" },
+    { image: "/Image/valley-of-flowers-trek-uttarakhand-06.jpg" },
+    { image: "/Image/valley-of-flowers-trek-uttarakhand-07.jpg" },
+    { image: "/Image/valley-of-flowers-trek-uttarakhand-08.jpg" },
+    { image: "/Image/valley-of-flowers-trek-uttarakhand-09.jpg" },
   ],
 
   "kedarkantha-trek-uttarakhand": [
-    { video: "/Video/kedarkantha-trek-uttarakhand/kedarkantha-trek-uttarakhand-01.mp4" },
-    { video: "/Video/kedarkantha-trek-uttarakhand/kedarkantha-trek-uttarakhand-02.mp4" },
-    { video: "/Video/kedarkantha-trek-uttarakhand/kedarkantha-trek-uttarakhand-03.mp4" },
-    { video: "/Video/kedarkantha-trek-uttarakhand/kedarkantha-trek-uttarakhand-04.mp4" },
-    { video: "/Video/kedarkantha-trek-uttarakhand/kedarkantha-trek-uttarakhand-05.mp4" },
-    { video: "/Video/kedarkantha-trek-uttarakhand/kedarkantha-trek-uttarakhand-06.mp4" },
-    { video: "/Video/kedarkantha-trek-uttarakhand/kedarkantha-trek-uttarakhand-07.mp4" },
-    { video: "/Video/kedarkantha-trek-uttarakhand/kedarkantha-trek-uttarakhand-08.mp4" },
-    { video: "/Video/kedarkantha-trek-uttarakhand/kedarkantha-trek-uttarakhand-09.mp4" },
-    { video: "/Video/kedarkantha-trek-uttarakhand/kedarkantha-trek-uttarakhand-10.mp4" },
+    { image: "/Image/kedarkantha-trek-uttarakhand-01.mp4" },
+    { image: "/Image/kedarkantha-trek-uttarakhand-02.mp4" },
+    { image: "/Image/kedarkantha-trek-uttarakhand-03.mp4" },
+    { image: "/Image/kedarkantha-trek-uttarakhand-04.mp4" },
+    { image: "/Image/kedarkantha-trek-uttarakhand-05.mp4" },
+    { image: "/Image/kedarkantha-trek-uttarakhand-06.mp4" },
+    { image: "/Image/kedarkantha-trek-uttarakhand-07.mp4" },
+    { image: "/Image/kedarkantha-trek-uttarakhand-08.mp4" },
+    { image: "/Image/kedarkantha-trek-uttarakhand-09.mp4" },
+    { image: "/Image/kedarkantha-trek-uttarakhand-10.mp4" },
   ],
 
-  "the-great-buddha-statue-bodhgaya-bihar": [
-    { video: "/Video/the-great-buddha-statue-bodhgaya-bihar/the-great-buddha-statue-bodhgaya-bihar-01.mp4" },
-    { video: "/Video/the-great-buddha-statue-bodhgaya-bihar/the-great-buddha-statue-bodhgaya-bihar-02.mp4" },
-    { video: "/Video/the-great-buddha-statue-bodhgaya-bihar/the-great-buddha-statue-bodhgaya-bihar-03.mp4" },
-    { video: "/Video/the-great-buddha-statue-bodhgaya-bihar/the-great-buddha-statue-bodhgaya-bihar-04.mp4" },
-    { video: "/Video/the-great-buddha-statue-bodhgaya-bihar/the-great-buddha-statue-bodhgaya-bihar-05.mp4" },
-    { video: "/Video/the-great-buddha-statue-bodhgaya-bihar/the-great-buddha-statue-bodhgaya-bihar-06.mp4" },
-    { video: "/Video/the-great-buddha-statue-bodhgaya-bihar/the-great-buddha-statue-bodhgaya-bihar-07.mp4" },
-    { video: "/Video/the-great-buddha-statue-bodhgaya-bihar/the-great-buddha-statue-bodhgaya-bihar-08.mp4" },
-    { video: "/Video/the-great-buddha-statue-bodhgaya-bihar/the-great-buddha-statue-bodhgaya-bihar-09.mp4" },
+  "the-great-buddha-statue-bodh-gaya-bihar": [
+    { image: "/Image/the-great-buddha-statue-bodh-gaya-bihar-01.jpg" },
+    { image: "/Image/the-great-buddha-statue-bodh-gaya-bihar-02.jpg" },
+    { image: "/Image/the-great-buddha-statue-bodh-gaya-bihar-03.jpg" },
+    { image: "/Image/the-great-buddha-statue-bodh-gaya-bihar-04.jpg" },
+    { image: "/Image/the-great-buddha-statue-bodh-gaya-bihar-05.jpg" },
+    { image: "/Image/the-great-buddha-statue-bodh-gaya-bihar-06.jpg" },
+    { image: "/Image/the-great-buddha-statue-bodh-gaya-bihar-07.jpg" },
+    { image: "/Image/the-great-buddha-statue-bodh-gaya-bihar-08.jpg" },
+    { image: "/Image/the-great-buddha-statue-bodh-gaya-bihar-09.jpg" },
   ],
 
   "jama-masjid-delhi": [
-    { video: "/Video/jama-masjid-delhi/jama-masjid-delhi-01.mp4" },
-    { video: "/Video/jama-masjid-delhi/jama-masjid-delhi-02.mp4" },
-    { video: "/Video/jama-masjid-delhi/jama-masjid-delhi-03.mp4" },
-    { video: "/Video/jama-masjid-delhi/jama-masjid-delhi-04.mp4" },
-    { video: "/Video/jama-masjid-delhi/jama-masjid-delhi-05.mp4" },
-    { video: "/Video/jama-masjid-delhi/jama-masjid-delhi-06.mp4" },
-    { video: "/Video/jama-masjid-delhi/jama-masjid-delhi-07.mp4" },
-    { video: "/Video/jama-masjid-delhi/jama-masjid-delhi-08.mp4" },
-    { video: "/Video/jama-masjid-delhi/jama-masjid-delhi-09.mp4" },
+    { image: "/Image/jama-masjid-delhi-01.jpg" },
+    { image: "/Image/jama-masjid-delhi-02.jpg" },
+    { image: "/Image/jama-masjidr-delhi-03.jpg" },
+    { image: "/Image/jama-masjid-delhi-04.jpg" },
+    { image: "/Image/jama-masjid-delhi-05.jpg" },
+    { image: "/Image/jama-masjid-delhi-06.jpg" },
+    { image: "/Image/jama-masjid-delhi-07.jpg" },
+    { image: "/Image/jama-masjid-delhi-08.jpg" },
+    { image: "/Image/jama-masjid-delhi-09.jpg" },
   ],
   "pench-national-park-safari-maharashtra": [
     {image: "/Image/pench-national-park-safari-maharashtra-01.jpg"},
@@ -136,13 +187,51 @@ const storiesData = {
 };
 
 // 🔥 THUMBNAILS (IMPORTANT)
+// 🔥 THUMBNAILS
 const thumbnails = {
-  "qutub-minar-delhi": "/Image/qutub-minar-delhi-01.png",
-  "mahabodhi-temple-bodhgaya-bihar": "/Image/mahabhodi-temple-01.jpg",
-  "valley-of-flowers-trek-uttarakhand": "/Image/valley-of-flowers-01.jpg",
-  "kedarkantha-trek-uttarakhand": "/Image/kedarkantha-01.jpg",
-  "the-great-buddha-statue-bodhgaya-bihar": "/Image/great-buddha-statue-bodh-gaya-bihar-01.png",
-  "jama-masjid-delhi": "/Image/Jama-Masjid-Delhi.jpg",
+  "connaught-place-delhi": "/Image/connaught-place-delhi-01.jpg",
+
+  "red-fort-delhi": "/Image/red-fort-delhi-01.jpg",
+
+  "delhi-most-mysterious-places":
+    "/Image/delhi-most-mysterious-places-01.jpg",
+
+  "hazrat-nizamuddin-dargah-delhi":
+    "/Image/hazrat-nizamuddin-dargah-delhi-01.jpg",
+
+  "qutub-minar-delhi":
+    "/Image/qutub-minar-delhi-01.png",
+
+  "mahabodhi-temple-bodh-gaya-bihar":
+    "/Image/mahabodhi-temple-bodh-gaya-bihar-01.jpg",
+
+  "valley-of-flowers-trek-uttarakhand":
+    "/Image/valley-of-flowers-trek-uttarakhand-01.jpg",
+
+  "kedarkantha-trek-uttarakhand":
+    "/Image/kedarkantha-trek-uttarakhand-01.jpg",
+
+  // fixed slug
+  "the-great-buddha-statue-bodh-gaya-bihar":
+    "/Image/the-great-buddha-statue-bodh-gaya-bihar-01.png",
+
+  "jama-masjid-delhi":
+    "/Image/jama-masjid-delhi-01.jpg",
+
+  "pench-national-park-safari-maharashtra":
+    "/Image/pench-national-park-safari-maharashtra-01.jpg",
+
+  "gawilgad-fort-amravati-maharashtra":
+    "/Image/gawilgad-fort-amravati-maharashtra-01.jpg",
+
+  "nawegaon-nagzira-tiger-researve-maharashtra":
+    "/Image/nawegaon-nagzira-tiger-researve-maharashtra-01.jpg",
+
+  "humayun-tomb-delhi":
+    "/Image/humayun-tomb-delhi-travel-guide-01.jpg",
+
+  "akshardham-temple-delhi":
+    "/Image/akshardham-temple-delhi-travel-guide-01.jpg"
 };
 
 export default function Stories() {

@@ -20,7 +20,7 @@ const trending_stories = [
 
 export default function TrendingSidebar() {
   return (
-    <div className="w-full px-2 sm:px-4 md:px-10 mt-6">
+    <div className="w-full px-2 ml-2 sm:px-4 md:px-10 mt-25 mb-5">
 
       <div className="
         w-full max-w-[1320px] mx-auto
@@ -37,7 +37,7 @@ export default function TrendingSidebar() {
         </h2>
 
         {/* LIST */}
-        <div className="h-[270px] overflow-y-auto pr-2">
+        <div className="h-[570px] overflow-y-auto pr-2">
 
           {trending_stories.map((item) => (
             <Link to={`/${item.slug}`} key={item.slug}>
