@@ -5,6 +5,7 @@ import { stories } from "./Webstories";
 
 // 🔥 SLUG BASED DATA
 const storiesData = {
+
 "connaught-place-delhi": [
     { image: "/Image/connaught-place-delhi-01.jpg" },
     { image: "/Image/connaught-place-delhi-02.jpg" },
@@ -53,6 +54,46 @@ const storiesData = {
     { image: "/Image/hazrat-nizamuddin-dargah-delhi-09.jpg" },
     { image: "/Image/hazrat-nizamuddin-dargah-delhi-10.jpg" },
     
+  ],
+
+  "ram-mandir-ayodhya-uttar-pradesh": [
+    { image: "/Image/ram-mandir-ayodhya-uttar-pradesh-01.jpg" },
+    { image: "/Image/ram-mandir-ayodhya-uttar-pradesh-02.jpg" },
+    { image: "/Image/ram-mandir-ayodhya-uttar-pradesh-03.jpg" },
+    { image: "/Image/ram-mandir-ayodhya-uttar-pradesh-04.jpg" },
+    { image: "/Image/ram-mandir-ayodhya-uttar-pradesh-05.jpg" },
+    { image: "/Image/ram-mandir-ayodhya-uttar-pradesh-06.jpg" },
+    { image: "/Image/ram-mandir-ayodhya-uttar-pradesh-07.jpg" },
+    { image: "/Image/ram-mandir-ayodhya-uttar-pradesh-08.jpg" },
+    { image: "/Image/ram-mandir-ayodhya-uttar-pradesh-09.jpg" },
+    { image: "/Image/ram-mandir-ayodhya-uttar-pradesh-10.jpg" },
+    { image: "/Image/ram-mandir-ayodhya-uttar-pradesh-11.jpg" },
+    
+  ],
+
+  "lotus-temple-delhi": [
+    { image: "/Image/lotus-temple-delhi-01.jpg" },
+    { image: "/Image/lotus-temple-delhi-02.jpg" },
+    { image: "/Image/lotus-temple-delhi-03.jpg" },
+    { image: "/Image/lotus-temple-delhi-04.jpg" },
+    { image: "/Image/lotus-temple-delhi-05.jpg" },
+    { image: "/Image/lotus-temple-delhi-06.jpg" },
+    { image: "/Image/lotus-temple-delhi-07.jpg" },
+    { image: "/Image/lotus-temple-delhi-08.jpg" },
+    { image: "/Image/lotus-temple-delhi-09.jpg" },
+    { image: "/Image/lotus-temple-delhi-10.jpg" },
+    
+  ],
+
+  "malcha-mahal-delhi": [
+    { image: "/Image/malcha-mahal-delhi-01.jpg" },
+    { image: "/Image/malcha-mahal-delhi-02.jpg" },
+    { image: "/Image/malcha-mahal-delhi-03.jpg" },
+    { image: "/Image/malcha-mahal-delhi-04.jpg" },
+    { image: "/Image/malcha-mahal-delhi-05.jpg" },
+    { image: "/Image/malcha-mahal-delhi-06.jpg" },
+    { image: "/Image/malcha-mahal-delhi-07.jpg" },
+    { image: "/Image/malcha-mahal-delhi-08.jpg" },
   ],
 
 

@@ -19,7 +19,31 @@ export const stories = [
     createdBy: "Kriti Singh",
     image: "/Image/red-fort-delhi-01.jpg",
   }, 
+  {
+    id: 16,
+    slug: "ram-mandir-ayodhya-uttar-pradesh",
+    title: "Ram Mandir Ayodhya",
+    createdBy: "Pragya Singh",
+    image: "/Image/ram-mandir-ayodhya-uttar-pradesh-01.jpg",
+  }, 
 
+  {
+    id: 17,
+    slug: "lotus-temple-delhi",
+    title: "Lotus Temple Delhi",
+    createdBy: "Kriti Singh",
+    image: "/Image/lotus-temple-delhi-01.jpg",
+  }, 
+
+  {
+    id: 18,
+    slug: "malcha-mahal-delhi",
+    title: "Malcha Mahal Delhi",
+    createdBy: "Pragya Singh",
+    image: "/Image/malcha-mahal-delhi-01.jpg",
+  }, 
+
+  
   {
     id: 11,
     slug: "akshardham-temple-delhi",
@@ -171,63 +195,96 @@ export default function Webstories() {
     };
 
     return (
-      <div
-        className="h-[100dvh] w-full bg-black flex justify-center items-center"
-        onClick={handleClick}
-      >
-        <div className="relative w-full max-w-md h-full">
+  <div
+    onClick={handleClick}
+    className="h-[100dvh] bg-black flex items-center justify-center overflow-hidden"
+  >
+    {/* 1. Use aspect-[9/16] to keep the story shape consistent.
+      2. Use max-h-screen to ensure it never grows taller than the mobile viewport.
+    */}
+    <div className="relative w-full aspect-[9/16] max-h-screen bg-neutral-900 shadow-2xl overflow-hidden">
+      
+      {/* STORY MEDIA */}
+      {story.video ? (
+        <video
+          src={story.video}
+          autoPlay
+          muted
+          playsInline
+          className="w-full h-full object-cover"
+        />
+      ) : (
+        <img
+          src={story.image}
+          alt={story.title}
+          /* Changed object-fill to object-cover for better visuals, 
+             or use object-contain if you never want any cropping at all */
+          className="w-full h-full object-cover" 
+        />
+      )}
 
-          {/* PROGRESS */}
-          <div className="absolute top-0 w-full flex gap-1 px-2 pt-2 z-50">
-            {stories.map((_, i) => (
-              <div key={i} className="flex-1 h-[3px] bg-white/30">
-                <div
-                  className="h-full bg-white"
-                  style={{
-                    width:
-                      i < currentIndex
-                        ? "100%"
-                        : i === currentIndex
-                        ? `${progress}%`
-                        : "0%",
-                  }}
-                />
-              </div>
-            ))}
-          </div>
+      {/* Dark gradient for text legibility */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent via-60% to-black/80" />
 
-          {/* MEDIA */}
-          {story.video ? (
-            <video
-              src={story.video}
-              autoPlay
-              muted
-              playsInline
-              className="w-full h-full object-cover"
+      {/* Progress bars - Moved slightly down to avoid phone notches */}
+      <div className="absolute top-4 left-0 right-0 z-50 flex gap-1 px-3">
+        {stories.map((_, i) => (
+          <div key={i} className="flex-1 h-[2px] bg-white/30 rounded-full overflow-hidden">
+            <div
+              className="h-full bg-white transition-all duration-75 ease-linear"
+              style={{
+                width:
+                  i < currentIndex
+                    ? "100%"
+                    : i === currentIndex
+                    ? `${progress}%`
+                    : "0%"
+              }}
             />
-          ) : (
-            <img
-              src={story.image}
-              className="w-full h-full object-cover"
-            />
-          )}
-
-          {/* OVERLAY */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent"></div>
-
-          {/* TEXT */}
-          <div className="absolute bottom-0 w-full px-5 pb-12 text-white">
-            <h2 className="text-lg font-semibold leading-snug">
-              {story.title}
-            </h2>
-            <p className="text-sm mt-2 opacity-80">
-              By {story.createdBy}
-            </p>
           </div>
+        ))}
+      </div>
 
+      {/* TEXT CONTENT - Using 'Safe Zones' */}
+      <div className="absolute inset-0 z-40 flex flex-col justify-between p-6 pointer-events-none">
+        
+        {/* Top Text (Title) */}
+        <div className="mt-8">
+          <h2 className="text-white text-2xl md:text-xl font-bold leading-tight drop-shadow-2xl">
+            {story.title}
+          </h2>
+        </div>
+
+        {/* Bottom Text (Creator) */}
+        <div className="mb-6">
+          <p className="text-white/90 text-sm font-medium bg-black/20 backdrop-blur-sm inline-block px-3 py-1 rounded-full">
+            By: {story.createdBy}
+          </p>
         </div>
       </div>
-    );
+
+      {/* Navigation Buttons - Hidden on small mobile to prevent mis-clicks */}
+      <div className="hidden md:block">
+        {currentIndex > 0 && (
+          <button
+            onClick={(e) => { e.stopPropagation(); navigate(`/webstories/${stories[currentIndex - 1].slug}`); }}
+            className="absolute left-4 top-1/2 -translate-y-1/2 z-50 h-10 w-10 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur text-white"
+          >
+            ‹
+          </button>
+        )}
+        {currentIndex < stories.length - 1 && (
+          <button
+            onClick={(e) => { e.stopPropagation(); navigate(`/webstories/${stories[currentIndex + 1].slug}`); }}
+            className="absolute right-4 top-1/2 -translate-y-1/2 z-50 h-10 w-10 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur text-white"
+          >
+            ›
+          </button>
+        )}
+      </div>
+    </div>
+  </div>
+);
   }
 
   // ================= GRID MODE =================
